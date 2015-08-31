@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.vintek_ss.vince.kiddocare.NewMealActivity">
+    <item
+        android:id="@+id/action_saveMP"
+        android:showAsAction="withText|ifRoom"
+        android:title="@string/action_example_newMP" />
+
+</menu>
+<!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_new_meal.xml -->

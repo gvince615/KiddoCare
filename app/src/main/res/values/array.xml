@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Billing_Hourly">
+        <item name="2.00">$2.00 per Hour</item>
+        <item name="2.25">$2.25 per Hour</item>
+        <item name="2.50">$2.50 per Hour</item>
+        <item name="2.75">$2.75 per Hour</item>
+        <item name="3.00">$3.00 per Hour</item>
+        <item name="3.25">$3.25 per Hour</item>
+        <item name="3.50">$3.50 per Hour</item>
+        <item name="3.75">$3.75 per Hour</item>
+        <item name="4.00">$4.00 per Hour</item>
+        <item name="4.25">$4.25 per Hour</item>
+        <item name="4.50">$4.50 per Hour</item>
+        <item name="4.75">$4.75 per Hour</item>
+        <item name="5.00">$5.00 per Hour</item>
+        <item name="5.25">$5.25 per Hour</item>
+        <item name="5.50">$5.50 per Hour</item>
+        <item name="5.75">$5.75 per Hour</item>
+        <item name="6.00">$6.00 per Hour</item>
+        <item name="6.25">$6.25 per Hour</item>
+        <item name="6.50">$6.50 per Hour</item>
+        <item name="6.75">$6.75 per Hour</item>
+        <item name="7.00">$7.00 per Hour</item>
+        <item name="7.25">$7.25 per Hour</item>
+        <item name="7.50">$7.50 per Hour</item>
+        <item name="7.75">$7.75 per Hour</item>
+        <item name="8.00">$8.00 per Hour</item>
+        <item name="8.25">$8.25 per Hour</item>
+        <item name="8.50">$8.50 per Hour</item>
+        <item name="8.75">$8.75 per Hour</item>
+        <item name="9.00">$9.00 per Hour</item>
+        <item name="9.25">$9.25 per Hour</item>
+        <item name="9.50">$9.50 per Hour</item>
+        <item name="9.75">$9.75 per Hour</item>
+        <item name="10.00">$10.00 per Hour</item>
+    </string-array>
+
+    <string-array name="Billing_Hourly_values">
+        <item name="2.00">2.00</item>
+        <item name="2.25">2.25</item>
+        <item name="2.50">2.50</item>
+        <item name="2.75">2.75</item>
+        <item name="3.00">3.00</item>
+        <item name="3.25">3.25</item>
+        <item name="3.50">3.50</item>
+        <item name="3.75">3.75</item>
+        <item name="4.00">4.00</item>
+        <item name="4.25">4.25</item>
+        <item name="4.50">4.50</item>
+        <item name="4.75">4.75</item>
+        <item name="5.00">5.00</item>
+        <item name="5.25">5.25</item>
+        <item name="5.50">5.50</item>
+        <item name="5.75">5.75</item>
+        <item name="6.00">6.00</item>
+        <item name="6.25">6.25</item>
+        <item name="6.50">6.50</item>
+        <item name="6.75">6.75</item>
+        <item name="7.00">7.00</item>
+        <item name="7.25">7.25</item>
+        <item name="7.50">7.50</item>
+        <item name="7.75">7.75</item>
+        <item name="8.00">8.00</item>
+        <item name="8.25">8.25</item>
+        <item name="8.50">8.50</item>
+        <item name="8.75">8.75</item>
+        <item name="9.00">9.00</item>
+        <item name="9.25">9.25</item>
+        <item name="9.50">9.50</item>
+        <item name="9.75">9.75</item>
+        <item name="10.00">10.00</item>
+    </string-array>
+
+    <string-array name="Billing_Daily">
+        <item name="10.00">$10.00 per Day</item>
+        <item name="12.50">$12.50 per Day</item>
+        <item name="15.00">$15.00 per Day</item>
+        <item name="17.50">$17.50 per Day</item>
+        <item name="20.00">$20.00 per Day</item>
+        <item name="22.50">$22.50 per Day</item>
+        <item name="25.00">$25.00 per Day</item>
+        <item name="27.50">$27.50 per Day</item>
+        <item name="30.00">$30.00 per Day</item>
+        <item name="32.50">$32.50 per Day</item>
+        <item name="35.00">$35.00 per Day</item>
+        <item name="37.50">$37.50 per Day</item>
+        <item name="40.00">$40.00 per Day</item>
+        <item name="42.50">$42.50 per Day</item>
+        <item name="45.00">$45.00 per Day</item>
+        <item name="47.50">$47.50 per Day</item>
+        <item name="50.00">$50.00 per Day</item>
+        <item name="52.50">$52.50 per Day</item>
+        <item name="55.00">$55.00 per Day</item>
+        <item name="57.50">$57.50 per Day</item>
+        <item name="60.00">$60.00 per Day</item>
+        <item name="62.50">$62.50 per Day</item>
+        <item name="65.00">$65.00 per Day</item>
+        <item name="67.50">$67.50 per Day</item>
+        <item name="70.00">$70.00 per Day</item>
+        <item name="72.50">$72.50 per Day</item>
+        <item name="75.00">$75.00 per Day</item>
+        <item name="77.50">$77.50 per Day</item>
+        <item name="80.00">$80.00 per Day</item>
+    </string-array>
+
+    <string-array name="Billing_Daily_values">
+        <item name="10.00">10.00</item>
+        <item name="12.50">12.50</item>
+        <item name="15.00">15.00</item>
+        <item name="17.50">17.50</item>
+        <item name="20.00">20.00</item>
+        <item name="22.50">22.50</item>
+        <item name="25.00">25.00</item>
+        <item name="27.50">27.50</item>
+        <item name="30.00">30.00</item>
+        <item name="32.50">32.50</item>
+        <item name="35.00">35.00</item>
+        <item name="37.50">37.50</item>
+        <item name="40.00">40.00</item>
+        <item name="42.50">42.50</item>
+        <item name="45.00">45.00</item>
+        <item name="47.50">47.50</item>
+        <item name="50.00">50.00</item>
+        <item name="52.50">52.50</item>
+        <item name="55.00">55.00</item>
+        <item name="57.50">57.50</item>
+        <item name="60.00">60.00</item>
+        <item name="62.50">62.50</item>
+        <item name="65.00">65.00</item>
+        <item name="67.50">67.50</item>
+        <item name="70.00">60.00</item>
+        <item name="72.50">72.50</item>
+        <item name="75.00">75.00</item>
+        <item name="77.50">77.50</item>
+        <item name="80.00">80.00</item>
+    </string-array>
+
+    <string-array name="Billing_numHrs41Day">
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>
+        <item name="6">6</item>
+        <item name="7">7</item>
+        <item name="7">7</item>
+        <item name="8">8</item>
+        <item name="9">9</item>
+        <item name="10">10</item>
+        <item name="11">11</item>
+        <item name="12">12</item>
+    </string-array>
+
+    <string-array name="Billing_numHrs41Day_values">
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>
+        <item name="6">6</item>
+        <item name="7">7</item>
+        <item name="8">8</item>
+        <item name="9">9</item>
+        <item name="10">10</item>
+        <item name="11">11</item>
+        <item name="12">12</item>
+    </string-array>
+
+    <string-array name="Child_Age">
+        <item name="infant">Infant</item>
+        <item name="toddler">Toddler</item>
+        <item name="preschool">Preschool</item>
+        <item name="schoolAge">School Age</item>
+    </string-array>
+
+    <string-array name="Discount_Type">
+        <item name="none">No Discount</item>
+        <item name="sibling">Multi-Sibling</item>
+        <item name="mil">Military</item>
+        <item name="family">Family</item>
+        <item name="generic">Other: </item>
+    </string-array>
+
+    <string-array name="Discount_values">
+        <item name="0%">.00</item>
+        <item name="5%">.05</item>
+        <item name="10%">.10</item>
+        <item name="15%">.15</item>
+        <item name="20%">.20</item>
+        <item name="25%">.25</item>
+        <item name="30%">.30</item>
+        <item name="35%">.35</item>
+        <item name="40%">.40</item>
+        <item name="45%">.45</item>
+        <item name="50%">.50</item>
+    </string-array>
+
+</resources>

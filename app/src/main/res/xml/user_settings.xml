@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="General Settings">
+
+        <EditTextPreference
+            android:key="prefUserName"
+            android:summary="Enter your Name"
+            android:title="Care Provider name" />
+        <EditTextPreference
+            android:key="prefUserCenterName"
+            android:summary="Enter your Daycare Center Name"
+            android:title="Care Provider Center Name" />
+        <EditTextPreference
+            android:key="prefUserCenterAddress"
+            android:summary="Enter your Daycare Center Address"
+            android:title="Care Provider Center Address" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Billing Settings">
+        <PreferenceScreen
+            android:key="button"
+            android:persistent="false"
+            android:title="Hours in a billable Day?">
+
+            <ListPreference
+                android:entries="@array/Billing_numHrs41Day"
+                android:entryValues="@array/Billing_numHrs41Day_values"
+                android:key="prefBilling_numHrs41Day"
+                android:summary="How many hours equals one day for billing"
+                android:title="Hours per day?" />
+
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="button"
+            android:persistent="false"
+            android:title="Infant Age Children">
+
+            <ListPreference
+                android:defaultValue="2.00"
+                android:entries="@array/Billing_Hourly"
+                android:entryValues="@array/Billing_Hourly_values"
+                android:key="prefBilling_Hourly_Infants"
+                android:summary="Hourly Rate for Infants"
+                android:title="Hourly Rate: Infants" />
+
+            <ListPreference
+                android:entries="@array/Billing_Daily"
+                android:entryValues="@array/Billing_Daily_values"
+                android:key="prefBilling_Daily_Infants"
+                android:summary="Daily Rate for Infants"
+                android:title="Daily Rate: Infants" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="button"
+            android:persistent="false"
+            android:title="Toddler Age Children">
+
+            <ListPreference
+                android:defaultValue="2.00"
+                android:entries="@array/Billing_Hourly"
+                android:entryValues="@array/Billing_Hourly_values"
+                android:key="prefBilling_Hourly_Toddler"
+                android:summary="Hourly Rate for Toddlers"
+                android:title="Hourly Rate: Toddlers" />
+
+            <ListPreference
+                android:entries="@array/Billing_Daily"
+                android:entryValues="@array/Billing_Daily_values"
+                android:key="prefBilling_Daily_Toddlers"
+                android:summary="Hourly Rate for Toddlers"
+                android:title="Daily Rate: Toddlers" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="button"
+            android:persistent="false"
+            android:title="Preschool Age Children">
+
+            <ListPreference
+                android:defaultValue="2.00"
+                android:entries="@array/Billing_Hourly"
+                android:entryValues="@array/Billing_Hourly_values"
+                android:key="prefBilling_Hourly_Preschool"
+                android:summary="Hourly Rate for Preschool Children"
+                android:title="Hourly Rate: Preschool" />
+
+            <ListPreference
+                android:entries="@array/Billing_Daily"
+                android:entryValues="@array/Billing_Daily_values"
+                android:key="prefBilling_Daily_Preschool"
+                android:summary="Daily Rate for Preschool Children"
+                android:title="Daily Rate: Preschool" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="button"
+            android:persistent="false"
+            android:title="School Age Children">
+
+            <ListPreference
+                android:defaultValue="2.00"
+                android:entries="@array/Billing_Hourly"
+                android:entryValues="@array/Billing_Hourly_values"
+                android:key="prefBilling_Hourly_SchoolAge"
+                android:summary="Hourly Rate for School Age Children"
+                android:title="Hourly Rate: School Age" />
+
+            <ListPreference
+                android:entries="@array/Billing_Daily"
+                android:entryValues="@array/Billing_Daily_values"
+                android:key="prefBilling_Daily_SchoolAge"
+                android:summary="Hourly Rate for School Age Children"
+                android:title="Daily Rate: School Age" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+</PreferenceScreen>
