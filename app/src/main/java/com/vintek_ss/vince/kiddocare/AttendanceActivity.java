@@ -34,7 +34,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import static com.vintek_ss.vince.kiddocare.R.color.green;
-import static com.vintek_ss.vince.kiddocare.R.color.trans;
+import static com.vintek_ss.vince.kiddocare.R.color.transparent;
 
 public class AttendanceActivity extends Activity implements AdapterView.OnItemSelectedListener {
     private static final int SETTINGS_RESULT = 1;
@@ -227,7 +227,7 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
         // child is logged in NEED TO LOG CHILD OUT
         if (isLoggedIn.equals(y)) {
             r = AttenEntry.updateAttenEntry(cIn, cfn, cln, clockDate);
-            list.getChildAt(position).setBackgroundColor(getResources().getColor(trans));
+            list.getChildAt(position).setBackgroundColor(getResources().getColor(transparent));
         }
         // child logged out NEED TO LOG CHILD IN
         if (isLoggedIn.equals(n)) {
@@ -571,7 +571,7 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
             }
             if (currentChild.childLoggedIn().equals(n)) {
 
-                itemView.setBackgroundColor(getResources().getColor(trans));
+                itemView.setBackgroundColor(getResources().getColor(transparent));
             }
             return itemView;
 

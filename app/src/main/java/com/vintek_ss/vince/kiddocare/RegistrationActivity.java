@@ -13,6 +13,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.InputFilter;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,6 +56,9 @@ public class RegistrationActivity extends Activity implements
     Spinner child_Age;
     boolean newDiscount = false;
     // child
+    ValidationFormField firstNameLabel;
+    EditText firstnameScroll;
+
     EditText childFname, ChildFavActivity;
     EditText childLname;
     TextView childBirth, childID;
@@ -84,12 +89,24 @@ public class RegistrationActivity extends Activity implements
         setContentView(R.layout.activity_registration);
         // Spinner element
         spinner = (Spinner) findViewById(R.id.s_reg_children);
-        viewFlipper = (ViewFlipper) findViewById(R.id.viewflipper);
+        //viewFlipper = (ViewFlipper) findViewById(R.id.viewflipper);
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
 
         // Loading spinner data from database
         loadSpinnerData();
+        InputFilter filter = new InputFilter() {
+            public CharSequence filter(CharSequence source, int start, int end,
+                                       Spanned dest, int dstart, int dend) {
+                for (int i = start; i < end; i++) {
+                    if (!Character.isLetterOrDigit(source.charAt(i))) {
+                        return "";
+                    }
+                }
+                return null;
+            }
+        };
+
     }
 
     private void loadSpinnerData() {
@@ -238,8 +255,8 @@ public class RegistrationActivity extends Activity implements
     // Load all data on reg for to edit Record
     public void loadDatatoEDITRecord(View v) {
 
-        Spinner cSpin = (Spinner) findViewById(R.id.s_reg_children);
-        int selectedPos = cSpin.getSelectedItemPosition();
+        final Spinner cSpin = (Spinner) findViewById(R.id.s_reg_children);
+        final int selectedPos = cSpin.getSelectedItemPosition();
 
         if (selectedPos == 0) {
             cSpin.setBackgroundResource(R.drawable.red_box);
@@ -288,8 +305,9 @@ public class RegistrationActivity extends Activity implements
                     if (edit == true) {
                         daycaremanagerDB db = new daycaremanagerDB(RegistrationActivity.this);
                         db.open();
+                        String selected = cSpin.getSelectedItem().toString();
                         // this will load the registration form the child/parent data (FOR for EDIT record)
-                        Cursor c = db.getChildEntry(childLabel);
+                        Cursor c = db.getChildEntry(selected);
                         String cfn = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
                         String Cid = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
                         String cbd = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_BDATE));

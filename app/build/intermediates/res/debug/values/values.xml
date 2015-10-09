@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/array.xml -->
     <eat-comment/>
     <string-array name="Billing_Daily">
@@ -187,6 +187,59 @@
         <item name="45%">.45</item>
         <item name="50%">.50</item>
     </string-array>
+    <string-array name="state_codes">
+        <item/>
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -321,6 +374,7 @@
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
     <declare-styleable name="LoadingImageView"><attr format="enum" name="imageAspectRatioAdjust"><enum name="none" value="0"/><enum name="adjust_width" value="1"/><enum name="adjust_height" value="2"/></attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
     <declare-styleable name="MapAttrs"><attr format="enum" name="mapType"><enum name="none" value="0"/><enum name="normal" value="1"/><enum name="satellite" value="2"/><enum name="terrain" value="3"/><enum name="hybrid" value="4"/></attr><attr format="float" name="cameraBearing"/><attr format="float" name="cameraTargetLat"/><attr format="float" name="cameraTargetLng"/><attr format="float" name="cameraTilt"/><attr format="float" name="cameraZoom"/><attr format="boolean" name="liteMode"/><attr format="boolean" name="uiCompass"/><attr format="boolean" name="uiRotateGestures"/><attr format="boolean" name="uiScrollGestures"/><attr format="boolean" name="uiTiltGestures"/><attr format="boolean" name="uiZoomControls"/><attr format="boolean" name="uiZoomGestures"/><attr format="boolean" name="useViewLifecycle"/><attr format="boolean" name="zOrderOnTop"/><attr format="boolean" name="uiMapToolbar"/></declare-styleable>
+    <declare-styleable name="MaskedEditText"><attr format="string" name="mask"/><attr format="string" name="char_representation"/><attr format="string" name="mask_fill"/></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
@@ -331,6 +385,8 @@
     <declare-styleable name="SwitchCompat"><attr name="android:thumb"/><attr format="reference" name="track"/><attr name="android:textOn"/><attr name="android:textOff"/><attr format="dimension" name="thumbTextPadding"/><attr format="reference" name="switchTextAppearance"/><attr format="dimension" name="switchMinWidth"/><attr format="dimension" name="switchPadding"/><attr format="boolean" name="splitTrack"/><attr format="boolean" name="showText"/></declare-styleable>
     <declare-styleable name="Theme"><attr format="boolean" name="windowActionBar"/><attr format="boolean" name="windowActionBarOverlay"/><attr format="boolean" name="windowActionModeOverlay"/><attr format="dimension|fraction" name="windowFixedWidthMajor"/><attr format="dimension|fraction" name="windowFixedHeightMinor"/><attr format="dimension|fraction" name="windowFixedWidthMinor"/><attr format="dimension|fraction" name="windowFixedHeightMajor"/><attr name="android:windowIsFloating"/><attr format="reference" name="actionBarTabStyle"/><attr format="reference" name="actionBarTabBarStyle"/><attr format="reference" name="actionBarTabTextStyle"/><attr format="reference" name="actionOverflowButtonStyle"/><attr format="reference" name="actionOverflowMenuStyle"/><attr format="reference" name="actionBarPopupTheme"/><attr format="reference" name="actionBarStyle"/><attr format="reference" name="actionBarSplitStyle"/><attr format="reference" name="actionBarTheme"/><attr format="reference" name="actionBarWidgetTheme"/><attr format="dimension" name="actionBarSize"><enum name="wrap_content" value="0"/></attr><attr format="reference" name="actionBarDivider"/><attr format="reference" name="actionBarItemBackground"/><attr format="reference" name="actionMenuTextAppearance"/><attr format="color|reference" name="actionMenuTextColor"/><attr format="reference" name="actionModeStyle"/><attr format="reference" name="actionModeCloseButtonStyle"/><attr format="reference" name="actionModeBackground"/><attr format="reference" name="actionModeSplitBackground"/><attr format="reference" name="actionModeCloseDrawable"/><attr format="reference" name="actionModeCutDrawable"/><attr format="reference" name="actionModeCopyDrawable"/><attr format="reference" name="actionModePasteDrawable"/><attr format="reference" name="actionModeSelectAllDrawable"/><attr format="reference" name="actionModeShareDrawable"/><attr format="reference" name="actionModeFindDrawable"/><attr format="reference" name="actionModeWebSearchDrawable"/><attr format="reference" name="actionModePopupWindowStyle"/><attr format="reference" name="textAppearanceLargePopupMenu"/><attr format="reference" name="textAppearanceSmallPopupMenu"/><attr format="reference" name="actionDropDownStyle"/><attr format="dimension" name="dropdownListPreferredItemHeight"/><attr format="reference" name="spinnerStyle"/><attr format="reference" name="spinnerDropDownItemStyle"/><attr format="reference" name="homeAsUpIndicator"/><attr format="reference" name="actionButtonStyle"/><attr format="reference" name="buttonBarStyle"/><attr format="reference" name="buttonBarButtonStyle"/><attr format="reference" name="selectableItemBackground"/><attr format="reference" name="selectableItemBackgroundBorderless"/><attr format="reference" name="dividerVertical"/><attr format="reference" name="dividerHorizontal"/><attr format="reference" name="activityChooserViewStyle"/><attr format="reference" name="toolbarStyle"/><attr format="reference" name="toolbarNavigationButtonStyle"/><attr format="reference" name="popupMenuStyle"/><attr format="reference" name="popupWindowStyle"/><attr format="reference|color" name="editTextColor"/><attr format="reference" name="editTextBackground"/><attr format="reference" name="switchStyle"/><attr format="reference" name="textAppearanceSearchResultTitle"/><attr format="reference" name="textAppearanceSearchResultSubtitle"/><attr format="reference|color" name="textColorSearchUrl"/><attr format="reference" name="searchViewStyle"/><attr format="dimension" name="listPreferredItemHeight"/><attr format="dimension" name="listPreferredItemHeightSmall"/><attr format="dimension" name="listPreferredItemHeightLarge"/><attr format="dimension" name="listPreferredItemPaddingLeft"/><attr format="dimension" name="listPreferredItemPaddingRight"/><attr format="reference" name="dropDownListViewStyle"/><attr format="reference" name="listPopupWindowStyle"/><attr format="reference" name="textAppearanceListItem"/><attr format="reference" name="textAppearanceListItemSmall"/><attr format="reference" name="panelBackground"/><attr format="dimension" name="panelMenuListWidth"/><attr format="reference" name="panelMenuListTheme"/><attr format="reference" name="listChoiceBackgroundIndicator"/><attr format="color" name="colorPrimary"/><attr format="color" name="colorPrimaryDark"/><attr format="color" name="colorAccent"/><attr format="color" name="colorControlNormal"/><attr format="color" name="colorControlActivated"/><attr format="color" name="colorControlHighlight"/><attr format="color" name="colorButtonNormal"/><attr format="color" name="colorSwitchThumbNormal"/></declare-styleable>
     <declare-styleable name="Toolbar"><attr format="reference" name="titleTextAppearance"/><attr format="reference" name="subtitleTextAppearance"/><attr name="title"/><attr name="subtitle"/><attr name="android:gravity"/><attr format="dimension" name="titleMargins"/><attr format="dimension" name="titleMarginStart"/><attr format="dimension" name="titleMarginEnd"/><attr format="dimension" name="titleMarginTop"/><attr format="dimension" name="titleMarginBottom"/><attr name="contentInsetStart"/><attr name="contentInsetEnd"/><attr name="contentInsetLeft"/><attr name="contentInsetRight"/><attr format="dimension" name="maxButtonHeight"/><attr format="reference" name="theme"/><attr format="reference" name="collapseIcon"/><attr format="string" name="collapseContentDescription"/><attr name="popupTheme"/><attr format="reference" name="navigationIcon"/><attr format="string" name="navigationContentDescription"/><attr name="android:minHeight"/></declare-styleable>
+    <declare-styleable name="TypefaceableTextView"><attr format="string" name="tvOverriddenTypeface"/></declare-styleable>
+    <declare-styleable name="ValidationFormField"><attr format="string" name="hintText"/><attr format="string" name="floatingLabelText"/><attr format="string" name="fieldType"/><attr format="string" name="maxLength"/><attr format="string" name="regexPattern"/><attr format="string" name="regexErrorText"/><attr format="string" name="minLength"/><attr format="string" name="minLengthErrorText"/><attr format="boolean" name="hasHelperText"/><attr format="boolean" name="isloggedIn"/></declare-styleable>
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
     <declare-styleable name="WalletFragmentOptions"><attr format="enum" name="appTheme"><enum name="holo_dark" value="0"/><enum name="holo_light" value="1"/></attr><attr format="enum" name="environment"><enum name="production" value="1"/><enum name="sandbox" value="0"/><enum name="strict_sandbox" value="2"/></attr><attr format="reference" name="fragmentStyle"/><attr format="enum" name="fragmentMode"><enum name="buyButton" value="1"/><enum name="selectionDetails" value="2"/></attr></declare-styleable>
@@ -378,6 +434,10 @@
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_corner_radius">5dp</dimen>
+    <dimen name="default_button_height">52dp</dimen>
+    <dimen name="default_button_radius">5dp</dimen>
+    <dimen name="default_layout_padding">16dp</dimen>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
@@ -388,7 +448,20 @@
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
+    <dimen name="empty_field_error_padding">3dp</dimen>
+    <dimen name="fragment_message_padding">16dp</dimen>
+    <dimen name="margin_above_button">24dp</dimen>
+    <dimen name="margin_above_heading_3">10dp</dimen>
+    <dimen name="margin_above_large_heading">24dp</dimen>
+    <dimen name="margin_above_top_large_heading">21dp</dimen>
+    <dimen name="margin_below_button">14dp</dimen>
+    <dimen name="message_dialog_button_height">40dp</dimen>
+    <dimen name="message_dialog_button_width">90dp</dimen>
+    <dimen name="nav_drawer_width">240dp</dimen>
     <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values/values.xml -->
     <eat-comment/>
     <item name="action_bar_activity_content" type="id"/>
@@ -446,12 +519,16 @@
     <string name="action_sign_in_short">Sign in</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="address_validation">^\\W*(?:\\w+\\b\\W*){0,5}$</string>
     <string name="app_name">KiddoCare</string>
+    <string name="business_name_field_type">business_name</string>
+    <string name="business_name_validation">^\\W*(?:\\w+\\b\\W*){0,5}$</string>
     <string name="button"> Edit Record(s) </string>
     <string name="child_f_name">FNAME</string>
     <string name="child_l_name">LNAME</string>
     <string name="child_picture">Child Picture</string>
     <string name="childpicture">childPicture</string>
+    <string name="city_name_validation">^\\W*(?:\\w+\\b\\W*){0,5}$</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/common_strings.xml -->
     <eat-comment/>
     <string name="common_android_wear_notification_needs_update_text">An application requires an update to the Android Wear app.</string>
@@ -482,20 +559,47 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="confirm_create_password_field_type">confirmNewPassword</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password_error">Your passwords don’t match. Please try again.</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_account_header">Create Your Account</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="create_calendar_message">Allow Ad to create a calendar event?</string>
     <string name="create_calendar_title">Create calendar event</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="create_password_field_type">newPassword</string>
+    <string name="create_password_validation">(?=.*[a-zA-Z])(?=.*[0-9])</string>
+    <string name="create_user_name_field_type">createUsername</string>
+    <string name="create_username_validation">[a-zA-Z0-9\S]*</string>
+    <string name="currency_validation">[.,$0-9]*</string>
     <string name="d_tap">D_Tap</string>
     <string name="date">Date</string>
+    <string name="date_validation">^((1[0-2]|0[1-9])/(3[01]|[12][0-9]|0[1-9])/[0-9]{4}|)$</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="decline">Decline</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="email">Email</string>
+    <string name="email_error">Please use the format email@example.com.</string>
+    <string name="email_field_type">email</string>
     <string name="enrolled_on_">Enrolled On:</string>
+    <string name="enter_2digit_state_field_type">enter2DigitState</string>
+    <string name="enter_address_field_type">enterAddress</string>
+    <string name="enter_birth_date_field_type">enterBirthDate</string>
+    <string name="enter_city_field_type">enterCity</string>
+    <string name="enter_currency_field_type">enterAnnualIncome</string>
+    <string name="enter_full_ssn_field_type">enterFullSSN</string>
+    <string name="enter_number_field_type">enterNumber</string>
+    <string name="enter_password_field_type">enterPassword</string>
+    <string name="enter_ssn_field_type">enterSSN</string>
+    <string name="enter_username_field_type">enterUsername</string>
+    <string name="enter_zip_code_field_type">enterZipCode</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="error_field_required">This field is required</string>
@@ -505,6 +609,9 @@
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="favActivities">Favorite Activities</string>
+    <string name="first_name">First Name</string>
+    <string name="first_name_error">Please try that again without special characters.</string>
+    <string name="first_name_min_length_error">Please enter your first name.</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">hello</string>
     <string name="hepb">HePB</string>
@@ -533,14 +640,26 @@
     <string name="label_dadinfo">Dad\'s Info</string>
     <string name="label_medical">Medical Information</string>
     <string name="label_mominfo">Mom\'s Info</string>
+    <string name="last_name">Last Name</string>
+    <string name="last_name_error">Please try that again without special characters.</string>
+    <string name="last_name_min_length_error">Please enter your last name.</string>
     <string name="loading">Loading...</string>
     <string name="loggedIn">Logged In?</string>
     <string name="menu_newMP">New Meal Plan</string>
     <string name="mmr">MMR</string>
+    <string name="myriad_pro">MyriadPro-Regular.otf</string>
+    <string name="myriad_pro_bold">MyriadPro-Bold.otf</string>
+    <string name="myriad_pro_italic">MyriadPro-It.otf</string>
+    <string name="myriad_pro_semibold">MyriadPro-Semibold.otf</string>
+    <string name="name_field_type">name</string>
+    <string name="name_validation">[a-zA-Z0-9\S]*</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="note_peaoplecanpickup">Persons Permitted to Pick up and Drop off Child</string>
     <string name="num">#</string>
+    <string name="password">Password</string>
+    <string name="password_error">Your Password must contain at least 8 characters, including and at
+        least one uppercase letter and one number.</string>
     <string name="phNum">Phone Number</string>
     <string name="print_string">Print</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings_activity_login.xml -->
@@ -549,10 +668,16 @@
     <string name="prompt_password">Password (optional)</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values/strings.xml -->
     <eat-comment/>
+    <string name="quatro_slab">QuatroSlab.otf</string>
+    <string name="quatro_slab_bold">QuatroSlab-Bold.otf</string>
+    <string name="quatro_slab_italic">QuatroSlab-Italic.otf</string>
+    <string name="quatro_slab_semibold">QuatroSlab-SemiBold.otf</string>
     <string name="recnum">Record #: </string>
     <string name="savemp">Save New Meal Plan</string>
     <string name="selec_boy">Boy</string>
     <string name="selec_girl">Girl</string>
+    <string name="ssn_validation">^((?!000|666)[0-8][0-9]{2}-(?!00)[0-9]{2}-(?!0000)[0-9]{4}|)$</string>
+    <string name="state_error">Please enter a valid 2 digit state abbreviation.</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/admob_strings.xml -->
     <eat-comment/>
     <string name="store_picture_message">"Allow Ad to store image in Picture gallery?"</string>
@@ -585,6 +710,12 @@
     <string name="title_section4">Billing</string>
     <string name="title_section5">About KiddoCare</string>
     <string name="tpic_Label">Set Child Picture</string>
+    <string name="us_2digit_state_validation">[A-Z]*</string>
+    <string name="us_zip_validation">([0-9]{5}|)</string>
+    <string name="username">Username</string>
+    <string name="username_helper_text">Your Username must be at least 6 characters without spaces or special characters.</string>
+    <string name="validation_dont_leave_password_empty">Please enter your password.</string>
+    <string name="validation_dont_leave_username_empty">Please enter your username.</string>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.5.87/res/values/wallet_strings.xml -->
     <eat-comment/>
     <string name="wallet_buy_button_place_holder" translation_description="Text on a button that allows a user to make a payment with Google Wallet [CHAR LIMIT=30]">Buy with Google</string>

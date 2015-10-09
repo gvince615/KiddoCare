@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values-w820dp/colors.xml -->
+    <eat-comment/>
+    <color name="black" ns1:ignore="UnusedResources">#000000</color>
+    <color name="blue">#80000099</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="dark_blue" ns1:ignore="UnusedResources">#0C4569</color>
+    <color name="dark_gray" ns1:ignore="UnusedResources">#5A5A5A</color>
+    <color name="dark_green" ns1:ignore="UnusedResources">#3C7814</color>
+    <color name="dark_orange" ns1:ignore="UnusedResources">#E67800</color>
+    <color name="dark_red" ns1:ignore="UnusedResources">#910e16</color>
+    <color name="drkgreen">#009900</color>
+    <color name="drkgrey">#800000</color>
+    <color name="drkred">#990000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="green">#80009900</color>
+    <color name="light" ns1:ignore="UnusedResources">#fafafa</color>
+    <color name="light_blue" ns1:ignore="UnusedResources">#C3D3E3</color>
+    <color name="light_gray" ns1:ignore="UnusedResources">#E5E5E5</color>
+    <color name="light_green" ns1:ignore="UnusedResources">#D3EF8D</color>
+    <color name="lightest_blue" ns1:ignore="UnusedResources">#EDF2F7</color>
+    <color name="lightest_grey" ns1:ignore="UnusedResources">#f2f2f2</color>
+    <color name="ltgrey">#80999999</color>
+    <color name="medium_blue" ns1:ignore="UnusedResources">#2081BF</color>
+    <color name="medium_gray" ns1:ignore="UnusedResources">#AAAAAA</color>
+    <color name="medium_green" ns1:ignore="UnusedResources">#6C9F2E</color>
+    <color name="orange" ns1:ignore="UnusedResources">#FF9B00</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="purple" ns1:ignore="UnusedResources">#551387</color>
+    <color name="red" ns1:ignore="UnusedResources">#B5121B</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_bar_blue" ns1:ignore="UnusedResources">#0C344E</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="trans">#000000</color>
+    <color name="transparent" ns1:ignore="UnusedResources">#000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_mask">#a0000000</color>
+    <color name="white" ns1:ignore="UnusedResources">#FFFFFF</color>
     <!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/values-w820dp/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">64dp</dimen>

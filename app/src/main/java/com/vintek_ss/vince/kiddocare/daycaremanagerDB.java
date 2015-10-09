@@ -319,20 +319,14 @@ public class daycaremanagerDB {
     }
 
 
-    public Cursor getChildEntry(String childFullName) {
-        String cfn = "";
-        String cln = "";
-        try {
-            String[] splitFandL = childFullName.split("\\s+");
-            cfn = splitFandL[0];
-            cln = splitFandL[1];
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public Cursor getChildEntry(String position) {
+        String[] parts = position.split(":");
+        String cID = parts[0];
 
+        String sPosition = String.valueOf(position);
 
-        String whereClause = "child_first_name = ? AND child_last_name = ?";
-        String[] whereArgs = new String[]{cfn, cln};
+        String whereClause = "_id = ?";
+        String[] whereArgs = new String[]{cID};
 
         String[] columns = new String[]{KEY_CHILD_ROWID, KEY_CHILD_FNAME,
                 KEY_CHILD_LNAME, KEY_CHILD_BDATE, KEY_CHILD_EDATE, KEY_CHILD_AGE, KEY_CHILD_ADDRESS,
@@ -683,10 +677,14 @@ public class daycaremanagerDB {
     }
 
     public Cursor get_Child_AttenData(String childName) {
+        String[] parts = childName.split(": ");
+        String childNum = parts[0];
+        String childSplitName = parts[1];
+
         String[] columns = new String[]{KEY_ATTEN_ROWID, KEY_ATTEN_CHILD,
                 KEY_ATTEN_DATE_IN, KEY_ATTEN_DATE_OUT};
         String whereClause1 = KEY_ATTEN_CHILD + " = ?";
-        String[] whereArgs1 = new String[]{childName};
+        String[] whereArgs1 = new String[]{childSplitName};
 
         Cursor c = ourDatabase.query(DATABASE_ATABLE, columns, whereClause1, whereArgs1,
                 null, null, null);
@@ -696,19 +694,25 @@ public class daycaremanagerDB {
 
     /////////////// DELETE CHILD & all records from atten for the child
     public void deleteChild(String selectedChild) {
+        String[] parts = selectedChild.split(": ");
+        String childNum = parts[0];
+        String childSplitName = parts[1];
 
         String whereClause1 = KEY_ATTEN_CHILD + " = ?";
-        String[] whereArgs1 = new String[]{selectedChild};
+        String[] whereArgs1 = new String[]{childSplitName};
         ourDatabase.delete(DATABASE_ATABLE, whereClause1, whereArgs1);
 
         String whereClause2 = KEY_CHILD_FNAME + " = ? AND " + KEY_CHILD_LNAME + " = ?";
-        String[] whereArgs2 = selectedChild.split("\\s+");
+        String[] whereArgs2 = childSplitName.split("\\s+");
         ourDatabase.delete(DATABASE_CTABLE, whereClause2, whereArgs2);
 
     }
 
     public String get_Child_Age(String billRep_child) {
-        String[] splitP1FandL = billRep_child.split("\\s+");
+        String[] parts = billRep_child.split(": ");
+        String childNum = parts[0];
+        String childSplitName = parts[1];
+        String[] splitP1FandL = childSplitName.split("\\s+");
         String[] ChildColumns = new String[]{KEY_CHILD_FNAME, KEY_CHILD_LNAME,
                 KEY_CHILD_AGE};
         Cursor c2 = ourDatabase.query(DATABASE_CTABLE, ChildColumns,
@@ -724,6 +728,8 @@ public class daycaremanagerDB {
 
     /////////////////////////billing
     public String[] FetchAttenData(String childName, String start, String end) {
+
+
         String[] ChildColumns = new String[]{KEY_CHILD_FNAME, KEY_CHILD_LNAME,
                 KEY_CHILD_AGE};
         String whereClause1 = KEY_ATTEN_CHILD + " = ?";
@@ -903,7 +909,7 @@ public class daycaremanagerDB {
 
         // Select All Query
 
-        String[] columns = new String[]{KEY_CHILD_FNAME, KEY_CHILD_LNAME};
+        String[] columns = new String[]{KEY_CHILD_ROWID, KEY_CHILD_FNAME, KEY_CHILD_LNAME};
         try {
             Cursor cursor = ourDatabase.query(DATABASE_CTABLE, columns, null,
                     null, null, null, null);
@@ -912,11 +918,13 @@ public class daycaremanagerDB {
             // looping through all rows and adding to list
             if (cursor.moveToFirst()) {
                 do {
+                    String childRowNum = cursor.getString(cursor
+                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
                     String childFname = cursor.getString(cursor
                             .getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
                     String childLname = cursor.getString(cursor
                             .getColumnIndex(daycaremanagerDB.KEY_CHILD_LNAME));
-                    children.add(childFname + " " + childLname);
+                    children.add(childRowNum + ": " + childFname + " " + childLname);
 
                 } while (cursor.moveToNext());
             }

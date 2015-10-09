@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
@@ -27,7 +28,6 @@
         android:id="@+id/s_reg_children"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/viewflipper"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="5dp"
@@ -37,33 +37,31 @@
         android:textSize="15sp"
         tools:listitem="@android:layout/simple_spinner_dropdown_item" />
 
-    <ViewFlipper
-        android:id="@+id/viewflipper"
-        android:layout_width="fill_parent"
-        android:layout_height="350dp"
-        android:layout_above="@+id/textView25"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/b_loadChildInfo"
-        android:layout_marginBottom="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="6dp"
-        android:animateFirstView="true"
-        android:animateLayoutChanges="true"
-        android:background="#1f89a37f"
-        android:splitMotionEvents="true">
 
         <ScrollView
             android:id="@+id/scrollView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="0dp">
+            android:padding="5dp">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="388dp"
                 android:orientation="vertical"
                 android:padding="5dp">
+
+                <com.vintek_ss.vince.kiddocare.ValidationFormField
+                    android:id="@+id/firstNameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    custom:fieldType="@string/name_field_type"
+                    custom:floatingLabelText="@string/first_name"
+                    custom:hintText="@string/first_name"
+                    custom:maxLength="30"
+                    custom:minLength="1"
+                    custom:minLengthErrorText="@string/first_name_min_length_error"
+                    custom:regexErrorText="@string/first_name_error" />
 
                 <EditText
                     android:id="@+id/et_childFname"
@@ -71,14 +69,12 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
                     android:hint="@string/hint_ChildFname"
                     android:inputType="textPersonName"
                     android:maxEms="14"
-                    android:minEms="6">
+                    android:minEms="6" />
 
 
-                </EditText>
 
                 <EditText
                     android:id="@+id/et_childLname"
@@ -86,7 +82,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/et_childFname"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
                     android:hint="@string/hint_childLname"
                     android:inputType="textPersonName"
                     android:maxEms="14"
@@ -131,8 +126,6 @@
                     android:id="@+id/et_Medtime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/et_Medname"
-                    android:layout_alignParentEnd="true"
                     android:clickable="true"
                     android:ems="5"
                     android:gravity="right|center_vertical"
@@ -145,9 +138,7 @@
                     android:id="@+id/et_Medname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/et_DTAPdate"
-                    android:layout_toStartOf="@+id/et_Medtime"
                     android:ems="10"
                     android:hint="@string/hint_medication_name"
                     android:inputType="textCapWords" />
@@ -167,10 +158,6 @@
                     android:id="@+id/iv_ChildPic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/et_child_Edate"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/et_child_Edate"
                     android:adjustViewBounds="true"
                     android:clickable="true"
                     android:contentDescription="@string/child_picture"
@@ -184,9 +171,6 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView12"
-                    android:layout_alignBottom="@+id/textView12"
-                    android:layout_alignParentLeft="true"
                     android:text="@string/recnum"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold" />
@@ -195,8 +179,6 @@
                     android:id="@+id/b_takePic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/iv_ChildPic"
-                    android:layout_below="@+id/iv_ChildPic"
                     android:minHeight="30dip"
                     android:onClick="takePic"
                     android:text="@string/tpic_Label"
@@ -207,7 +189,6 @@
                     android:id="@+id/tv_loggedIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/textView11"
                     android:layout_marginTop="10dp"
                     android:text="@string/label_Address"
@@ -217,8 +198,6 @@
                     android:id="@+id/textView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_childAddy"
                     android:text="@string/favActivities"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -226,7 +205,6 @@
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/et_childFavActivities"
                     android:layout_marginTop="30dp"
                     android:hint="@string/label_medical"
@@ -248,8 +226,6 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_child_Edate"
-                    android:layout_toEndOf="@+id/textView11"
                     android:text="@string/_new"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -257,9 +233,7 @@
                     android:id="@+id/et_Cbirthdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/tv_discount"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
                     android:clickable="true"
                     android:ems="10"
                     android:hint="@string/hint_Cbirth"
@@ -273,7 +247,6 @@
                     android:id="@+id/et_child_Edate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
                     android:layout_below="@+id/et_Cbirthdate"
                     android:clickable="true"
                     android:ems="10"
@@ -288,10 +261,6 @@
                     android:id="@+id/tv_discount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/s_childAgeGroup"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
-
                     android:clickable="true"
                     android:focusableInTouchMode="false"
                     android:hint="Select Discount"
@@ -303,32 +272,14 @@
                     android:id="@+id/s_childAgeGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_childLname"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
                     android:entries="@array/Child_Age"
                     android:spinnerMode="dialog" />
 
-            </RelativeLayout>
-        </ScrollView>
-
-        <ScrollView
-            android:id="@+id/scrollView3"
-            android:layout_width="match_parent"
-            android:layout_height="230dp">
-
-            <RelativeLayout
-                android:id="@+id/RelativeLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="394dp"
-                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
                     android:labelFor="@+id/scrollView3"
                     android:text="@string/note_peaoplecanpickup"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -337,8 +288,6 @@
                     android:id="@+id/et_ppuFname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/textView14"
                     android:ems="10"
                     android:inputType="textPersonName" />
 
@@ -346,8 +295,6 @@
                     android:id="@+id/tv_ppu_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignRight="@+id/tv_ppuFname"
-                    android:layout_below="@+id/et_ppuLname"
                     android:labelFor="@+id/et_ppuNum"
                     android:text="@string/phNum"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -356,8 +303,6 @@
                     android:id="@+id/tv_ppuFname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/et_ppuFname"
-                    android:layout_alignParentLeft="true"
                     android:labelFor="@id/et_ppuFname"
                     android:text="@string/hint_ppulname"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -366,10 +311,6 @@
                     android:id="@+id/tv_ppuLname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/et_ppuLname"
-                    android:layout_alignBottom="@+id/et_ppuLname"
-                    android:layout_alignParentLeft="true"
-                    android:labelFor="@id/et_ppuLname"
                     android:text="@string/hint_ppuLname"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -377,8 +318,6 @@
                     android:id="@+id/et_ppuNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_ppuLname"
                     android:ems="10"
                     android:inputType="phone" />
 
@@ -386,22 +325,9 @@
                     android:id="@+id/et_ppuLname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_ppuFname"
                     android:ems="10"
                     android:inputType="textPersonName" />
-            </RelativeLayout>
-        </ScrollView>
 
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="386dp"
-                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -414,8 +340,6 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
                     android:text="@string/label_dadinfo"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -423,8 +347,6 @@
                     android:id="@+id/et_M_fname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/textView6"
                     android:ems="7"
                     android:hint="@string/hint_ChildFname"
                     android:inputType="textPersonName" />
@@ -433,10 +355,7 @@
                     android:id="@+id/et_D_fname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/textView7"
                     android:ems="7"
-                    android:gravity="right|center_vertical"
                     android:hint="@string/hint_ChildFname"
                     android:inputType="textPersonName" />
 
@@ -444,8 +363,6 @@
                     android:id="@+id/et_M_lname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/et_M_fname"
                     android:ems="7"
                     android:hint="@string/hint_childLname"
                     android:inputType="textPersonName" />
@@ -454,8 +371,6 @@
                     android:id="@+id/et_D_lname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_D_fname"
                     android:ems="7"
                     android:gravity="right|center_vertical"
                     android:hint="@string/hint_childLname"
@@ -465,43 +380,32 @@
                     android:id="@+id/et_M_Hnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/textView9"
-                    android:layout_alignParentLeft="true"
                     android:ems="7"
                     android:hint="@string/hint_PhoneNumber"
                     android:inputType="phone"
-                    android:textAlignment="viewStart"
                     tools:ignore="LabelFor" />
 
                 <EditText
                     android:id="@+id/et_D_Hnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/textView9"
-                    android:layout_alignParentRight="true"
                     android:ems="7"
                     android:gravity="right|center_vertical"
                     android:hint="@string/hint_PhoneNumber"
-                    android:inputType="phone"
-                    android:textAlignment="viewEnd" />
+                    android:inputType="phone" />
 
                 <EditText
                     android:id="@+id/et_M_Cnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/textView9"
                     android:ems="7"
                     android:hint="@string/hint_PhoneNumber"
-                    android:inputType="phone"
-                    android:textAlignment="viewStart" />
+                    android:inputType="phone" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/et_M_Cnum"
-                    android:layout_alignRight="@+id/textView9"
                     android:text="@string/lab_C"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -509,43 +413,32 @@
                     android:id="@+id/et_D_Cnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/textView9"
                     android:ems="7"
                     android:gravity="center_vertical"
                     android:hint="@string/hint_PhoneNumber"
-                    android:inputType="phone"
-                    android:textAlignment="viewEnd" />
+                    android:inputType="phone" />
 
                 <EditText
                     android:id="@+id/et_M_Wnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/et_M_Cnum"
                     android:ems="7"
                     android:hint="@string/hint_PhoneNumber"
-                    android:inputType="phone"
-                    android:textAlignment="viewStart" />
+                    android:inputType="phone" />
 
                 <EditText
                     android:id="@+id/et_D_Wnum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/textView10"
                     android:ems="7"
                     android:gravity="right|center_vertical"
                     android:hint="@string/hint_PhoneNumber"
-                    android:inputType="phone"
-                    android:textAlignment="viewEnd" />
+                    android:inputType="phone" />
 
                 <TextView
                     android:id="@+id/TextView01"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/et_M_Wnum"
-                    android:layout_centerHorizontal="true"
                     android:text="@string/lab_w"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -553,8 +446,6 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView8"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="15dp"
                     android:text="@string/lab_h"
                     android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -563,9 +454,6 @@
                     android:id="@+id/et_M_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_M_Wnum"
                     android:layout_marginTop="28dp"
                     android:ems="10"
                     android:hint="@string/hint_Memail"
@@ -575,9 +463,6 @@
                     android:id="@+id/et_D_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_M_email"
                     android:ems="10"
                     android:gravity="center_vertical"
                     android:hint="@string/hint_Demail"
@@ -587,8 +472,6 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_M_lname"
-                    android:layout_centerHorizontal="true"
                     android:layout_marginTop="31dp"
                     android:text="@string/label_cont_info"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
@@ -597,8 +480,6 @@
                     android:id="@+id/TextView02"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/et_M_lname"
                     android:text="@string/recnum"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold" />
@@ -607,9 +488,6 @@
                     android:id="@+id/TextView03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/TextView02"
-                    android:layout_alignBottom="@+id/TextView02"
-                    android:layout_alignParentRight="true"
                     android:text="@string/recnum"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold" />
@@ -618,8 +496,6 @@
                     android:id="@+id/tv_momRecNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_M_lname"
-                    android:layout_toLeftOf="@+id/TextView01"
                     android:text="@string/_new"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -627,25 +503,8 @@
                     android:id="@+id/tv_dadRecNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_D_lname"
-                    android:layout_toRightOf="@+id/TextView01"
                     android:text="@string/_new"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
-            </RelativeLayout>
+            </LinearLayout>
         </ScrollView>
-
-    </ViewFlipper>
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:background="#ffe8e9ff"
-        android:gravity="center"
-        android:text="&lt;     Swipe HERE or from Left or Right edge to scroll    >"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
 </RelativeLayout>

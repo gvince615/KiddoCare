@@ -87,7 +87,11 @@ public class BillingActivity extends Activity implements AdapterView.OnItemSelec
                 BillingData.open();
 
                 String ChildName = cSpin.getSelectedItem().toString();
-                String[] splitFandL = ChildName.split("\\s+");
+
+                String[] parts = ChildName.split(": ");
+                String childNum = parts[0];
+                String childSplitName = parts[1];
+                String[] splitFandL = childSplitName.split("\\s+");
                 String cfn = splitFandL[0];
                 String cln = splitFandL[1];
 
@@ -98,7 +102,7 @@ public class BillingActivity extends Activity implements AdapterView.OnItemSelec
 
                 float discount_amountF = Float.valueOf(discountData[1].trim()).floatValue();
                 float convertedDiscountF = discount_amountF * 100;
-                String[] result = BillingData.FetchAttenData(ChildName, start, end);
+                String[] result = BillingData.FetchAttenData(childSplitName, start, end);
 
                 TextView attenData = (TextView) findViewById(R.id.tv_billingData);
                 attenData.setText(result[0]);
