@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools">
+    <item
+        custom:isloggedIn="true"
+        android:state_focused="true"
+        android:drawable="@drawable/edit_text_dark_blue_bbg" />
+
+    <item
+        custom:isloggedIn="true"
+        android:state_focused="false"
+        android:drawable="@drawable/edit_text_med_gray_gbg" />
+
+</selector><!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/drawable/validation_edit_text_logged_in.xml -->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/dark_green"/>
+    <size
+        android:width="@dimen/message_dialog_button_width"
+        android:height="@dimen/message_dialog_button_height"/>
+    <corners android:radius="@dimen/default_button_radius" />
+</shape><!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/drawable/green_rounded_rect_selected.xml -->

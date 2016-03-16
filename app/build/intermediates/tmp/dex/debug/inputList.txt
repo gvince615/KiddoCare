@@ -1,0 +1,8 @@
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/classes/debug
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-10f59a2c36c7f63fcfd3a9d5dd69278777131b67.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-f8b7e64f4401fbd9a9812a5917caa885b8de3eb0.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/classes-2434cd55237fb0bc6b8c2e6a4f2e002f8fdab171.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-7a67ca6d7ad4dfa9358134642762e4040c6c649b.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/classes-02353a0fd91dc75bc038220c295daedbe60e9c76.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/classes-def32b064826809847858805780c79f41b441b30.jar
+/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/classes-1e0067f0ef9bafc11f32d3dbd20d1c1e3f20d83e.jar
