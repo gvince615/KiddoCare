@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/tools">
-    <item android:drawable="@drawable/edit_text_dark_blue_bbg" android:state_focused="true" custom:isloggedIn="true" />
-
-    <item android:drawable="@drawable/edit_text_med_gray_gbg" android:state_focused="false" custom:isloggedIn="true" />
-
-</selector><!-- From: file:/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/drawable-hdpi/validation_edit_text_logged_in.xml -->
