@@ -4,7 +4,7 @@
     api-level="23"
     density="xxhdpi"
     format="6"
-    timestamp="1458219230211626000" >
+    timestamp="1458219982159445000" >
 
     <task
         name="javac"
@@ -68,7 +68,7 @@
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9_65a13282d2c808ecb577ebb7402e58e81b4f0aa7/classes.dex"
             type="DEX" />
     </build>
-    <build timestamp="1458219230211626000" >
+    <build timestamp="1458219982159445000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />

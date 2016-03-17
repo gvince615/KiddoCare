@@ -101,17 +101,17 @@
 
                         custom:qlfel_helperText="Enter the child's last name"
                         custom:qlfel_hintText="Child's Last Name"
-                        custom:qlfel_inputType="person_name"/>
+                        custom:qlfel_inputType="@string/date"/>
 
                     <com.quickenloans.floatui.QLFloatingEditLayout
-                        android:id="@+id/et_childLname"
+                        android:id="@+id/et_childAddy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/et_childLname"
 
-                        custom:qlfel_helperText="Enter the child's last name"
-                        custom:qlfel_hintText="Child's Last Name"
-                        custom:qlfel_inputType="@string/date"/>
+                        custom:qlfel_helperText="Enter the child's address"
+                        custom:qlfel_hintText="Child's Address"
+                        custom:qlfel_inputType="person_name"/>
                 </LinearLayout>
 
 
@@ -123,16 +123,6 @@
                     android:visibility="gone">
 
 
-                    <EditText
-                        android:id="@+id/et_childAddy"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_below="@+id/tv_loggedIn"
-                        android:ems="10"
-                        android:hint="@string/label_Address"
-                        android:inputType="textPostalAddress" />
 
                     <TextView
                         android:id="@+id/textView3"
