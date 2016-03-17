@@ -1,315 +1,311 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/RelativeLayout1"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/registration_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="5dp"
-    tools:ignore="LabelFor">
+    android:padding="5dp">
 
-    <ImageButton
-        android:id="@+id/b_loadChildInfo"
-        style="?android:attr/buttonStyleSmall"
+    <android.support.v7.widget.ButtonBarLayout
+        android:id="@+id/registration_header"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:text="Child"
+        android:id="@+id/child_page_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="#ffe8e9ff"
-        android:onClick="loadDatatoEDITRecord"
-        android:padding="2dp"
-        android:src="@mipmap/ic_edit"
-        android:text="@string/button" />
-
-    <Spinner
-        android:id="@+id/s_reg_children"
+        android:layout_weight="1"/>
+    <Button
+        android:text="Parent"
+        android:id="@+id/parent_page_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/viewflipper"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_toLeftOf="@+id/b_loadChildInfo"
-        android:textSize="15sp"
-        tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+        android:layout_weight="1"/>
+
+    </android.support.v7.widget.ButtonBarLayout>
 
     <ViewFlipper
         android:id="@+id/viewflipper"
-        android:layout_width="fill_parent"
-        android:layout_height="350dp"
-        android:layout_above="@+id/textView25"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/b_loadChildInfo"
-        android:layout_marginBottom="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="6dp"
-        android:animateFirstView="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:animateLayoutChanges="true"
-        android:background="#1f89a37f"
         android:splitMotionEvents="true">
 
         <ScrollView
-            android:id="@+id/scrollView1"
+            android:id="@+id/child_scrollView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="0dp">
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="388dp"
-                android:orientation="vertical"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:padding="5dp">
 
-                <EditText
-                    android:id="@+id/et_childFname"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight=".5"
+                    android:layout_gravity="center_horizontal|center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_ChildPic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:adjustViewBounds="true"
+                        android:clickable="true"
+                        android:contentDescription="@string/child_picture"
+                        android:src="@mipmap/ic_launcher_new"
+                        android:layout_gravity="center_horizontal|center_vertical"/>
+
+                    <Button
+                        android:id="@+id/b_takePic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="takePic"
+                        android:text="@string/tpic_Label"
+                        android:textSize="12sp"
+                        android:layout_gravity="end|center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/child_name_container"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
-                    android:hint="@string/hint_ChildFname"
-                    android:inputType="textPersonName"
-                    android:maxEms="14"
-                    android:minEms="6">
+                    android:orientation="vertical"
+                    android:layout_weight=".3"
+                    android:layout_gravity="left|top">
+
+                    <com.quickenloans.floatui.QLFloatingEditLayout
+                        android:id="@+id/et_childFname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        custom:qlfel_helperText="Enter the child's first name"
+                        custom:qlfel_hintText="Child's First Name"
+                        custom:qlfel_inputType="person_name"
+                        />
+
+                    <com.quickenloans.floatui.QLFloatingEditLayout
+                        android:id="@+id/et_childLname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_childFname"
+
+                        custom:qlfel_helperText="Enter the child's last name"
+                        custom:qlfel_hintText="Child's Last Name"
+                        custom:qlfel_inputType="person_name"/>
+                </LinearLayout>
 
 
-                </EditText>
-
-                <EditText
-                    android:id="@+id/et_childLname"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/et_childFname"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
-                    android:hint="@string/hint_childLname"
-                    android:inputType="textPersonName"
-                    android:maxEms="14"
-                    android:minEms="6" />
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:visibility="gone">
 
-                <EditText
-                    android:id="@+id/et_childAddy"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/tv_loggedIn"
-                    android:ems="10"
-                    android:hint="@string/label_Address"
-                    android:inputType="textPostalAddress" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/textView2"
-                    android:text="Flu Shot"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <EditText
+                        android:id="@+id/et_childAddy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tv_loggedIn"
+                        android:ems="10"
+                        android:hint="@string/label_Address"
+                        android:inputType="textPostalAddress" />
 
-                <TextView
-                    android:id="@+id/et_DTAPdate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_below="@+id/textView3"
-                    android:layout_marginBottom="10dp"
-                    android:clickable="true"
-                    android:ems="5"
-                    android:hint="@string/hint_date"
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/textView2"
+                        android:text="Flu Shot"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                    android:inputType="date"
-                    android:onClick="pickDate"
-                    android:textSize="17dp" />
+                    <TextView
+                        android:id="@+id/et_DTAPdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginBottom="10dp"
+                        android:clickable="true"
+                        android:ems="5"
+                        android:hint="@string/hint_date"
 
-                <TextView
-                    android:id="@+id/et_Medtime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/et_Medname"
-                    android:layout_alignParentEnd="true"
-                    android:clickable="true"
-                    android:ems="5"
-                    android:gravity="right|center_vertical"
-                    android:hint="@string/hint_time"
-                    android:inputType="time"
-                    android:onClick="pickTime"
-                    android:textSize="17dp" />
+                        android:inputType="date"
+                        android:onClick="pickDate"
+                        android:textSize="17dp" />
 
-                <EditText
-                    android:id="@+id/et_Medname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_DTAPdate"
-                    android:layout_toStartOf="@+id/et_Medtime"
-                    android:ems="10"
-                    android:hint="@string/hint_medication_name"
-                    android:inputType="textCapWords" />
+                    <TextView
+                        android:id="@+id/et_Medtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/et_Medname"
+                        android:layout_alignParentEnd="true"
+                        android:clickable="true"
+                        android:ems="5"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/hint_time"
+                        android:inputType="time"
+                        android:onClick="pickTime"
+                        android:textSize="17dp" />
 
-                <EditText
-                    android:id="@+id/et_Callergies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/et_Medname"
-                    android:ems="10"
-                    android:hint="@string/hint_allergies"
-                    android:inputType="textCapWords" />
+                    <EditText
+                        android:id="@+id/et_Medname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/et_DTAPdate"
+                        android:layout_toStartOf="@+id/et_Medtime"
+                        android:ems="10"
+                        android:hint="@string/hint_medication_name"
+                        android:inputType="textCapWords" />
 
-                <ImageView
-                    android:id="@+id/iv_ChildPic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_above="@+id/et_child_Edate"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/et_child_Edate"
-                    android:adjustViewBounds="true"
-                    android:clickable="true"
-                    android:contentDescription="@string/child_picture"
-                    android:maxHeight="180dp"
-                    android:maxWidth="100dp"
-                    android:paddingBottom="5dp"
-                    android:paddingTop="5dp"
-                    android:src="@mipmap/ic_launcher_new" />
+                    <EditText
+                        android:id="@+id/et_Callergies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/et_Medname"
+                        android:ems="10"
+                        android:hint="@string/hint_allergies"
+                        android:inputType="textCapWords" />
 
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/textView12"
-                    android:layout_alignBottom="@+id/textView12"
-                    android:layout_alignParentLeft="true"
-                    android:text="@string/recnum"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textStyle="bold" />
 
-                <Button
-                    android:id="@+id/b_takePic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/iv_ChildPic"
-                    android:layout_below="@+id/iv_ChildPic"
-                    android:minHeight="30dip"
-                    android:onClick="takePic"
-                    android:text="@string/tpic_Label"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/tv_loggedIn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/textView11"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/label_Address"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView12"
+                        android:layout_alignBottom="@+id/textView12"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/recnum"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_childAddy"
-                    android:text="@string/favActivities"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_childFavActivities"
-                    android:layout_marginTop="30dp"
-                    android:hint="@string/label_medical"
-                    android:text="@string/label_medical"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <EditText
-                    android:id="@+id/et_childFavActivities"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/textView13"
-                    android:ems="10"
-                    android:hint="@string/hint_activities"
-                    android:inputType="textMultiLine" />
+                    <TextView
+                        android:id="@+id/tv_loggedIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView11"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/label_Address"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_child_Edate"
-                    android:layout_toEndOf="@+id/textView11"
-                    android:text="@string/_new"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/et_childAddy"
+                        android:text="@string/favActivities"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/et_Cbirthdate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/tv_discount"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
-                    android:clickable="true"
-                    android:ems="10"
-                    android:hint="@string/hint_Cbirth"
-                    android:inputType="date"
-                    android:maxEms="14"
-                    android:minEms="6"
-                    android:onClick="pickDate"
-                    android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/et_childFavActivities"
+                        android:layout_marginTop="30dp"
+                        android:hint="@string/label_medical"
+                        android:text="@string/label_medical"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-                <TextView
-                    android:id="@+id/et_child_Edate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_Cbirthdate"
-                    android:clickable="true"
-                    android:ems="10"
-                    android:hint="@string/hint_enrollDate"
-                    android:inputType="date"
-                    android:maxEms="14"
-                    android:minEms="6"
-                    android:onClick="pickDate"
-                    android:textSize="20dp" />
+                    <EditText
+                        android:id="@+id/et_childFavActivities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/textView13"
+                        android:ems="10"
+                        android:hint="@string/hint_activities"
+                        android:inputType="textMultiLine" />
 
-                <TextView
-                    android:id="@+id/tv_discount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/s_childAgeGroup"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_child_Edate"
+                        android:layout_toEndOf="@+id/textView11"
+                        android:text="@string/_new"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-                    android:clickable="true"
-                    android:focusableInTouchMode="false"
-                    android:hint="Select Discount"
-                    android:onClick="selectDiscount"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textSize="20dp" />
+                    <TextView
+                        android:id="@+id/et_Cbirthdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/tv_discount"
+                        android:layout_toStartOf="@+id/iv_ChildPic"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:hint="@string/hint_Cbirth"
+                        android:inputType="date"
+                        android:maxEms="14"
+                        android:minEms="6"
+                        android:onClick="pickDate"
+                        android:textSize="20dp" />
 
-                <Spinner
-                    android:id="@+id/s_childAgeGroup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_childLname"
-                    android:layout_toStartOf="@+id/iv_ChildPic"
-                    android:entries="@array/Child_Age"
-                    android:spinnerMode="dialog" />
+                    <TextView
+                        android:id="@+id/et_child_Edate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/et_Cbirthdate"
+                        android:clickable="true"
+                        android:ems="10"
+                        android:hint="@string/hint_enrollDate"
+                        android:inputType="date"
+                        android:maxEms="14"
+                        android:minEms="6"
+                        android:onClick="pickDate"
+                        android:textSize="20dp" />
 
-            </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/s_childAgeGroup"
+                        android:layout_toStartOf="@+id/iv_ChildPic"
+
+                        android:clickable="true"
+                        android:focusableInTouchMode="false"
+                        android:hint="Select Discount"
+                        android:onClick="selectDiscount"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="20dp" />
+
+                    <Spinner
+                        android:id="@+id/s_childAgeGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/Child_Age"
+                        android:spinnerMode="dialog"
+                        android:layout_below="@+id/et_childFname"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
         </ScrollView>
 
         <ScrollView
@@ -632,20 +628,36 @@
                     android:text="@string/_new"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </RelativeLayout>
+
         </ScrollView>
+        <ImageButton
+            android:id="@+id/b_loadChildInfo"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#ffe8e9ff"
+            android:onClick="loadDatatoEDITRecord"
+            android:padding="2dp"
+            android:src="@mipmap/ic_edit"
+            android:text="@string/button" />
 
+        <Spinner
+            android:id="@+id/s_reg_children"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/viewflipper"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/b_loadChildInfo"
+            android:textSize="15sp"
+            tools:listitem="@android:layout/simple_spinner_dropdown_item" />
     </ViewFlipper>
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true"
-        android:background="#ffe8e9ff"
-        android:gravity="center"
-        android:text="&lt;     Swipe HERE or from Left or Right edge to scroll    >"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-</RelativeLayout>
+</LinearLayout>

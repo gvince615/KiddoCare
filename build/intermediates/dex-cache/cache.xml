@@ -1,26 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
-
-    <item
-        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_sliceb.jar"
-        jumboMode="true"
-        revision="21.1.1"
-        sha1="21d28e75166601c154bff1baf38e914bcccf97a1">
-        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_sliceb_95ce13eb0b0d5a5047feedfc8a1c44a9886f7291/classes.dex" />
-    </item>
-    <item
-        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/1a/dependencies.jar"
-        jumboMode="true"
-        revision="21.1.1"
-        sha1="ccac4914babbb80996486af156ee901e101b016a">
-        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/1a/dependencies_9a3187d262ceae0ccdd19a693a20cb996a7a1338/classes.dex" />
-    </item>
-    <item
-        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRunSlicer/debug/jars/1/5/main_slice.jar"
-        jumboMode="true"
-        revision="21.1.1"
-        sha1="b09a39405aee95f71357d17944f3a8d7c9748778">
-        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/main_slice_1739f55d4effb34f78be92ba3622b4e240dee7bf/classes.dex" />
-    </item>
-
-</items>
+<items version="2" />

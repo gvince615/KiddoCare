@@ -1,32 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
+    abi="x86"
     api-level="23"
-    density="xxxhdpi"
+    density="xxhdpi"
     format="6"
-    timestamp="1458148733333183000" >
+    timestamp="1458219230211626000" >
 
     <task
         name="javac"
-        duration="591" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="365" />
+        duration="0" />
     <task
         name="verifier"
-        duration="34" />
+        duration="0" />
 
     <artifact
-        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="1458148733333183000" >
+    <build
+        timestamp="1458212477483249000"
+        verifier="DEPENDENCY_CHANGED" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="1458217627213099000"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3_46fb41f46cfb1b1ff5f96201dca0fcd981887855/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1_de72aa9c9998b382ee46e1bdfa3699d860c035fc/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5_622b922c88314b6d170fce806995c99f317a8f4f/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7_a6caa1d0cefdea11424338c893d5a54830f62acc/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0_6c694c2345a3644ee80c3bbda9bc32c6695ce89d/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4_2106691c4f280ae951dbc1330703854d6362f9e1/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6_6e1d7d18e0e612affc36aa55ade4f1cd554e189e/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2_0f2d83ff74a5762e47a5726862db093b225f8a21/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8_2158076083e2d0d2291000e72faa934fe0d8f39d/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="1458218745367769000"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9_65a13282d2c808ecb577ebb7402e58e81b4f0aa7/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="1458219230211626000" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>
