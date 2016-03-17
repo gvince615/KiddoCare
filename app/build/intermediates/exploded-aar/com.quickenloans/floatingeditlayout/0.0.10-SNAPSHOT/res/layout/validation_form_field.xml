@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/validationContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="25dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/upperFieldNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:paddingLeft="0dp"
+        android:text="floating label"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small"
+        android:translationZ="5dp"
+        android:visibility="gone"/>
+
+
+    <EditText
+        android:id="@+id/fieldValue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/upperFieldNameLabel"
+        android:background="@drawable/edit_text_med_gray_gbg"
+        android:elegantTextHeight="false"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/medium_gray"
+        android:textSize="@dimen/text_size_medium"
+        android:translationZ="0dp" />
+
+    <TextView
+        android:id="@+id/fieldErrorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fieldValue"
+        android:paddingLeft="0dp"
+        android:text=" "
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_small"
+        android:translationZ="0dp"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/tools">
+    <item android:drawable="@drawable/edit_text_dark_blue_wbg"
+        android:state_focused="true" custom:isloggedIn="false" />
+
+    <item android:drawable="@drawable/edit_text_med_gray_wbg"
+        android:state_focused="false" custom:isloggedIn="false" />
+
+</selector>
