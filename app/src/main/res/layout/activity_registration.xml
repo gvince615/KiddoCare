@@ -102,6 +102,16 @@
                         custom:qlfel_helperText="Enter the child's last name"
                         custom:qlfel_hintText="Child's Last Name"
                         custom:qlfel_inputType="person_name"/>
+
+                    <com.quickenloans.floatui.QLFloatingEditLayout
+                        android:id="@+id/et_childLname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/et_childLname"
+
+                        custom:qlfel_helperText="Enter the child's last name"
+                        custom:qlfel_hintText="Child's Last Name"
+                        custom:qlfel_inputType="@string/date"/>
                 </LinearLayout>
 
 
