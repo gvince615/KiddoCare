@@ -1,0 +1,139 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    custom:cardElevation="3dp"
+    custom:cardCornerRadius="5dp"
+    custom:cardBackgroundColor="@color/white"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.quickenloans.floatui.QLFloatingEditLayout
+            android:id="@+id/et_childFname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            custom:qlfel_helperText="Enter the child's first name"
+            custom:qlfel_hintText="Child's First Name"
+            custom:qlfel_inputType="person_name"
+            />
+        <com.quickenloans.floatui.QLFloatingEditLayout
+            android:id="@+id/et_childLname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            custom:qlfel_helperText="Enter the child's last name"
+            custom:qlfel_hintText="Child's Last Name"
+            custom:qlfel_inputType="person_name"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/et_Cbirthdate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="Birth Date:"/>
+
+            <TextView
+                android:id="@+id/et_Cbirthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:hint="@string/hint_Cbirth"
+                android:onClick="pickDate"
+                android:textSize="20sp"
+                android:gravity="end"
+                android:layout_gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/et_child_Edate_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="Enrollment Date:"/>
+
+            <TextView
+                android:id="@+id/et_child_Edate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:hint="@string/hint_enrollDate"
+                android:onClick="pickDate"
+                android:textSize="20sp"
+                android:gravity="end"
+                android:layout_gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.quickenloans.floatui.QLFloatingEditLayout
+                android:id="@+id/et_child_address_ln_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                custom:qlfel_helperText="Enter the child's first name"
+                custom:qlfel_hintText="Child's Address Line 1"
+                custom:qlfel_inputType="postalAddress"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.quickenloans.floatui.QLFloatingEditLayout
+                    android:id="@+id/et_child_address_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="5dp"
+                    android:paddingStart="0dp"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="0dp"
+
+                    custom:qlfel_helperText="Enter the child's zip"
+                    custom:qlfel_hintText="Child's Zip Code"
+                    custom:qlfel_inputType="zipCodeNumber"
+                    />
+                <com.quickenloans.floatui.QLFloatingEditLayout
+                    android:id="@+id/et_child_address_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="5dp"
+                    android:paddingRight="0dp"
+                    android:paddingLeft="5dp"
+
+                    custom:qlfel_helperText="Enter the child's city"
+                    custom:qlfel_hintText="Child's City"
+                    custom:qlfel_inputType="City"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

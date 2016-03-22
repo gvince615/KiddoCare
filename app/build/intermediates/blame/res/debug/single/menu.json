@@ -24,6 +24,10 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_reg.xml"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_scrolling.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_scrolling.xml"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_billing.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_billing.xml"
     },

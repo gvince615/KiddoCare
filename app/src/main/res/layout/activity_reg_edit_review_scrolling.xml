@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vintek_ss.vince.kiddocare.RegEditReviewScrollingActivity">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/registration_child_data_card" />
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <!--<include-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--layout="@layout/registration_child_data_card" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="@dimen/text_margin"-->
+        <!--android:text="@string/large_text" />-->
+
+</android.support.v4.widget.NestedScrollView>

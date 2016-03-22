@@ -33,6 +33,12 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.quickenloans.floatui.QLFloatingEditLayout;
+import com.quickenloans.floatui.Validator;
+import com.quickenloans.floatui.validators.*;
+
+
+
 import java.util.Calendar;
 import java.util.List;
 
@@ -54,14 +60,13 @@ public class RegistrationActivity extends Activity implements
     Spinner child_Age;
     boolean newDiscount = false;
     // child
-    EditText childFname, ChildFavActivity;
-    EditText childLname;
+    QLFloatingEditLayout childFname, childLname, childAddress;
+
+    EditText ChildFavActivity;
+
     TextView childBirth, childID;
     TextView childEnroll;
-    EditText childAddress;
     TextView childDTAPDate, parentM_Rnum, parentD_Rnum;
-    TextView childMMRdate;
-    TextView childHEPBdate;
     EditText childMed1;
     TextView childMedtime1;
     EditText childAllergy;
@@ -78,10 +83,18 @@ public class RegistrationActivity extends Activity implements
     private ViewFlipper viewFlipper;
     private float lastX;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
+
+        //set validators
+        Validation.bind(this, R.id.et_childFname, Validators.FIRST_NAME_VALIDATOR);
+        Validation.bind(this, R.id.et_childLname, Validators.FIRST_NAME_VALIDATOR);
+        Validation.bind(this, R.id.et_child_birth_date, Validators.BIRTH_DATE_VALIDATOR);
+
         // Spinner element
         spinner = (Spinner) findViewById(R.id.s_reg_children);
         viewFlipper = (ViewFlipper) findViewById(R.id.viewflipper);
@@ -151,10 +164,10 @@ public class RegistrationActivity extends Activity implements
             }
 
 
-            childLname = (EditText) findViewById(R.id.et_childLname);
-            childLname.setText(cln);
-            childAddress = (EditText) findViewById(R.id.et_childAddy);
-            childAddress.setText(cadd);
+            childLname = (QLFloatingEditLayout) findViewById(R.id.et_childLname);
+            childLname.getEditText().setText(cln);
+            childAddress = (QLFloatingEditLayout) findViewById(R.id.et_childAddy);
+            childAddress.getEditText().setText(cadd);
 
             ///// Get and Set Parent Data for Record Update
 
@@ -313,8 +326,9 @@ public class RegistrationActivity extends Activity implements
 
                         ImageView iv = (ImageView) findViewById(R.id.iv_ChildPic);
                         iv.setImageBitmap(cPic);
-                        childFname = (EditText) findViewById(R.id.et_childFname);
-                        childFname.setText(cfn);
+                        childFname = (QLFloatingEditLayout) findViewById(R.id.et_childFname);
+
+                        childFname.getEditText().setText(cfn);
                         //childLname = (EditText) findViewById(R.id.et_childLname);
                         // childLname.setText(cln);
                         childID = (TextView) findViewById(R.id.textView12);
@@ -323,8 +337,8 @@ public class RegistrationActivity extends Activity implements
                         childEnroll.setText(ced);
                         childBirth = (TextView) findViewById(R.id.et_Cbirthdate);
                         childBirth.setText(cbd);
-                        childAddress = (EditText) findViewById(R.id.et_childAddy);
-                        childAddress.setText(cadd);
+                        childAddress = (QLFloatingEditLayout) findViewById(R.id.et_childAddy);
+                        childAddress.getEditText().setText(cadd);
                         childDTAPDate = (TextView) findViewById(R.id.et_DTAPdate);
                         childDTAPDate.setText(cdtap);
                         //            childMMRdate = (TextView) findViewById(R.id.et_MMRdate);
@@ -661,15 +675,15 @@ public class RegistrationActivity extends Activity implements
             childPic = (ImageView) findViewById(R.id.iv_ChildPic);
             // REQUIRED
 
-            childFname = (EditText) findViewById(R.id.et_childFname);
+            childFname = (QLFloatingEditLayout) findViewById(R.id.et_childFname);
             String cfn = childFname.getText().toString();
-            childLname = (EditText) findViewById(R.id.et_childLname);
+            childLname = (QLFloatingEditLayout) findViewById(R.id.et_childLname);
             String cln = childLname.getText().toString();
             childBirth = (TextView) findViewById(R.id.et_Cbirthdate);
             String cbd = childBirth.getText().toString();
             childEnroll = (TextView) findViewById(R.id.et_child_Edate);
             String ced = childEnroll.getText().toString();
-            childAddress = (EditText) findViewById(R.id.et_childAddy);
+            childAddress = (QLFloatingEditLayout) findViewById(R.id.et_childAddy);
             String cadd = childAddress.getText().toString();
 
             childDTAPDate = (TextView) findViewById(R.id.et_DTAPdate);

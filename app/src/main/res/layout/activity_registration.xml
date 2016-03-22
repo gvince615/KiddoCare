@@ -1,6 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/registration_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,6 +12,8 @@
         android:elevation="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
 
     <Button
         android:text="Child"
@@ -28,6 +30,8 @@
 
     </android.support.v7.widget.ButtonBarLayout>
 
+
+
     <ViewFlipper
         android:id="@+id/viewflipper"
         android:layout_width="match_parent"
@@ -41,11 +45,15 @@
             android:layout_height="match_parent"
             android:padding="5dp">
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="5dp">
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -101,17 +109,17 @@
 
                         custom:qlfel_helperText="Enter the child's last name"
                         custom:qlfel_hintText="Child's Last Name"
-                        custom:qlfel_inputType="@string/date"/>
+                        custom:qlfel_inputType="person_name"/>
 
                     <com.quickenloans.floatui.QLFloatingEditLayout
-                        android:id="@+id/et_childAddy"
+                        android:id="@+id/et_child_birth_date"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/et_childLname"
 
-                        custom:qlfel_helperText="Enter the child's address"
-                        custom:qlfel_hintText="Child's Address"
-                        custom:qlfel_inputType="person_name"/>
+                        custom:qlfel_helperText="Enter the child's birth date"
+                        custom:qlfel_hintText="Child's Birth Date"
+                        custom:qlfel_inputType="short_date"/>
                 </LinearLayout>
 
 
@@ -659,5 +667,7 @@
             android:layout_toLeftOf="@+id/b_loadChildInfo"
             android:textSize="15sp"
             tools:listitem="@android:layout/simple_spinner_dropdown_item" />
+
+
     </ViewFlipper>
 </LinearLayout>

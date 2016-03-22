@@ -74,7 +74,8 @@
         <activity
             android:name=".MealActivity"
             android:label="@string/title_activity_meal"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
@@ -82,7 +83,8 @@
         <activity
             android:name=".NewMealActivity"
             android:label="@string/title_activity_new_meal"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
@@ -90,7 +92,8 @@
         <activity
             android:name=".CalendarActivity"
             android:label="@string/title_activity_calendar"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
@@ -108,8 +111,17 @@
             android:name=".AboutActivity"
             android:label="About KiddoCare"
             android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_reg_edit_review_scrolling"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            android:windowSoftInputMode="stateHidden|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
