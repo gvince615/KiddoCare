@@ -195,4 +195,16 @@
         <item name="50%">.50</item>
     </string-array>
 
+    <string-array name="guardian_type">
+        <item name="mother">Mother</item>
+        <item name="father">Father</item>
+        <item name="grandmother">Grandmother</item>
+        <item name="grandfather">Grandfather</item>
+        <item name="aunt">Aunt</item>
+        <item name="uncle">Uncle</item>
+        <item name="other_guardian">Other - Guardian</item>
+        <item name="other_pickup">Other - Pick-up Person</item>
+
+    </string-array>
+
 </resources>

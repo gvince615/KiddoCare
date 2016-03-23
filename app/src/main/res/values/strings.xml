@@ -28,7 +28,12 @@
     <color name="blue">#80000099</color>
     <color name="ltgrey">#80999999</color>
     <color name="white">#ffffff</color>
+    <color name="trans_white">#EEffffff</color>
     <color name="trans">#00ffffff</color>
+    <color name="logo_pink">#F669C8</color>
+    <color name="logo_blue">#3A9AF9</color>
+    <color name="logo_yellow">#FEFE9C</color>
+    <color name="logo_green">#0B9D9D</color>
 
     <string name="title_activity_loading">Kiddo Care</string>
     <string name="loading">Loading...</string>
@@ -36,7 +41,7 @@
     <string name="tpic_Label">Set Child Picture</string>
     <string name="hint_ChildFname">First Name</string>
     <string name="hint_childLname">Last Name</string>
-    <string name="hint_enrollDate">Select Enrollment Date</string>
+    <string name="hint_enrollDate">Select Date</string>
     <string name="label_Address">Child\'s Address</string>
     <string name="label_medical">Medical Information</string>
     <string name="hint_medication_name">Medication Name</string>

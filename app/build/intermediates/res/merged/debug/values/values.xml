@@ -185,6 +185,17 @@
         <item name="45%">.45</item>
         <item name="50%">.50</item>
     </string-array>
+    <string-array name="guardian_type">
+        <item name="mother">Mother</item>
+        <item name="father">Father</item>
+        <item name="grandmother">Grandmother</item>
+        <item name="grandfather">Grandfather</item>
+        <item name="aunt">Aunt</item>
+        <item name="uncle">Uncle</item>
+        <item name="other_guardian">Other - Guardian</item>
+        <item name="other_pickup">Other - Pick-up Person</item>
+
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -260,6 +271,10 @@
     <color name="light_green" ns1:ignore="UnusedResources">#D3EF8D</color>
     <color name="lightest_blue" ns1:ignore="UnusedResources">#EDF2F7</color>
     <color name="lightest_grey" ns1:ignore="UnusedResources">#f2f2f2</color>
+    <color name="logo_blue">#3A9AF9</color>
+    <color name="logo_green">#0B9D9D</color>
+    <color name="logo_pink">#F669C8</color>
+    <color name="logo_yellow">#FEFE9C</color>
     <color name="ltgrey">#80999999</color>
     <color name="material_blue_500">#5677fc</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -316,6 +331,7 @@
     <color name="text_color_primary">#dd000000</color>
     <color name="text_color_secondary">#89000000</color>
     <color name="trans">#00ffffff</color>
+    <color name="trans_white">#EEffffff</color>
     <color name="transparent" ns1:ignore="UnusedResources">#00000000</color>
     <color name="viewfinder_laser">#ffcc0000</color>
     <color name="viewfinder_mask">#a0000000</color>
@@ -438,7 +454,7 @@
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="app_bar_height">260dp</dimen>
+    <dimen name="app_bar_height">220dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -575,7 +591,7 @@
     <string name="hint_allergies">List any Allergies</string>
     <string name="hint_childLname">Last Name</string>
     <string name="hint_date">Select Date</string>
-    <string name="hint_enrollDate">Select Enrollment Date</string>
+    <string name="hint_enrollDate">Select Date</string>
     <string name="hint_medication_name">Medication Name</string>
     <string name="hint_phNum">Phone Number</string>
     <string name="hint_ppuLname">Last Name</string>

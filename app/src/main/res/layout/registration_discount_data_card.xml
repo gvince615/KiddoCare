@@ -1,0 +1,55 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    custom:cardElevation="3dp"
+    custom:cardCornerRadius="5dp"
+    custom:cardBackgroundColor="@color/trans_white"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/logo_yellow_box">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:background="@color/logo_yellow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discount to Apply:"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold|italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.quickenloans.floatui.QLFloatingEditLayout
+                android:id="@+id/et_discount_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                custom:qlfel_helperText="Enter the discount description"
+                custom:qlfel_hintText="Discount Description"
+                custom:qlfel_inputType="discount_desc"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_discount"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/Discount_values"
+                android:textSize="25sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

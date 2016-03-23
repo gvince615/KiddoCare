@@ -4,41 +4,57 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     custom:cardElevation="3dp"
     custom:cardCornerRadius="5dp"
-    custom:cardBackgroundColor="@color/white"
-    android:layout_margin="10dp">
+    custom:cardBackgroundColor="@color/trans_white"
+    android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="10dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/logo_blue_box"
         android:orientation="vertical">
 
-        <com.quickenloans.floatui.QLFloatingEditLayout
-            android:id="@+id/et_childFname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            custom:qlfel_helperText="Enter the child's first name"
-            custom:qlfel_hintText="Child's First Name"
-            custom:qlfel_inputType="person_name"
-            />
-        <com.quickenloans.floatui.QLFloatingEditLayout
-            android:id="@+id/et_childLname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            custom:qlfel_helperText="Enter the child's last name"
-            custom:qlfel_hintText="Child's Last Name"
-            custom:qlfel_inputType="person_name"
-            />
-        </LinearLayout>
-
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/logo_blue"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Child's Information:"
+                android:layout_marginBottom="5dp"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.quickenloans.floatui.QLFloatingEditLayout
+                android:id="@+id/et_childFname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                custom:qlfel_helperText="Enter the child's first name"
+                custom:qlfel_hintText="Child's First Name"
+                custom:qlfel_inputType="person_name"
+                />
+            <com.quickenloans.floatui.QLFloatingEditLayout
+                android:id="@+id/et_childLname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                custom:qlfel_helperText="Enter the child's last name"
+                custom:qlfel_hintText="Child's Last Name"
+                custom:qlfel_inputType="person_name"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -47,7 +63,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="Birth Date:"/>
 
             <TextView
@@ -56,13 +72,15 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:layout_weight="1"
-                android:hint="@string/hint_Cbirth"
+                android:hint="@string/hint_date"
                 android:onClick="pickDate"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:gravity="end"
                 android:layout_gravity="right" />
         </LinearLayout>
         <LinearLayout
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -71,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:text="Enrollment Date:"/>
 
             <TextView
@@ -80,13 +98,14 @@
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:layout_weight="1"
-                android:hint="@string/hint_enrollDate"
+                android:hint="@string/hint_date"
                 android:onClick="pickDate"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:gravity="end"
                 android:layout_gravity="right" />
         </LinearLayout>
         <LinearLayout
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -95,6 +114,7 @@
                 android:id="@+id/et_child_address_ln_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
 
                 custom:qlfel_helperText="Enter the child's first name"
                 custom:qlfel_hintText="Child's Address Line 1"
