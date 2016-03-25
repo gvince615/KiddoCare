@@ -11,8 +11,9 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
@@ -20,7 +21,9 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import static com.vintek_ss.vince.kiddocare.R.drawable.ic_boy;
 import static com.vintek_ss.vince.kiddocare.R.drawable.ic_girl;
@@ -35,7 +38,12 @@ public class ScrollingActivity extends AppCompatActivity {
     final String cItems[] = {"Generic Boy Image", "Generic Girl Image", "Take Picture"};
 
     ImageView childImage;
+    RecyclerView rv_RegistrationData;
     private int mYear, mMonth, mDay, mHour, mMinute;
+
+    private List<Child> children;
+
+
 
 
 
@@ -51,13 +59,13 @@ public class ScrollingActivity extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbar =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle("Title");
+        collapsingToolbar.setTitle("LastName, FirstName");
         collapsingToolbar.setContentScrimColor(getResources().getColor(R.color.black));
 
-        childImage = (ImageView) findViewById(R.id.iv_child_image);
-
-
-
+        rv_RegistrationData = (RecyclerView)findViewById(R.id.rv_registration_data_list);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        rv_RegistrationData.setLayoutManager(llm);
+        //rv_RegistrationData.setHasFixedSize(true);
 
         FloatingActionButton fab_take_pic = (FloatingActionButton) findViewById(R.id.fab_take_child_picture);
         fab_take_pic.setOnClickListener(new View.OnClickListener() {
@@ -67,16 +75,32 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab_add_card = (FloatingActionButton) findViewById(R.id.fab_add_card);
-        fab_add_card.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Card Added", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab_add_card = (FloatingActionButton) findViewById(R.id.fab_add_card);
+//        fab_add_card.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Card Added", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         loadBackdrop();
+        initializeData();
+        initializeAdapter();
+    }
+
+    private void initializeData(){
+        children = new ArrayList<>();
+        children.add(new Child(1, R.drawable.ic_girl, "KateLynn", "Vincent",
+                "11-20-2012", "01-01-2013", "5162 Glen Cove Ln", "Flint", "MI", "48507"));
+
+        children.add(new Child(1, R.drawable.ic_girl, "Jeremiah", "Vincent",
+                "11-10-2008", "01-01-2013", "5162 Glen Cove Ln", "Flint", "MI", "48507"));
+    }
+
+    private void initializeAdapter(){
+        RegistrationRVAdapter adapter = new RegistrationRVAdapter(children);
+        rv_RegistrationData.setAdapter(adapter);
     }
 
     public void pickDate(View v) {
@@ -129,15 +153,15 @@ public class ScrollingActivity extends AppCompatActivity {
                 }
                 if (ID == (R.id.et_Cbirthdate)) {
                     TextView tv = (TextView) findViewById(R.id.et_Cbirthdate);
-                    tv.setText(year + "-" + newMonth + "-" + dayOfMonth);
+                    tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
                 if (ID == (R.id.et_child_Edate)) {
                     TextView tv = (TextView) findViewById(R.id.et_child_Edate);
-                    tv.setText(year + "-" + newMonth + "-" + dayOfMonth);
+                    tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
                 if (ID == (R.id.et_DTAPdate)) {
                     TextView tv = (TextView) findViewById(R.id.et_DTAPdate);
-                    tv.setText(year + "-" + newMonth + "-" + dayOfMonth);
+                    tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
 //                if (ID == (R.id.et_MMRdate)) {
 //                    TextView tv = (TextView) findViewById(R.id.et_MMRdate);

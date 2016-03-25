@@ -128,7 +128,7 @@
             android:label="@string/title_activity_reg_edit_review_scrolling"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateHidden|adjustPan" >
+            android:windowSoftInputMode="stateHidden|adjustResize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />

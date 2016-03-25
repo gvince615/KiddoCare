@@ -4,37 +4,54 @@
     api-level="23"
     density="xxhdpi"
     format="6"
-    timestamp="1458761542807738000"
-    verifier="COMPATIBLE" >
+    timestamp="1458905955455021000"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="310" />
+        duration="221" />
     <task
         name="instant-run-dex"
-        duration="413" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="20" />
+        duration="12" />
     <task
         name="verifier"
         duration="1" />
 
     <artifact
-        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/reload-dex/debug/classes.dex"
-        type="RELOAD_DEX" />
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6_6e1d7d18e0e612affc36aa55ade4f1cd554e189e/classes.dex"
+        type="DEX" />
 
-    <build timestamp="1458761393760983000" >
+    <build timestamp="1458903875153590000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="1458761542807738000"
-        verifier="COMPATIBLE" >
+    <build timestamp="1458904200635348000" >
         <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1_de72aa9c9998b382ee46e1bdfa3699d860c035fc/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7_a6caa1d0cefdea11424338c893d5a54830f62acc/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4_2106691c4f280ae951dbc1330703854d6362f9e1/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="1458905955455021000"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6_6e1d7d18e0e612affc36aa55ade4f1cd554e189e/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

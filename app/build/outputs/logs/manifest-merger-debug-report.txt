@@ -212,7 +212,7 @@ ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/Andro
 activity#com.vintek_ss.vince.kiddocare.ScrollingActivity
 ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:119:9-128:20
 	android:windowSoftInputMode
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:124:13-64
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:124:13-67
 	android:screenOrientation
 		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:123:13-49
 	android:label
