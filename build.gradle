@@ -4,7 +4,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0-alpha3'
+        classpath 'com.android.tools.build:gradle:2.1.0-beta1'
 
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
         // NOTE: Do not place your application dependencies here; they belong
@@ -24,23 +24,23 @@ allprojects {
         println "TODO: set up artifactory credentials"
         maven {
             //todo set up credentials
-            //credentials {
-            //  username 'user'
-            //  password 'password'
-            //}
+            credentials {
+              username 'user'
+              password 'password'
+            }
             //todo this should use DNS name (e.g., ql1mobjenkins2) not IP address
             //todo this is probably not the final server anyway
-            url "http://10.2.11.231:8081/artifactory/libs-snapshot-local"
+            url "http://ql1mobrepo1:8081/artifactory/libs-snapshot-local"
         }
         maven {
             //todo set up credentials
-            //credentials {
-            //  username 'user'
-            //  password 'password'
-            //}
+            credentials {
+              username 'user'
+              password 'password'
+            }
             //todo this should use DNS name (e.g., ql1mobjenkins2) not IP address
             //todo this is probably not the final server anyway
-            url "http://10.2.11.231:8081/artifactory/libs-release-local"
+            url "http://ql1mobrepo1:8081/artifactory/libs-release-local"
         }
     }
 }

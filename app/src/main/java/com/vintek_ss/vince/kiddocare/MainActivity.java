@@ -64,7 +64,7 @@ public class MainActivity extends Activity implements
                                 mainFragment.newInstance(position)).commit();
                 break;
             case 2:
-                Intent intent2 = new Intent(this, ScrollingActivity.class);
+                Intent intent2 = new Intent(this, RegisteredListScrollingActivity.class);
                 startActivity(intent2);
                 break;
             case 3:

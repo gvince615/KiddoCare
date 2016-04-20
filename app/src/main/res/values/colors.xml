@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#0B9D9D</color>
+    <color name="logo_pink">#F669C8</color>
+    <color name="logo_blue">#3A9AF9</color>
+    <color name="logo_yellow">#FEFE9C</color>
+    <color name="logo_green">#0B9D9D</color>
+
+    <color name="black">#000000</color>
+    <color name="drkgrey">#80000000</color>
+    <color name="red">#80990000</color>
+    <color name="drkred">#990000</color>
+    <color name="green">#80009900</color>
+    <color name="drkgreen">#009900</color>
+    <color name="blue">#80000099</color>
+    <color name="ltgrey">#80999999</color>
+    <color name="white">#ffffff</color>
+    <color name="trans_white">#DDffffff</color>
+    <color name="trans">#00ffffff</color>
+</resources>

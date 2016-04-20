@@ -117,14 +117,35 @@
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
         </activity>
         <activity
-            android:name=".ScrollingActivity"
-            android:label="@string/title_activity_reg_edit_review_scrolling"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:name=".RegisteredListScrollingActivity"
+            android:label="@string/title_activity_registered"
             android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
             android:windowSoftInputMode="stateHidden|adjustResize">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegistrationListScrollingActivity"
+            android:label="@string/title_activity_reg_edit_review_scrolling"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+        </activity>
+        <activity
+            android:name=".KiddoCareMainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/tools">
+<resources>
     <string-array name="Billing_Daily">
         <item name="10.00">$10.00 per Day</item>
         <item name="12.50">$12.50 per Day</item>
@@ -196,9 +196,11 @@
         <item name="other_pickup">Other - Pick-up Person</item>
 
     </string-array>
+    <attr format="reference" name="calendarViewStyle"/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
+    <attr format="reference" name="menuDrawerStyle"/>
     <attr format="string" name="title"/>
     <bool name="abc_action_bar_embed_tabs">true</bool>
     <bool name="abc_action_bar_embed_tabs_pre_jb">false</bool>
@@ -212,7 +214,6 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
-    <color name="accent">#ff2196f3</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
@@ -221,6 +222,8 @@
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#000000</color>
     <color name="blue">#80000099</color>
+    <color name="blue_dark">#00aeef</color>
+    <color name="blue_light">#48a5cc</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -233,13 +236,9 @@
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
-    <color name="content_background">#fffafafa</color>
-    <color name="contents_text">#ff000000</color>
-    <color name="dark_blue" ns1:ignore="UnusedResources">#0C4569</color>
-    <color name="dark_gray" ns1:ignore="UnusedResources">#5A5A5A</color>
-    <color name="dark_green" ns1:ignore="UnusedResources">#3C7814</color>
-    <color name="dark_orange" ns1:ignore="UnusedResources">#E67800</color>
-    <color name="dark_red" ns1:ignore="UnusedResources">#910e16</color>
+    <color name="colorAccent">#0B9D9D</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="design_fab_shadow_end_color">@android:color/transparent</color>
     <color name="design_fab_shadow_mid_color">#14000000</color>
     <color name="design_fab_shadow_start_color">#44000000</color>
@@ -257,7 +256,6 @@
     <color name="drkgreen">#009900</color>
     <color name="drkgrey">#80000000</color>
     <color name="drkred">#990000</color>
-    <color name="encode_view">#ffffffff</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
     <color name="green">#80009900</color>
@@ -265,12 +263,6 @@
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
-    <color name="light" ns1:ignore="UnusedResources">#fafafa</color>
-    <color name="light_blue" ns1:ignore="UnusedResources">#C3D3E3</color>
-    <color name="light_gray" ns1:ignore="UnusedResources">#E5E5E5</color>
-    <color name="light_green" ns1:ignore="UnusedResources">#D3EF8D</color>
-    <color name="lightest_blue" ns1:ignore="UnusedResources">#EDF2F7</color>
-    <color name="lightest_grey" ns1:ignore="UnusedResources">#f2f2f2</color>
     <color name="logo_blue">#3A9AF9</color>
     <color name="logo_green">#0B9D9D</color>
     <color name="logo_pink">#F669C8</color>
@@ -289,17 +281,8 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
-    <color name="medium_blue" ns1:ignore="UnusedResources">#2081BF</color>
-    <color name="medium_gray" ns1:ignore="UnusedResources">#AAAAAA</color>
-    <color name="medium_green" ns1:ignore="UnusedResources">#6C9F2E</color>
-    <color name="onboarding_blue">#0C5C76</color>
-    <color name="onboarding_green">#97C93E</color>
-    <color name="onboarding_orange">#F89A1C</color>
-    <color name="onboarding_purple">#7E3F98</color>
-    <color name="onboarding_red">#D92229</color>
-    <color name="onboarding_teal">#03B297</color>
-    <color name="orange" ns1:ignore="UnusedResources">#FF9B00</color>
-    <color name="possible_result_points">#c0ffbd21</color>
+    <color name="md__defaultBackground">#FF555555</color>
+    <color name="navigationBarColor">#000000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -308,34 +291,26 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <color name="purple" ns1:ignore="UnusedResources">#551387</color>
     <color name="red">#80990000</color>
-    <color name="result_minor_text">#ffc0c0c0</color>
-    <color name="result_points">#c099cc00</color>
-    <color name="result_text">#ffffffff</color>
-    <color name="result_view">#b0000000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
-    <color name="selectable_background_pressed">#1f000000</color>
-    <color name="status_bar">#ff1976d2</color>
-    <color name="status_bar_blue" ns1:ignore="UnusedResources">#0C344E</color>
-    <color name="status_text">#ffffffff</color>
+    <color name="stroke">#77d4f6</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
-    <color name="text_color_primary">#dd000000</color>
-    <color name="text_color_secondary">#89000000</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="text_light">#ababab</color>
+    <color name="text_normal">#626262</color>
+    <color name="text_super_light">#c0c0c0</color>
     <color name="trans">#00ffffff</color>
-    <color name="trans_white">#EEffffff</color>
-    <color name="transparent" ns1:ignore="UnusedResources">#00000000</color>
-    <color name="viewfinder_laser">#ffcc0000</color>
-    <color name="viewfinder_mask">#a0000000</color>
+    <color name="trans_white">#DDffffff</color>
     <color name="white">#ffffff</color>
+    <color name="windowBackground">#FFFFFF</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -363,13 +338,13 @@
     <declare-styleable name="LinearLayoutCompat"><attr name="android:orientation"/><attr name="android:gravity"/><attr name="android:baselineAligned"/><attr name="android:baselineAlignedChildIndex"/><attr name="android:weightSum"/><attr format="boolean" name="measureWithLargestChild"/><attr name="divider"/><attr name="showDividers"><flag name="none" value="0"/><flag name="beginning" value="1"/><flag name="middle" value="2"/><flag name="end" value="4"/></attr><attr format="dimension" name="dividerPadding"/></declare-styleable>
     <declare-styleable name="LinearLayoutCompat_Layout"><attr name="android:layout_width"/><attr name="android:layout_height"/><attr name="android:layout_weight"/><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ListPopupWindow"><attr name="android:dropDownVerticalOffset"/><attr name="android:dropDownHorizontalOffset"/></declare-styleable>
+    <declare-styleable name="MenuDrawer"><attr format="reference" name="mdContentBackground"/><attr format="reference" name="mdMenuBackground"/><attr format="dimension" name="mdMenuSize"/><attr format="reference" name="mdActiveIndicator"/><attr format="boolean" name="mdDropShadowEnabled"/><attr format="dimension" name="mdDropShadowSize"/><attr format="color" name="mdDropShadowColor"/><attr format="reference" name="mdDropShadow"/><attr format="dimension" name="mdTouchBezelSize"/><attr format="boolean" name="mdAllowIndicatorAnimation"/><attr format="integer" name="mdMaxAnimationDuration"/><attr format="reference" name="mdSlideDrawable"/><attr format="string" name="mdDrawerOpenUpContentDescription"/><attr format="string" name="mdDrawerClosedUpContentDescription"/><attr format="boolean" name="mdDrawOverlay"/><attr format="enum" name="mdPosition"><enum name="left" value="0"/><enum name="top" value="1"/><enum name="right" value="2"/><enum name="bottom" value="3"/><enum name="start" value="4"/><enum name="end" value="5"/></attr></declare-styleable>
     <declare-styleable name="MenuGroup"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:checkableBehavior"/><attr name="android:visible"/><attr name="android:enabled"/></declare-styleable>
     <declare-styleable name="MenuItem"><attr name="android:id"/><attr name="android:menuCategory"/><attr name="android:orderInCategory"/><attr name="android:title"/><attr name="android:titleCondensed"/><attr name="android:icon"/><attr name="android:alphabeticShortcut"/><attr name="android:numericShortcut"/><attr name="android:checkable"/><attr name="android:checked"/><attr name="android:visible"/><attr name="android:enabled"/><attr name="android:onClick"/><attr name="showAsAction"><flag name="never" value="0"/><flag name="ifRoom" value="1"/><flag name="always" value="2"/><flag name="withText" value="4"/><flag name="collapseActionView" value="8"/></attr><attr format="reference" name="actionLayout"/><attr format="string" name="actionViewClass"/><attr format="string" name="actionProviderClass"/></declare-styleable>
     <declare-styleable name="MenuView"><attr name="android:itemTextAppearance"/><attr name="android:horizontalDivider"/><attr name="android:verticalDivider"/><attr name="android:headerBackground"/><attr name="android:itemBackground"/><attr name="android:windowAnimationStyle"/><attr name="android:itemIconDisabledAlpha"/><attr format="boolean" name="preserveIconSpacing"/></declare-styleable>
     <declare-styleable name="NavigationView"><attr name="android:background"/><attr name="android:fitsSystemWindows"/><attr name="android:maxWidth"/><attr name="elevation"/><attr format="reference" name="menu"/><attr format="color" name="itemIconTint"/><attr format="color" name="itemTextColor"/><attr format="reference" name="itemBackground"/><attr format="reference" name="itemTextAppearance"/><attr format="reference" name="headerLayout"/></declare-styleable>
     <declare-styleable name="PopupWindow"><attr format="boolean" name="overlapAnchor"/><attr name="android:popupBackground"/></declare-styleable>
     <declare-styleable name="PopupWindowBackgroundState"><attr format="boolean" name="state_above_anchor"/></declare-styleable>
-    <declare-styleable name="QLFloatingEditLayout"><attr format="integer" name="qlfel_maxLength"/><attr format="integer" name="qlfel_minLength"/><attr format="string" name="qlfel_inputType"/><attr format="string" name="qlfel_helperText"/><attr format="string" name="qlfel_hintText"/><attr format="string" name="qlfel_specialRule"/><attr format="string" name="qlfel_specialRuleErrorString"/><attr format="string" name="qlfel_allowableRegex"/><attr format="string" name="qlfel_allowableRegexErrorString"/><attr format="string" name="qlfel_invalidCharRegex"/><attr format="string" name="qlfel_invalidCharRegexErrorString"/><attr format="string" name="qlfel_numCharErrorString"/><attr name="android:imeOptions"/><attr format="string" name="qlfel_validator"/></declare-styleable>
     <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable>
     <declare-styleable name="ScrimInsetsFrameLayout"><attr format="color|reference" name="insetForeground"/></declare-styleable>
     <declare-styleable name="ScrollingViewBehavior_Params"><attr format="dimension" name="behavior_overlapTop"/></declare-styleable>
@@ -385,6 +360,7 @@
     <declare-styleable name="View"><attr format="dimension" name="paddingStart"/><attr format="dimension" name="paddingEnd"/><attr name="android:focusable"/><attr format="reference" name="theme"/><attr name="android:theme"/></declare-styleable>
     <declare-styleable name="ViewBackgroundHelper"><attr name="android:background"/><attr format="color" name="backgroundTint"/><attr name="backgroundTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
     <declare-styleable name="ViewStubCompat"><attr name="android:layout"/><attr name="android:inflatedId"/><attr name="android:id"/></declare-styleable>
+    <declare-styleable name="day"><attr format="boolean" name="state_current"/></declare-styleable>
     <dimen name="abc_action_bar_content_inset_material">16dp</dimen>
     <dimen name="abc_action_bar_default_height_material">56dp</dimen>
     <dimen name="abc_action_bar_default_padding_end_material">0dp</dimen>
@@ -506,9 +482,7 @@
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
     <dimen name="text_margin">16dp</dimen>
-    <dimen name="text_size_large">22sp</dimen>
-    <dimen name="text_size_medium">18sp</dimen>
-    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_large">17sp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -516,6 +490,14 @@
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
     <item name="item_touch_helper_previous_elevation" type="id"/>
+    <item name="mdActiveViewPosition" type="id"/>
+    <item name="mdContent" type="id"/>
+    <item name="mdMenu" type="id"/>
+    <item name="md__content" type="id"/>
+    <item name="md__drawer" type="id"/>
+    <item name="md__menu" type="id"/>
+    <item name="md__translationX" type="id"/>
+    <item name="md__translationY" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
@@ -560,6 +542,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+    <string name="age_bracket">Age Bracket</string>
     <string name="app_name">KiddoCare</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
@@ -582,21 +565,24 @@
     <string name="hello_world">hello</string>
     <string name="hepb">HePB</string>
     <string name="hint_Cbirth">Select Birth Date</string>
-    <string name="hint_ChildFname">First Name</string>
     <string name="hint_Demail">Dad\'s Email Address</string>
     <string name="hint_Memail">Mom\'s Email Address</string>
     <string name="hint_PhoneNumber">(###) ###-####</string>
     <string name="hint_TaskTitle">Task Title</string>
     <string name="hint_activities">Coloring, Blocks, etc...</string>
+    <string name="hint_address_ln_1">Street Address</string>
     <string name="hint_allergies">List any Allergies</string>
-    <string name="hint_childLname">Last Name</string>
+    <string name="hint_city">City</string>
     <string name="hint_date">Select Date</string>
     <string name="hint_enrollDate">Select Date</string>
+    <string name="hint_first_name">First Name</string>
     <string name="hint_medication_name">Medication Name</string>
     <string name="hint_phNum">Phone Number</string>
     <string name="hint_ppuLname">Last Name</string>
     <string name="hint_ppulname">First name</string>
+    <string name="hint_state">State</string>
     <string name="hint_time">Select Time</string>
+    <string name="hint_zip">5-Digit Zip Code</string>
     <string name="isactive_">IsActive?</string>
     <string name="lab_C">C</string>
     <string name="lab_h">H</string>
@@ -695,6 +681,7 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="last_name">Last Name</string>
     <string name="library_FloatingActionButton_author">Oleksandr Melnykov</string>
     <string name="library_FloatingActionButton_authorWebsite">https://github.com/makovkastar/FloatingActionButton</string>
     <string name="library_FloatingActionButton_isOpenSource">true</string>
@@ -706,12 +693,10 @@
     <string name="library_FloatingActionButton_repositoryLink">https://github.com/makovkastar/FloatingActionButton</string>
     <string name="loading">Loading...</string>
     <string name="loggedIn">Logged In?</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
     <string name="menu_newMP">New Meal Plan</string>
     <string name="mmr">MMR</string>
-    <string name="myriad_pro">MyriadPro-Regular.otf</string>
-    <string name="myriad_pro_bold">MyriadPro-Bold.otf</string>
-    <string name="myriad_pro_italic">MyriadPro-It.otf</string>
-    <string name="myriad_pro_semibold">MyriadPro-Semibold.otf</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="note_peaoplecanpickup">Persons Permitted to Pick up and Drop off Child</string>
@@ -720,16 +705,14 @@
     <string name="print_string">Print</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
-    <string name="quatro_slab">QuatroSlab.otf</string>
-    <string name="quatro_slab_bold">QuatroSlab-Bold.otf</string>
-    <string name="quatro_slab_italic">QuatroSlab-Italic.otf</string>
-    <string name="quatro_slab_semibold">QuatroSlab-SemiBold.otf</string>
     <string name="recnum">Record #: </string>
     <string name="savemp">Save New Meal Plan</string>
     <string name="selec_boy">Boy</string>
     <string name="selec_girl">Girl</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="t_b_saveReg">Save/Update Registration</string>
+    <string name="time_next">Next</string>
+    <string name="time_prev">Previous</string>
     <string name="title_MPsection1">Breakfast / AM Snack</string>
     <string name="title_MPsection2">Lunch / PM Snack</string>
     <string name="title_MPsection3">Dinner / Snack</string>
@@ -742,12 +725,15 @@
     <string name="title_activity_meal">Meal Plan</string>
     <string name="title_activity_new_meal">Add New Meal Plan</string>
     <string name="title_activity_new_registration">NewRegistrationActivity</string>
-    <string name="title_activity_reg_edit_review_scrolling">RegEditReviewScrollingActivity</string>
+    <string name="title_activity_reg_edit_review_scrolling">Registration</string>
+    <string name="title_activity_registered">Registered Children</string>
     <string name="title_activity_registration">Child Registration</string>
     <string name="title_activity_registration_review_edit">RegistrationReviewEditActivity</string>
+    <string name="title_activity_scrolling_activitytgrtgrtgr">ScrollingActivitytgrtgrtgr</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_tasks">Tasks</string>
     <string name="title_breakfast">Breakfast</string>
+    <string name="title_name_registration_edit">FirstName\nLastName</string>
     <string name="title_section1">Main</string>
     <string name="title_section2">Registration</string>
     <string name="title_section3">Attendance</string>
@@ -762,7 +748,7 @@
         <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
         <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="windowActionBar">true</item>
     </style>
@@ -1740,6 +1726,12 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
+    <style name="CalendarStyle">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="CalendarTheme">
+        <item name="calendarViewStyle">@style/CalendarStyle</item>
+    </style>
     <style name="CardView" parent="Base.CardView">
     </style>
     <style name="CardView.Dark">
@@ -1747,6 +1739,16 @@
     </style>
     <style name="CardView.Light">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
     <style name="Platform.AppCompat" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
@@ -2039,6 +2041,7 @@
     <style name="ThemeOverlay.AppCompat.Dark" parent="Base.ThemeOverlay.AppCompat.Dark"/>
     <style name="ThemeOverlay.AppCompat.Dark.ActionBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="ThemeOverlay.AppCompat.Light" parent="Base.ThemeOverlay.AppCompat.Light"/>
+    <style name="Widget"/>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
     <style name="Widget.AppCompat.ActionBar.Solid" parent="Base.Widget.AppCompat.ActionBar.Solid">
@@ -2195,5 +2198,11 @@
         <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
         <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
         <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
+    <style name="Widget.MenuDrawer">
+        <item name="mdMenuBackground">@color/md__defaultBackground</item>
+        <item name="mdContentBackground">?android:attr/windowBackground</item>
+        <item name="mdDrawerOpenUpContentDescription">@string/md__drawerOpenIndicatorDesc</item>
+        <item name="mdDrawerClosedUpContentDescription">@string/md__drawerClosedIndicatorDesc</item>
     </style>
 </resources>

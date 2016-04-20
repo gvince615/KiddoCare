@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@+id/tv_recordnum"
-        android:text="@string/hint_childLname"
+        android:text="@string/last_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 
@@ -50,7 +50,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@+id/iv_childpic"
-        android:text="@string/hint_ChildFname"
+        android:text="@string/hint_first_name"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold" />
 

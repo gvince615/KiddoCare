@@ -60,10 +60,6 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/drawable/design_fab_background.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable/validation_edit_text.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.quickenloans/floatingeditlayout/0.0.13-SNAPSHOT/res/drawable/validation_edit_text.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable/red_box.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/drawable/red_box.xml"
     },

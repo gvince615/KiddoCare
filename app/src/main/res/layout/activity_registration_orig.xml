@@ -66,26 +66,26 @@
                 android:orientation="vertical"
                 android:padding="5dp">
 
-                <com.quickenloans.floatui.QLFloatingEditLayout
-                    android:id="@+id/et_childFname"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
+                    <!--android:id="@+id/et_childFname"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
 
-                    custom:qlfel_helperText="Enter the child's first name"
-                    custom:qlfel_hintText="Child's First Name"
-                    custom:qlfel_inputType="person_name"
-                    />
+                    <!--custom:qlfel_helperText="Enter the child's first name"-->
+                    <!--custom:qlfel_hintText="Child's First Name"-->
+                    <!--custom:qlfel_inputType="person_name"-->
+                    <!--/>-->
 
-                <com.quickenloans.floatui.QLFloatingEditLayout
-                    android:id="@+id/et_childLname"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/et_childFname"
+                <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
+                    <!--android:id="@+id/et_childLname"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/et_childFname"-->
 
-                    custom:qlfel_helperText="Enter the child's last name"
-                    custom:qlfel_hintText="Child's Last Name"
-                    custom:qlfel_inputType="person_name"
-                    />
+                    <!--custom:qlfel_helperText="Enter the child's last name"-->
+                    <!--custom:qlfel_hintText="Child's Last Name"-->
+                    <!--custom:qlfel_inputType="person_name"-->
+                    <!--/>-->
 
                 <ImageView
                     android:id="@+id/iv_ChildPic"
@@ -422,7 +422,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/textView6"
                     android:ems="7"
-                    android:hint="@string/hint_ChildFname"
+                    android:hint="@string/hint_first_name"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -433,7 +433,7 @@
                     android:layout_below="@+id/textView7"
                     android:ems="7"
                     android:gravity="right|center_vertical"
-                    android:hint="@string/hint_ChildFname"
+                    android:hint="@string/hint_first_name"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -443,7 +443,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_below="@+id/et_M_fname"
                     android:ems="7"
-                    android:hint="@string/hint_childLname"
+                    android:hint="@string/last_name"
                     android:inputType="textPersonName" />
 
                 <EditText
@@ -454,7 +454,7 @@
                     android:layout_below="@+id/et_D_fname"
                     android:ems="7"
                     android:gravity="right|center_vertical"
-                    android:hint="@string/hint_childLname"
+                    android:hint="@string/last_name"
                     android:inputType="textPersonName" />
 
                 <EditText

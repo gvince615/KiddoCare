@@ -4,6 +4,8 @@ package com.vintek_ss.vince.kiddocare;
  * Created by gvincent on 3/24/16.
  */
 public class Child {
+    String age_bracket;
+
     int number;
     int pic;
     String first_name;
@@ -29,5 +31,13 @@ public class Child {
         this.address_city = address_city;
         this.address_state = address_state;
         this.address_zip = address_zip;
+    }
+
+    public Child(int number, int pic, String first_name, String last_name, String age_bracket) {
+        this.number = number;
+        this.pic = pic;
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.age_bracket = age_bracket;
     }
 }

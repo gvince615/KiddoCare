@@ -19,28 +19,16 @@
     <string name="action_example_newMP">Save</string>
     <string name="action_settings">Settings</string>
 
-    <color name="black">#000000</color>
-    <color name="drkgrey">#80000000</color>
-    <color name="red">#80990000</color>
-    <color name="drkred">#990000</color>
-    <color name="green">#80009900</color>
-    <color name="drkgreen">#009900</color>
-    <color name="blue">#80000099</color>
-    <color name="ltgrey">#80999999</color>
-    <color name="white">#ffffff</color>
-    <color name="trans_white">#EEffffff</color>
-    <color name="trans">#00ffffff</color>
-    <color name="logo_pink">#F669C8</color>
-    <color name="logo_blue">#3A9AF9</color>
-    <color name="logo_yellow">#FEFE9C</color>
-    <color name="logo_green">#0B9D9D</color>
+
+    <string name="title_name_registration_edit">FirstName\nLastName</string>
+
 
     <string name="title_activity_loading">Kiddo Care</string>
     <string name="loading">Loading...</string>
     <string name="title_activity_registration">Child Registration</string>
     <string name="tpic_Label">Set Child Picture</string>
-    <string name="hint_ChildFname">First Name</string>
-    <string name="hint_childLname">Last Name</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="last_name">Last Name</string>
     <string name="hint_enrollDate">Select Date</string>
     <string name="label_Address">Child\'s Address</string>
     <string name="label_medical">Medical Information</string>
@@ -104,6 +92,15 @@
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_new_registration">NewRegistrationActivity</string>
     <string name="title_activity_registration_review_edit">RegistrationReviewEditActivity</string>
+
+    <string name="title_activity_reg_edit_review_scrolling">Registration</string>
+    <string name="hint_address_ln_1">Street Address</string>
+    <string name="hint_zip">5-Digit Zip Code</string>
+    <string name="hint_city">City</string>
+    <string name="hint_state">State</string>
+    <string name="age_bracket">Age Bracket</string>
+    <string name="title_activity_registered">Registered Children</string>
+    <string name="title_activity_scrolling_activitytgrtgrtgr">ScrollingActivitytgrtgrtgr</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -193,6 +190,5 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="title_activity_reg_edit_review_scrolling">RegEditReviewScrollingActivity</string>
 
 </resources>

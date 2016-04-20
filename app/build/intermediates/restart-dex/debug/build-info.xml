@@ -1,56 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
-    density="xxhdpi"
-    format="6"
-    timestamp="1458905955455021000"
+    density="xxxhdpi"
+    format="7"
+    timestamp="1461155291264868000"
     verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="221" />
+        duration="559" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="12" />
+        duration="83" />
     <task
         name="verifier"
-        duration="1" />
+        duration="18" />
 
     <artifact
         location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
         type="RESOURCES" />
     <artifact
-        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6_6e1d7d18e0e612affc36aa55ade4f1cd554e189e/classes.dex"
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+        type="DEX" />
+    <artifact
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
         type="DEX" />
 
-    <build timestamp="1458903875153590000" >
+    <build timestamp="1461154759543340000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1458904200635348000" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1_de72aa9c9998b382ee46e1bdfa3699d860c035fc/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7_a6caa1d0cefdea11424338c893d5a54830f62acc/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4_2106691c4f280ae951dbc1330703854d6362f9e1/classes.dex"
-            type="DEX" />
-    </build>
     <build
-        timestamp="1458905955455021000"
+        timestamp="1461155291264868000"
         verifier="R_CLASS_CHANGE" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
         <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6_6e1d7d18e0e612affc36aa55ade4f1cd554e189e/classes.dex"
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />
     </build>
 

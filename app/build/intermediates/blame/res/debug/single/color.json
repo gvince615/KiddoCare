@@ -28,6 +28,10 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/color/switch_thumb_material_light.xml"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/color/text_calendar.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/color/text_calendar.xml"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/color/switch_thumb_material_dark.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/color/switch_thumb_material_dark.xml"
     },
