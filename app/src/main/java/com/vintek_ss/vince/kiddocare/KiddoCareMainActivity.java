@@ -31,14 +31,15 @@ public class KiddoCareMainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.drawable.ic_launcher);
 
-        CollapseCalendarView calendarView = (CollapseCalendarView) findViewById(R.id.calendar);
+        final CollapseCalendarView calendarView = (CollapseCalendarView) findViewById(R.id.calendar);
         calendarView.init(LocalDate.now(), LocalDate.now().minusYears(10), LocalDate.now().plusYears(10));
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+
+                Snackbar.make(view, "Adding new Calendar Event for, " + calendarView.getSelectedDate(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

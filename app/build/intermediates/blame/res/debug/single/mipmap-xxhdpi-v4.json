@@ -1,11 +1,27 @@
 [
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher_new.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_launcher_new.png"
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_menu.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_menu.png"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_registration_btn.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_registration_btn.png"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_billing_btn.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_billing_btn.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_launcher_new.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_launcher_new.png"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_attendance_btn.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_attendance_btn.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_girl.png",

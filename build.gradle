@@ -21,27 +21,6 @@ allprojects {
         maven {
             url "https://clojars.org/repo/"
         }
-        println "TODO: set up artifactory credentials"
-        maven {
-            //todo set up credentials
-            credentials {
-              username 'user'
-              password 'password'
-            }
-            //todo this should use DNS name (e.g., ql1mobjenkins2) not IP address
-            //todo this is probably not the final server anyway
-            url "http://ql1mobrepo1:8081/artifactory/libs-snapshot-local"
-        }
-        maven {
-            //todo set up credentials
-            credentials {
-              username 'user'
-              password 'password'
-            }
-            //todo this should use DNS name (e.g., ql1mobjenkins2) not IP address
-            //todo this is probably not the final server anyway
-            url "http://ql1mobrepo1:8081/artifactory/libs-release-local"
-        }
     }
 }
 
