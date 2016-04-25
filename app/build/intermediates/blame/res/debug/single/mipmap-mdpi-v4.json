@@ -20,12 +20,12 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-mdpi/ic_billing_btn.png"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher_new.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-mdpi/ic_launcher_new.png"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_boy.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-mdpi/ic_boy.png"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_launcher_new.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-mdpi/ic_launcher_new.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-mdpi-v4/ic_edit.png",

@@ -562,6 +562,8 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="favActivities">Favorite Activities</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_round">Hello Round World!</string>
+    <string name="hello_square">Hello Square World!</string>
     <string name="hello_world">hello</string>
     <string name="hepb">HePB</string>
     <string name="hint_Cbirth">Select Birth Date</string>
@@ -732,6 +734,7 @@
     <string name="title_activity_scrolling_activitytgrtgrtgr">ScrollingActivitytgrtgrtgr</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_tasks">Tasks</string>
+    <string name="title_activity_wear_attendance">WearAttendanceActivity</string>
     <string name="title_breakfast">Breakfast</string>
     <string name="title_name_registration_edit">FirstName\nLastName</string>
     <string name="title_section1">Main</string>
