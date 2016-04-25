@@ -2742,6 +2742,10 @@ containing a value of this type.
         public static final int b_takePic=0x7f0e00a7;
         public static final int beginning=0x7f0e0039;
         public static final int bottom=0x7f0e0025;
+        public static final int btn_about=0x7f0e0133;
+        public static final int btn_attendance=0x7f0e0131;
+        public static final int btn_billing=0x7f0e0132;
+        public static final int btn_menu=0x7f0e0134;
         public static final int btn_registration=0x7f0e0130;
         public static final int button=0x7f0e0128;
         public static final int buttonPanel=0x7f0e004c;
@@ -2843,7 +2847,7 @@ containing a value of this type.
         public static final int exitUntilCollapsed=0x7f0e001f;
         public static final int expand_activities_button=0x7f0e0046;
         public static final int expanded_menu=0x7f0e0059;
-        public static final int fab=0x7f0e0098;
+        public static final int fab_addCalEvent=0x7f0e0098;
         public static final int fab_add_card=0x7f0e0143;
         public static final int fab_take_child_picture=0x7f0e015f;
         public static final int fill=0x7f0e0036;
@@ -2856,10 +2860,6 @@ containing a value of this type.
         public static final int icon=0x7f0e004a;
         public static final int ifRoom=0x7f0e003d;
         public static final int image=0x7f0e0047;
-        public static final int imageView=0x7f0e0131;
-        public static final int imageView2=0x7f0e0132;
-        public static final int imageView3=0x7f0e0133;
-        public static final int imageView4=0x7f0e0134;
         public static final int image_holder=0x7f0e014b;
         public static final int info=0x7f0e0140;
         public static final int item_touch_helper_previous_elevation=0x7f0e0005;

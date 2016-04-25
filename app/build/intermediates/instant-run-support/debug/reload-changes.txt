@@ -1,0 +1,5 @@
+CHANGED,/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/vintek_ss/vince/kiddocare/KiddoCareMainActivity$1$override.class
+CHANGED,/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/vintek_ss/vince/kiddocare/R$id$override.class
+CHANGED,/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/vintek_ss/vince/kiddocare/KiddoCareMainActivity$2$override.class
+CHANGED,/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/vintek_ss/vince/kiddocare/KiddoCareMainActivity$override.class

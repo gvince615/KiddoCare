@@ -1,5 +1,6 @@
 package com.vintek_ss.vince.kiddocare;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -7,18 +8,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ImageButton;
 
 import com.wefika.calendar.CollapseCalendarView;
-
-import net.simonvt.menudrawer.MenuDrawer;
 
 import org.joda.time.LocalDate;
 
 public class KiddoCareMainActivity extends AppCompatActivity {
 
-    private MenuDrawer mMenuDrawer;
-    FloatingActionButton floatingActionButton;
     CoordinatorLayout coordinatorLayout;
+    FloatingActionButton addCalEvent_fab;
+
+    ImageButton goToRegistration_ib, goToMenu_ib, goToAbout_ib, goToAttendance_ib, goToBilling_ib;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +30,88 @@ public class KiddoCareMainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setLogo(R.drawable.ic_launcher);
+        if (toolbar != null) {
+            toolbar.setLogo(R.drawable.ic_launcher);
+        }
 
-        final CollapseCalendarView calendarView = (CollapseCalendarView) findViewById(R.id.calendar);
-        calendarView.init(LocalDate.now(), LocalDate.now().minusYears(10), LocalDate.now().plusYears(10));
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Snackbar.make(view, "Adding new Calendar Event for, " + calendarView.getSelectedDate(), Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-//        mMenuDrawer = MenuDrawer.attach(this, Position.BOTTOM);
-//        mMenuDrawer.setTouchMode(MenuDrawer.TOUCH_MODE_FULLSCREEN);
-//        mMenuDrawer.setContentView(R.layout.activity_kiddo_care_main);
-//        mMenuDrawer.setMenuView(R.layout.menu_sample);
-//        mMenuDrawer.setBackgroundColor(getResources().getColor(R.color.trans));
-//        mMenuDrawer.setBackground(null);
-
-        ///CalendarManager manager = new CalendarManager(LocalDate.now(), CalendarManager.State.MONTH, LocalDate.now(), LocalDate.now().plusYears(1));
-
-
-
+        initMain();
     }
 
+    private void initMain() { // Initializes image buttons on main activity
 
+        final CollapseCalendarView calendarView = (CollapseCalendarView) findViewById(R.id.calendar);
+        if (calendarView != null) {
+            calendarView.init(LocalDate.now(), LocalDate.now().minusYears(10), LocalDate.now().plusYears(10));
+        }
 
+        addCalEvent_fab = (FloatingActionButton) findViewById(R.id.fab_addCalEvent);
+        if (addCalEvent_fab != null) {
+            addCalEvent_fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (calendarView != null) {
+                        Snackbar.make(view, "Adding new Calendar Event for, " + calendarView.getSelectedDate(), Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                }
+            });
+        }
+
+        goToRegistration_ib = (ImageButton) findViewById(R.id.btn_registration);
+        if (goToRegistration_ib != null) {
+            goToRegistration_ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent registrationIntent = new Intent(getApplicationContext(), RegisteredListScrollingActivity.class);
+                    startActivity(registrationIntent);
+                }
+            });
+        }
+
+        goToMenu_ib = (ImageButton) findViewById(R.id.btn_menu);
+// TODO
+//       if (goToMenu_ib != null) {
+//            goToMenu_ib.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent menuIntent = new Intent(getApplicationContext(), MealActivity.class);
+//                    startActivity(menuIntent);
+//                }
+//            });
+//        }
+
+        goToAbout_ib = (ImageButton) findViewById(R.id.btn_about);
+// TODO
+//        if (goToAbout_ib != null) {
+//            goToAbout_ib.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
+//                    startActivity(aboutIntent);
+//                }
+//            });
+//        }
+
+        goToAttendance_ib = (ImageButton) findViewById(R.id.btn_attendance);
+        if (goToAttendance_ib != null) {
+            goToAttendance_ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent attendanceIntent = new Intent(getApplicationContext(), AttendanceActivity.class);
+                    startActivity(attendanceIntent);
+                }
+            });
+        }
+
+        goToBilling_ib = (ImageButton) findViewById(R.id.btn_billing);
+        if (goToBilling_ib != null) {
+            goToBilling_ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent billingIntent = new Intent(getApplicationContext(), BillingActivity.class);
+                    startActivity(billingIntent);
+                }
+            });
+        }
+    }
 }

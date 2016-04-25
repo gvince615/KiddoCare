@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/blazsolar/Documents/workspace/fika/android/CollapseCalendarViewProject/CollapseCalendarView/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <attr name="calendarViewStyle" format="reference" />
+    <!-- From: file:/Users/blazsolar/Documents/workspace/fika/android/CollapseCalendarViewProject/CollapseCalendarView/src/main/res/values/collors.xml -->
+    <eat-comment />
+
+    <color name="blue_dark">#00aeef</color>
+    <color name="blue_light">#48a5cc</color>
+    <color name="stroke">#77d4f6</color>
+    <color name="text_light">#ababab</color>
+    <color name="text_normal">#626262</color>
+    <color name="text_super_light">#c0c0c0</color>
+    <!-- From: file:/Users/blazsolar/Documents/workspace/fika/android/CollapseCalendarViewProject/CollapseCalendarView/src/main/res/values/attrs.xml -->
+    <eat-comment />
+
+    <declare-styleable name="day">
+        <attr name="state_current" format="boolean" />
+    </declare-styleable>
+    <!-- From: file:/Users/blazsolar/Documents/workspace/fika/android/CollapseCalendarViewProject/CollapseCalendarView/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="time_next">Next</string>
+    <string name="time_prev">Previous</string>
+    <!-- From: file:/Users/blazsolar/Documents/workspace/fika/android/CollapseCalendarViewProject/CollapseCalendarView/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="CalendarStyle">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CalendarTheme">
+        <item name="calendarViewStyle">@style/CalendarStyle</item>
+    </style>
+
+</resources>
