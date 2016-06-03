@@ -36,13 +36,13 @@ public final class R {
 		public static final int ic_launcher = 0x7f020066;
 	}
 	public static final class id {
-		public static final int days = 0x7f0e00df;
-		public static final int header = 0x7f0e00db;
-		public static final int next = 0x7f0e00dd;
-		public static final int prev = 0x7f0e00dc;
-		public static final int selection_title = 0x7f0e00de;
+		public static final int days = 0x7f0e00e0;
+		public static final int header = 0x7f0e00dc;
+		public static final int next = 0x7f0e00de;
+		public static final int prev = 0x7f0e00dd;
+		public static final int selection_title = 0x7f0e00df;
 		public static final int title = 0x7f0e004b;
-		public static final int weeks = 0x7f0e00e0;
+		public static final int weeks = 0x7f0e00e1;
 	}
 	public static final class layout {
 		public static final int calendar_layout = 0x7f040024;
@@ -50,8 +50,8 @@ public final class R {
 		public static final int week_layout = 0x7f04005a;
 	}
 	public static final class string {
-		public static final int time_next = 0x7f070073;
-		public static final int time_prev = 0x7f070074;
+		public static final int time_next = 0x7f070074;
+		public static final int time_prev = 0x7f070075;
 	}
 	public static final class style {
 		public static final int CalendarStyle = 0x7f0a00c0;

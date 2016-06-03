@@ -1,43 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
+    abi="x86"
     api-level="23"
-    density="xxxhdpi"
+    density="560dpi"
     format="7"
-    timestamp="1461585822090105000" >
+    timestamp="1464982070533297000" >
 
     <task
         name="javac"
-        duration="209" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="44" />
+        duration="0" />
     <task
         name="verifier"
-        duration="2" />
+        duration="0" />
 
     <artifact
         location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
         type="RESOURCES" />
-    <artifact
-        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-        type="DEX" />
 
-    <build timestamp="1461583907030743000" >
+    <build timestamp="1464979081913026000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1461585822090105000" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
+    <build timestamp="1464981394349937000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
             type="DEX" />
+    </build>
+    <build
+        timestamp="1464981462244932000"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981462244932000/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="1464981507058895000"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981507058895000/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        timestamp="1464981594142456000"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981594142456000/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build timestamp="1464982070533297000" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

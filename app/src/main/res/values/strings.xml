@@ -20,8 +20,8 @@
     <string name="action_settings">Settings</string>
 
 
-    <string name="title_name_registration_edit">FirstName\nLastName</string>
-
+    <string name="title_name_registration_edit">KateLynn Vincent</string>
+    <string name="expanded_title_name_registration_edit">KateLynn/nVincent</string>
 
     <string name="title_activity_loading">Kiddo Care</string>
     <string name="loading">Loading...</string>

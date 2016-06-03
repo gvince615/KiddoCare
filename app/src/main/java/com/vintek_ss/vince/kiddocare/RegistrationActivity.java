@@ -103,11 +103,11 @@ public class RegistrationActivity extends Activity implements
 //        daycaremanagerDB db = new daycaremanagerDB(getApplicationContext());
 //        db.open();
 //        // Spinner Drop down elements
-//        List<String> children = db.getAllChildren();
+//        List<String> childDatas = db.getAllChildren();
 //
 //        // Creating adapter for spinner
 //        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-//                android.R.layout.simple_spinner_item, children);
+//                android.R.layout.simple_spinner_item, childDatas);
 //
 //        // Drop down layout style - list view with radio button
 //        dataAdapter
@@ -249,7 +249,7 @@ public class RegistrationActivity extends Activity implements
 //
 //        if (selectedPos == 0) {
 //            cSpin.setBackgroundResource(R.drawable.red_box);
-//            Toast.makeText(getApplicationContext(), "Must First Select a Child",
+//            Toast.makeText(getApplicationContext(), "Must First Select a ChildData",
 //                    Toast.LENGTH_SHORT).show();
 //        } else {
 //            final String selectedChild = cSpin.getSelectedItem().toString();
@@ -566,7 +566,7 @@ public class RegistrationActivity extends Activity implements
 //
 //                // Handling left to right screen swap.
 //                if (lastX < currentX) {
-//                    // If there aren't any other children, just break.
+//                    // If there aren't any other childDatas, just break.
 //                    if (viewFlipper.getDisplayedChild() == 0)
 //                        break;
 //
@@ -794,7 +794,7 @@ public class RegistrationActivity extends Activity implements
 //
 //                    int duration = Toast.LENGTH_SHORT;
 //                    Toast toast = Toast.makeText(this,
-//                            "Missing Child Info\nRed fields are Required!", duration);
+//                            "Missing ChildData Info\nRed fields are Required!", duration);
 //                    toast.show();
 //                    didItWork = false;
 //                } else {
@@ -809,7 +809,7 @@ public class RegistrationActivity extends Activity implements
 //                String fullOldName = entry.getCurrentChildName(cID);
 //                if (fullNewName != fullOldName && discountType == "") {
 //                    int duration = Toast.LENGTH_SHORT;
-//                    Toast toast = Toast.makeText(this, "Must Reselct a Child Discount", duration);
+//                    Toast toast = Toast.makeText(this, "Must Reselct a ChildData Discount", duration);
 //                    toast.show();
 //                    didItWork = false;
 //                    discountTV.setBackgroundResource(R.drawable.red_box);

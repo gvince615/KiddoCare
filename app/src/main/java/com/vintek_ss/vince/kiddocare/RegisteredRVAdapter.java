@@ -28,13 +28,13 @@ public class RegisteredRVAdapter extends RecyclerView.Adapter<RegisteredRVAdapte
 
             cv = (CardView)itemView.findViewById(R.id.childDataCardView);
 
-//            cv.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
+            cv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 //                Intent intent = new Intent(this, AttendanceActivity.class);
 //                startActivity(intent);
-//                }
-//            });
+                }
+            });
 
             childPhoto = (ImageView)itemView.findViewById(R.id.child_image);
 
@@ -44,10 +44,10 @@ public class RegisteredRVAdapter extends RecyclerView.Adapter<RegisteredRVAdapte
         }
     }
 
-    List<Child> children;
+    List<ChildData> childDatas;
 
-    RegisteredRVAdapter(List<Child> children){
-        this.children = children;
+    RegisteredRVAdapter(List<ChildData> childDatas){
+        this.childDatas = childDatas;
     }
 
     @Override
@@ -65,15 +65,15 @@ public class RegisteredRVAdapter extends RecyclerView.Adapter<RegisteredRVAdapte
     @Override
     public void onBindViewHolder(ChildViewHolder childViewHolder, int i) {
 
-        childViewHolder.childPhoto.setImageResource(children.get(i).pic);
-        childViewHolder.childFirstName_layout.getEditText().setText(children.get(i).first_name);
-        childViewHolder.childLastName_layout.getEditText().setText(children.get(i).last_name);
-        childViewHolder.childAgeBracket_layout.getEditText().setText(children.get(i).age_bracket);
+        childViewHolder.childPhoto.setImageResource(childDatas.get(i).pic);
+        childViewHolder.childFirstName_layout.getEditText().setText(childDatas.get(i).first_name);
+        childViewHolder.childLastName_layout.getEditText().setText(childDatas.get(i).last_name);
+        childViewHolder.childAgeBracket_layout.getEditText().setText(childDatas.get(i).age_bracket);
 
     }
 
     @Override
     public int getItemCount() {
-        return children.size();
+        return childDatas.size();
     }
 }

@@ -490,7 +490,7 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
                 // Handling left to right screen swap.
                 if (lastX < currentX) {
 
-                    // If there aren't any other children, just break.
+                    // If there aren't any other childDatas, just break.
                     if (viewFlipper.getDisplayedChild() == 0)
                         break;
 

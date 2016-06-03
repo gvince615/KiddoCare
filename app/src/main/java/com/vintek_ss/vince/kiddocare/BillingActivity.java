@@ -366,18 +366,18 @@ public class BillingActivity extends Activity implements AdapterView.OnItemSelec
         paint.setColor(Color.BLACK);
         paint.setTextSize(16);
         canvas.drawText(
-                "Child Care Center:", leftMargin + 80, titleBaseLine - 70, paint);
+                "ChildData Care Center:", leftMargin + 80, titleBaseLine - 70, paint);
         paint.setColor(Color.BLUE);
         canvas.drawText(ccenterName, leftMargin + 220, titleBaseLine - 70, paint);
 
         //canvas.drawText(
-        //       "Child Care Center Address:", leftMargin + 80, titleBaseLine - 40, paint);
+        //       "ChildData Care Center Address:", leftMargin + 80, titleBaseLine - 40, paint);
         paint.setColor(Color.BLUE);
         canvas.drawText(ccenterAddress, leftMargin + 80, titleBaseLine - 50, paint);
 
         paint.setColor(Color.BLACK);
         canvas.drawText(
-                "Child Care Provider:", leftMargin + 80, titleBaseLine - 30, paint);
+                "ChildData Care Provider:", leftMargin + 80, titleBaseLine - 30, paint);
         paint.setColor(Color.BLUE);
         canvas.drawText(providerName, leftMargin + 220, titleBaseLine - 30, paint);
         paint.setColor(Color.BLACK);

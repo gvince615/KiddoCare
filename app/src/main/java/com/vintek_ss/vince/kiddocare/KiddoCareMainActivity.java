@@ -69,28 +69,26 @@ public class KiddoCareMainActivity extends AppCompatActivity {
         }
 
         goToMenu_ib = (ImageButton) findViewById(R.id.btn_menu);
-// TODO
-//       if (goToMenu_ib != null) {
-//            goToMenu_ib.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent menuIntent = new Intent(getApplicationContext(), MealActivity.class);
-//                    startActivity(menuIntent);
-//                }
-//            });
-//        }
+        if (goToMenu_ib != null) {
+            goToMenu_ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent menuIntent = new Intent(getApplicationContext(), MealActivity.class);
+                    startActivity(menuIntent);
+                }
+            });
+        }
 
         goToAbout_ib = (ImageButton) findViewById(R.id.btn_about);
-// TODO
-//        if (goToAbout_ib != null) {
-//            goToAbout_ib.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
-//                    startActivity(aboutIntent);
-//                }
-//            });
-//        }
+        if (goToAbout_ib != null) {
+            goToAbout_ib.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent aboutIntent = new Intent(getApplicationContext(), AboutActivity.class);
+                    startActivity(aboutIntent);
+                }
+            });
+        }
 
         goToAttendance_ib = (ImageButton) findViewById(R.id.btn_attendance);
         if (goToAttendance_ib != null) {

@@ -70,7 +70,7 @@ public class mainFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putLong("dateLong", LselectedDate);
                 switch (position) {
-                    // see scheduled children for selected day
+                    // see scheduled childDatas for selected day
                     case 0:
                         Intent call_intent = new Intent(getActivity(), CalendarActivity.class);
                         call_intent.putExtras(bundle);

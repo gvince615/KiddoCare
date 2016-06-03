@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:text="Select below to check in and out children"
+                android:text="Select below to check in and out childDatas"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
 

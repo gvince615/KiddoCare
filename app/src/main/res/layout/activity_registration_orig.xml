@@ -72,7 +72,7 @@
                     <!--android:layout_height="wrap_content"-->
 
                     <!--custom:qlfel_helperText="Enter the child's first name"-->
-                    <!--custom:qlfel_hintText="Child's First Name"-->
+                    <!--custom:qlfel_hintText="ChildData's First Name"-->
                     <!--custom:qlfel_inputType="person_name"-->
                     <!--/>-->
 
@@ -83,7 +83,7 @@
                     <!--android:layout_below="@id/et_childFname"-->
 
                     <!--custom:qlfel_helperText="Enter the child's last name"-->
-                    <!--custom:qlfel_hintText="Child's Last Name"-->
+                    <!--custom:qlfel_hintText="ChildData's Last Name"-->
                     <!--custom:qlfel_inputType="person_name"-->
                     <!--/>-->
 
@@ -91,7 +91,7 @@
                     android:id="@+id/iv_ChildPic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_above="@+id/et_child_Edate"
+                    android:layout_above="@+id/tv_child_Edate"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
                     android:adjustViewBounds="true"
@@ -244,13 +244,13 @@
                     android:id="@+id/textView12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/et_child_Edate"
+                    android:layout_below="@+id/tv_child_Edate"
                     android:layout_toEndOf="@+id/textView11"
                     android:text="@string/_new"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <TextView
-                    android:id="@+id/et_Cbirthdate"
+                    android:id="@+id/tv_Cbirthdate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
@@ -270,7 +270,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_below="@+id/et_Cbirthdate"
+                    android:layout_below="@+id/tv_Cbirthdate"
                     android:clickable="true"
                     android:ems="10"
                     android:hint="@string/hint_enrollDate"

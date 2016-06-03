@@ -64,24 +64,6 @@
                     android:hint="@string/last_name" />
             </android.support.design.widget.TextInputLayout>
 
-            <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
-                <!--android:id="@+id/et_childFname"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-
-                <!--custom:qlfel_helperText="Enter the child's first name"-->
-                <!--custom:qlfel_hintText="Child's First Name"-->
-                <!--custom:qlfel_inputType="person_name"-->
-                <!--/>-->
-            <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
-                <!--android:id="@+id/et_childLname"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-
-                <!--custom:qlfel_helperText="Enter the child's last name"-->
-                <!--custom:qlfel_hintText="Child's Last Name"-->
-                <!--custom:qlfel_inputType="person_name"-->
-                <!--/>-->
         </LinearLayout>
         <LinearLayout
             android:padding="10dp"
@@ -97,7 +79,7 @@
                 android:text="Birth Date:"/>
 
             <TextView
-                android:id="@+id/et_Cbirthdate"
+                android:id="@+id/tv_Cbirthdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -167,16 +149,6 @@
                     android:hint="@string/hint_city" />
             </android.support.design.widget.TextInputLayout>
 
-            <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
-                <!--android:id="@+id/et_child_address_ln_1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="10dp"-->
-
-                <!--custom:qlfel_helperText="Enter the child's first name"-->
-                <!--custom:qlfel_hintText="Child's Address Line 1"-->
-                <!--custom:qlfel_inputType="postalAddress"-->
-                <!--/>-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -209,37 +181,6 @@
                         android:singleLine="true"
                         android:hint="@string/hint_state" />
                 </android.support.design.widget.TextInputLayout>
-
-
-
-                <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
-                    <!--android:id="@+id/et_child_address_zip"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:paddingEnd="5dp"-->
-                    <!--android:paddingStart="0dp"-->
-                    <!--android:paddingRight="5dp"-->
-                    <!--android:paddingLeft="0dp"-->
-
-                    <!--custom:qlfel_helperText="Enter the child's zip"-->
-                    <!--custom:qlfel_hintText="Child's Zip Code"-->
-                    <!--custom:qlfel_inputType="zipCodeNumber"-->
-                    <!--/>-->
-                <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
-                    <!--android:id="@+id/et_child_address_city"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:paddingEnd="0dp"-->
-                    <!--android:paddingStart="5dp"-->
-                    <!--android:paddingRight="0dp"-->
-                    <!--android:paddingLeft="5dp"-->
-
-                    <!--custom:qlfel_helperText="Enter the child's city"-->
-                    <!--custom:qlfel_hintText="Child's City"-->
-                    <!--custom:qlfel_inputType="City"-->
-                    <!--/>-->
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

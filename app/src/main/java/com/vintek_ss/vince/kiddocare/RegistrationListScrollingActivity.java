@@ -9,18 +9,22 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,6 +34,8 @@ import static com.vintek_ss.vince.kiddocare.R.drawable.ic_boy;
 import static com.vintek_ss.vince.kiddocare.R.drawable.ic_girl;
 import static com.vintek_ss.vince.kiddocare.R.drawable.ic_launcher;
 
+//import android.support.design.widget.CollapsingToolbarLayout;
+
 public class RegistrationListScrollingActivity extends AppCompatActivity {
 
     private static int ID = 0;
@@ -38,39 +44,82 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     final static int cameraData = 0;
     final String cItems[] = {"Generic Boy Image", "Generic Girl Image", "Take Picture"};
 
+    CollapsingToolbarLayout collapsingToolbarLayout;
+    ComplexRecyclerViewAdapter adapter;
+    AppBarLayout appbar;
     ImageView childImage;
     RecyclerView rv_RegistrationData;
     private int mYear, mMonth, mDay, mHour, mMinute;
+    FloatingActionButton fab_take_pic, fab_add_card;
 
-    private List<Child> children;
+    ArrayList<Object> items = new ArrayList<>();
 
+    public static final int CHILD = 0;
+    public static final int PARENT = 1;
+    public static final int MEDICAL = 2;
+    public static final int DISCOUNT = 3;
 
+    String mCollapsedTitle = "KateLynn Vincent";
+    String mExpandedTitle = "KateLynn Vincent";
 
+    private int datasetTypes[] = {CHILD, PARENT, MEDICAL, DISCOUNT}; //view types
 
-
+    private List<ChildData> childDataCard;
+    private List<ParentData> parentCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_edit_activity_scrolling);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        collapsingToolbarLayout =
+                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
+
+        toolbar.setTitle(mExpandedTitle);
+
+        collapsingToolbarLayout.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
+        collapsingToolbarLayout.setExpandedTitleColor(getResources().getColor(R.color.white));
+        collapsingToolbarLayout.setExpandedTitleGravity(Gravity.START);
+        collapsingToolbarLayout.setCollapsedTitleGravity(Gravity.END);
+        collapsingToolbarLayout.setContentScrimColor(getResources().getColor(R.color.black));
+
+        appbar = (AppBarLayout) findViewById(R.id.appbar);
+        appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+//            @Override
+//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+//                if(verticalOffset == 0 || verticalOffset <= toolbar.getHeight() && !toolbar.getTitle().equals("FNAME LNAME")){
+//                    collapsingToolbarLayout.setTitle("FNAME LNAME");
+//                }else if(!toolbar.getTitle().equals("FNAME" + "\n" + "LNAME")){
+//                    collapsingToolbarLayout.setTitle("FNAME" + "\n" + "LNAME");
+//                }
+//            }
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+
+                if(verticalOffset >= -480){
+                    collapsingToolbarLayout.setTitle(mExpandedTitle);
+                }else if(!toolbar.getTitle().equals(mCollapsedTitle)&& verticalOffset <= 400){
+                    collapsingToolbarLayout.setTitle(mCollapsedTitle);
+                }
+
+            }
+
+        });
+
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher_new);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        CollapsingToolbarLayout collapsingToolbar =
-                (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
-        collapsingToolbar.setTitle(getString(R.string.title_name_registration_edit));
-        collapsingToolbar.setExpandedTitleMargin(40,20,20,40);
-        collapsingToolbar.setContentScrimColor(getResources().getColor(R.color.black));
+
 
         rv_RegistrationData = (RecyclerView)findViewById(R.id.rv_registration_data_list);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv_RegistrationData.setLayoutManager(llm);
         //rv_RegistrationData.setHasFixedSize(true);
 
-        FloatingActionButton fab_take_pic = (FloatingActionButton) findViewById(R.id.fab_take_child_picture);
+        fab_take_pic = (FloatingActionButton) findViewById(R.id.fab_take_child_picture);
         fab_take_pic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,12 +127,13 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             }
         });
 
-        FloatingActionButton fab_add_card = (FloatingActionButton) findViewById(R.id.fab_add_card);
+        fab_add_card = (FloatingActionButton) findViewById(R.id.fab_add_card);
         fab_add_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Card Added", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                pickACardToAdd();
+
             }
         });
 
@@ -92,18 +142,68 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
         initializeAdapter();
     }
 
-    private void initializeData(){
-        children = new ArrayList<>();
-        children.add(new Child(1, R.drawable.ic_girl, "KateLynn", "Vincent",
-                "11-20-2012", "01-01-2013", "5162 Glen Cove Ln", "Flint", "MI", "48507"));
+    private void pickACardToAdd() {
+        AlertDialog.Builder builderSingle = new AlertDialog.Builder(RegistrationListScrollingActivity.this);
+        builderSingle.setIcon(R.drawable.ic_launcher);
+        builderSingle.setTitle("Select A Card To Add:");
 
-        children.add(new Child(1, R.drawable.ic_girl, "Jeremiah", "Vincent",
-                "11-10-2008", "01-01-2013", "5162 Glen Cove Ln", "Flint", "MI", "48507"));
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                RegistrationListScrollingActivity.this,
+                android.R.layout.select_dialog_singlechoice);
+        arrayAdapter.add("Parent Data Card");
+        arrayAdapter.add("Medical Data Card");
+        arrayAdapter.add("Discount Data Card");
+
+        builderSingle.setNegativeButton(
+                "cancel",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+
+        builderSingle.setAdapter(
+                arrayAdapter,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String strName = arrayAdapter.getItem(which);
+
+                        switch (strName){
+                            case "Parent Data Card":
+                                items.add(new ParentData("", "", "", "", "", "", "", ""));
+                                adapter.notifyDataSetChanged();
+                                break;
+                            case "Medical Data Card":
+                                break;
+                            case "Discount Data Card":
+                                break;
+                        }
+                        Snackbar.make(fab_add_card, strName + " Added", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
+                });
+        builderSingle.show();
+    }
+
+    private void initializeData(){
+        getSampleArrayList();
+    }
+
+    private ArrayList<Object> getSampleArrayList() {
+        items.add(new ChildData(0, 0, "", "", "", "", "", "", "", ""));
+        return items;
     }
 
     private void initializeAdapter(){
-        RegistrationRVAdapter adapter = new RegistrationRVAdapter(children);
+
+        adapter = new ComplexRecyclerViewAdapter(items);
         rv_RegistrationData.setAdapter(adapter);
+
+//        adapter = new ChildRegistrationRVAdapter(childDataCard, parentCard, datasetTypes);
+//        rv_RegistrationData.setAdapter(adapter);
+
     }
 
     public void pickDate(View v) {
@@ -115,65 +215,19 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 monthOfYear++;
-                String newMonth = "";
-                switch (monthOfYear) {
-                    case 1:
-                        newMonth = "Jan";
-                        break;
-                    case 2:
-                        newMonth = "Feb";
-                        break;
-                    case 3:
-                        newMonth = "Mar";
-                        break;
-                    case 4:
-                        newMonth = "Apr";
-                        break;
-                    case 5:
-                        newMonth = "May";
-                        break;
-                    case 6:
-                        newMonth = "Jun";
-                        break;
-                    case 7:
-                        newMonth = "Jul";
-                        break;
-                    case 8:
-                        newMonth = "Aug";
-                        break;
-                    case 9:
-                        newMonth = "Sep";
-                        break;
-                    case 10:
-                        newMonth = "Oct";
-                        break;
-                    case 11:
-                        newMonth = "Nov";
-                        break;
-                    case 12:
-                        newMonth = "Dec";
-                        break;
-                }
-                if (ID == (R.id.et_Cbirthdate)) {
-                    TextView tv = (TextView) findViewById(R.id.et_Cbirthdate);
+
+                if (ID == (R.id.tv_Cbirthdate)) {
+                    TextView tv = (TextView) findViewById(R.id.tv_Cbirthdate);
                     tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
-                if (ID == (R.id.et_child_Edate)) {
-                    TextView tv = (TextView) findViewById(R.id.et_child_Edate);
+                if (ID == (R.id.tv_child_Edate)) {
+                    TextView tv = (TextView) findViewById(R.id.tv_child_Edate);
                     tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
                 if (ID == (R.id.et_DTAPdate)) {
                     TextView tv = (TextView) findViewById(R.id.et_DTAPdate);
                     tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
-//                if (ID == (R.id.et_MMRdate)) {
-//                    TextView tv = (TextView) findViewById(R.id.et_MMRdate);
-//                    tv.setText(year + "-" + newMonth + "-" + dayOfMonth);
-//                }
-//                if (ID == (R.id.et_HEPBdate)) {
-//                    TextView tv = (TextView) findViewById(R.id.et_HEPBdate);
-//                    tv.setText(year + "-" + newMonth + "-" + dayOfMonth);
-//                }
             }
         }, mYear, mMonth, mDay);
         dateDialog.show();

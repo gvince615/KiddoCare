@@ -15,7 +15,7 @@ import java.util.List;
 public class RegisteredListScrollingActivity extends AppCompatActivity {
 
     RecyclerView rv_RegisteredData;
-    private List<Child> children;
+    private List<ChildData> childDatas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,16 +46,16 @@ public class RegisteredListScrollingActivity extends AppCompatActivity {
     }
 
     private void initializeData(){
-        children = new ArrayList<>();
-        children.add(new Child(1, R.drawable.ic_girl, "KateLynn", "Vincent",
+        childDatas = new ArrayList<>();
+        childDatas.add(new ChildData(1, R.drawable.ic_girl, "KateLynn", "Vincent",
                 "Toddler"));
 
-        children.add(new Child(1, R.drawable.ic_girl, "Jeremiah", "Vincent",
+        childDatas.add(new ChildData(1, R.drawable.ic_girl, "Jeremiah", "Vincent",
                 "School Age"));
     }
 
     private void initializeAdapter(){
-        RegisteredRVAdapter adapter = new RegisteredRVAdapter(children);
+        RegisteredRVAdapter adapter = new RegisteredRVAdapter(childDatas);
         rv_RegisteredData.setAdapter(adapter);
     }
 }

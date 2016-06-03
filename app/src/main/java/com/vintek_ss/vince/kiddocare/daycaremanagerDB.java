@@ -496,7 +496,7 @@ public class daycaremanagerDB {
         childAttenCV.put(KEY_ATTEN_CHILD, childFullName);
         childAttenCV.put(KEY_ATTEN_DATE_IN, clockINDate);
         if (TextUtils.isEmpty(clockOUTDate)) {
-            //////// to update Child record showing in care status
+            //////// to update ChildData record showing in care status
             ContentValues childCV = new ContentValues();
             childCV.put(KEY_CHILD_INCARE, "YES");
             String whereClause1 = KEY_CHILD_ROWID + " = ?";
@@ -554,7 +554,7 @@ public class daycaremanagerDB {
         String result = "";
         String childFullName = childFName + " " + childLName;
 
-        //////// to update Child record showing in care status
+        //////// to update ChildData record showing in care status
         ContentValues childCV = new ContentValues();
         childCV.put(KEY_CHILD_INCARE, "YES");
         String whereClause1 = KEY_CHILD_ROWID + " = ?";
@@ -651,7 +651,7 @@ public class daycaremanagerDB {
                         whereArgs3);
                 ////////////////////////////////////////////////////////////////
 
-                ////// Update Child Table  ///////////////////////////////////
+                ////// Update ChildData Table  ///////////////////////////////////
                 String whereClause2 = KEY_CHILD_ROWID + " = ?";
                 String[] whereArgs2 = new String[]{cIn};
                 childCV.put(KEY_CHILD_INCARE, "NO");
@@ -908,7 +908,7 @@ public class daycaremanagerDB {
             Cursor cursor = ourDatabase.query(DATABASE_CTABLE, columns, null,
                     null, null, null, null);
 
-            children.add("Select Child to load");
+            children.add("Select ChildData to load");
             // looping through all rows and adding to list
             if (cursor.moveToFirst()) {
                 do {
@@ -928,7 +928,7 @@ public class daycaremanagerDB {
             e.printStackTrace();
         }
 
-        // returning children
+        // returning childDatas
         return children;
     }
 
@@ -995,14 +995,14 @@ public class daycaremanagerDB {
             e.printStackTrace();
         }
 
-        // returning children
+        // returning childDatas
         return foodItems;
     }
 
     public String putIteminDB(String usersInput, String selected) {
         String s = null;
         String result = null;
-        //////// to update Child record showing in care status
+        //////// to update ChildData record showing in care status
         ContentValues itemCV = new ContentValues();
         itemCV.put(KEY_FOODITEM_GROUP, s);
         if (selected.equals("Enter Meal Name")) {
