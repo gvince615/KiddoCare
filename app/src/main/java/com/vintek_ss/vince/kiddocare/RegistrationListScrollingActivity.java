@@ -86,14 +86,6 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
         appbar = (AppBarLayout) findViewById(R.id.appbar);
         appbar.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-//            @Override
-//            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-//                if(verticalOffset == 0 || verticalOffset <= toolbar.getHeight() && !toolbar.getTitle().equals("FNAME LNAME")){
-//                    collapsingToolbarLayout.setTitle("FNAME LNAME");
-//                }else if(!toolbar.getTitle().equals("FNAME" + "\n" + "LNAME")){
-//                    collapsingToolbarLayout.setTitle("FNAME" + "\n" + "LNAME");
-//                }
-//            }
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
 
@@ -102,22 +94,16 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 }else if(!toolbar.getTitle().equals(mCollapsedTitle)&& verticalOffset <= 400){
                     collapsingToolbarLayout.setTitle(mCollapsedTitle);
                 }
-
             }
-
         });
 
         setSupportActionBar(toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher_new);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
-
         rv_RegistrationData = (RecyclerView)findViewById(R.id.rv_registration_data_list);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         rv_RegistrationData.setLayoutManager(llm);
-        //rv_RegistrationData.setHasFixedSize(true);
 
         fab_take_pic = (FloatingActionButton) findViewById(R.id.fab_take_child_picture);
         fab_take_pic.setOnClickListener(new View.OnClickListener() {
@@ -131,9 +117,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
         fab_add_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 pickACardToAdd();
-
             }
         });
 
@@ -172,12 +156,16 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
                         switch (strName){
                             case "Parent Data Card":
-                                items.add(new ParentData("", "", "", "", "", "", "", ""));
+                                items.add(new ParentData("", "", "", "", "", true, "", "", "", ""));
                                 adapter.notifyDataSetChanged();
                                 break;
                             case "Medical Data Card":
+                                items.add(new MedicalData("", "", "", ""));
+                                adapter.notifyDataSetChanged();
                                 break;
                             case "Discount Data Card":
+                                items.add(new DiscountData("", ""));
+                                adapter.notifyDataSetChanged();
                                 break;
                         }
                         Snackbar.make(fab_add_card, strName + " Added", Snackbar.LENGTH_LONG)

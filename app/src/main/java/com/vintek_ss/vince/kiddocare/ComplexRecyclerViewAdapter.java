@@ -33,12 +33,12 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         else if (items.get(position) instanceof ParentData) {
             return PARENT;
         }
-//        else if (items.get(position) instanceof ) {
-//            return PARENT;
-//        }
-//        else if (items.get(position) instanceof ParentData) {
-//            return PARENT;
-//        }
+        else if (items.get(position) instanceof MedicalData) {
+            return MEDICAL;
+        }
+        else if (items.get(position) instanceof DiscountData) {
+            return DISCOUNT;
+        }
         return -1;
     }
 
@@ -50,15 +50,19 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         switch (viewType) {
             case CHILD:
                 View v1 = inflater.inflate(R.layout.registration_child_data_card, viewGroup, false);
-                viewHolder = new ViewHolder1(v1);
+                viewHolder = new ChildHolder(v1);
                 break;
             case PARENT:
                 View v2 = inflater.inflate(R.layout.registration_parent_data_card, viewGroup, false);
-                viewHolder = new ViewHolder2(v2);
+                viewHolder = new ParentHolder(v2);
                 break;
             case MEDICAL:
+                View v3 = inflater.inflate(R.layout.registration_medical_data_card, viewGroup, false);
+                viewHolder = new MedicalHolder(v3);
                 break;
             case DISCOUNT:
+                View v4 = inflater.inflate(R.layout.registration_discount_data_card, viewGroup, false);
+                viewHolder = new DiscountHolder(v4);
                 break;
             default:
 //                View v = inflater.inflate(android.R.layout.simple_list_item_1, viewGroup, false);
@@ -72,12 +76,20 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         switch (viewHolder.getItemViewType()) {
             case CHILD:
-                ViewHolder1 vh1 = (ViewHolder1) viewHolder;
-                configureViewHolder1(vh1, position);
+                ChildHolder vh1 = (ChildHolder) viewHolder;
+                configureChildViewHolder(vh1, position);
                 break;
             case PARENT:
-                ViewHolder2 vh2 = (ViewHolder2) viewHolder;
-                configureViewHolder2(vh2, position);
+                ParentHolder vh2 = (ParentHolder) viewHolder;
+                configureParentViewHolder(vh2, position);
+                break;
+            case MEDICAL:
+                MedicalHolder vh3 = (MedicalHolder) viewHolder;
+                configureMedicalViewHolder(vh3, position);
+                break;
+            case DISCOUNT:
+                DiscountHolder vh4 = (DiscountHolder) viewHolder;
+                configureDiscountViewHolder(vh4, position);
                 break;
             default:
 //                RecyclerViewSimpleTextViewHolder vh = (RecyclerViewSimpleTextViewHolder) viewHolder;
@@ -85,7 +97,7 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
                 break;
         }
     }
-    private void configureViewHolder1(ViewHolder1 childViewHolder, int position) {
+    private void configureChildViewHolder(ChildHolder childViewHolder, int position) {
 
         ChildData childData = (ChildData) items.get(position);
         if (childData != null) {
@@ -100,7 +112,7 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         }
     }
 
-    private void configureViewHolder2(ViewHolder2 parentViewHolder, int position) {
+    private void configureParentViewHolder(ParentHolder parentViewHolder, int position) {
 
         ParentData parentData = (ParentData) items.get(position);
         if (parentData != null) {
@@ -112,6 +124,24 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
             parentViewHolder.getParentAddressCity_layout().getEditText().setText(parentData.address_city);
             parentViewHolder.getParentAddressState_layout().getEditText().setText(parentData.address_state);
             parentViewHolder.getParentAddressZip_layout().getEditText().setText(parentData.address_zip);
+        }
+    }
+    private void configureMedicalViewHolder(MedicalHolder medicalViewHolder, int position) {
+
+        MedicalData medicalData = (MedicalData) items.get(position);
+        if (medicalData != null) {
+            medicalViewHolder.getFluShotDate().setText(medicalData.flu_shot_date);
+            medicalViewHolder.getImmunizationDate().setText(medicalData.immunizations_date);
+            medicalViewHolder.getMedicationTime().setText(medicalData.medication_time);
+            medicalViewHolder.getMedicationDescription_label().getEditText().setText(medicalData.medication_description);
+        }
+    }
+    private void configureDiscountViewHolder(DiscountHolder discountViewHolder, int position) {
+
+        DiscountData discountData = (DiscountData) items.get(position);
+        if (discountData != null) {
+            discountViewHolder.getDiscountDescription_label().getEditText().setText(discountData.discount_description);
+            //discountViewHolder.getDiscountAmount().getChildAt(position).getTe.(discountData.discount_description);
         }
     }
 }

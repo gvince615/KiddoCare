@@ -4,7 +4,7 @@
     api-level="23"
     density="560dpi"
     format="7"
-    timestamp="1464982070533297000" >
+    timestamp="1464988818804099000" >
 
     <task
         name="javac"
@@ -20,44 +20,25 @@
         duration="0" />
 
     <artifact
-        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
+        location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+        type="DEX" />
 
     <build timestamp="1464979081913026000" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1464981394349937000" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-            type="DEX" />
-    </build>
     <build
-        timestamp="1464981462244932000"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981462244932000/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="1464981507058895000"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981507058895000/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build
-        timestamp="1464981594142456000"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/builds/debug/1464981594142456000/classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build timestamp="1464982070533297000" >
+        timestamp="1464988017152846000"
+        verifier="CLASS_ADDED" >
         <artifact
             location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/resources-debug.ap_"
             type="RESOURCES" />
+    </build>
+    <build timestamp="1464988818804099000" >
+        <artifact
+            location="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

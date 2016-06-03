@@ -5,6 +5,7 @@
     custom:cardElevation="3dp"
     custom:cardCornerRadius="5dp"
     custom:cardBackgroundColor="@color/trans_white"
+    android:id="@+id/discountDataCardView"
     android:layout_margin="5dp">
 
     <LinearLayout

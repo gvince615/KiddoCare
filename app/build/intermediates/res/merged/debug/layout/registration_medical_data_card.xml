@@ -4,6 +4,7 @@
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     custom:cardElevation="3dp"
     custom:cardCornerRadius="5dp"
+    android:id="@+id/medicalDataCardView"
     custom:cardBackgroundColor="@color/trans_white"
     android:layout_margin="5dp">
 
