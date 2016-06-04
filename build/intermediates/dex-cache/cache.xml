@@ -1,2 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="be09545b7e6ff322c7286d2e80bed3b75b76c529">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_f04e597b6d547fcee90a44242c96d254efa23acc.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.3/56498efd17752898cfcc3868c1b6211a07b12b8f/joda-time-2.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="56498efd17752898cfcc3868c1b6211a07b12b8f">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/joda-time-2.3_bb075a8f6a3824b3ad8dcffd93528264ef684a92.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/net.opacapp/multiline-collapsingtoolbar/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b6ddd3c0823455d8c1747bae8bf8f85bf47ab2f2">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/net.opacapp-multiline-collapsingtoolbar-1.0.0_a6add76425fe3c6370edf71b78787bc5dc2349cf.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_7c30c08a3ffdc33f9996cea9e6a37d14b4ad0e88.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_94738af30863aaf1fe93dc5289202e0ac1bfbcc8.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_3e58e48788d355228bcb4ee22278d105f4ab1fd4.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d9ecde39b460470e655de6e47c05573d2d5a8bfb">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_02710cb38620caa2592c1ef0aa05ef48af8cfcb5.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="90e54f8cdc17475672ba6cbaa065b48ab176a18e">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.wefika-collapse-calendar-view-0.1.0_9c56e2fef8f60f0ba7de0fe4f45487cf8879cd1f.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Desktop/Android Studio 2.app/Contents/gradle/m2repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="90a3822c38ec8c996e84c16a3477ef632cbc87a3">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/commons-lang3-3.3.2_62532289ceb98cca4fdf7ccde64690d4217a7aca.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Desktop/Android Studio 2.app/Contents/gradle/m2repository/com/intellij/annotations/12.0/annotations-12.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="bbcf6448f6d40abe506e2c83b70a3e8bfd2b4539">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/annotations-12.0_b172f3a774b0f47270d9ee978471572a8f7735da.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/net.simonvt.menudrawer/menudrawer/3.0.6/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6c43e8970e14e22ed8ea6bee207b27829422d516">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/net.simonvt.menudrawer-menudrawer-3.0.6_2525fc37d022790055e67ec9b9ea210ee4553107.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_92851767378b94490200741cf8085a96561f4bda.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_3b7e07fe827f22bc4e97ef466a70333e45b823f2.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/library-2.4.0_50ed12551a4ea9a193947f93d532f5dbd8695cdf.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/devlibs/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_390ad0cb7243240bd1f4542414c14153e5d05bda.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_3565248f735dc47fbf1f21a088e1326d4a24829d.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/.gradle/caches/modules-2/files-2.1/com.mobsandgeeks/android-saripaar/2.0.3/abd8da523222180f9531768c62509edf6cd9b02e/android-saripaar-2.0.3.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="abd8da523222180f9531768c62509edf6cd9b02e">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/android-saripaar-2.0.3_bfec6d0effbcc771dda20f54944db44a46afae6b.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2bf893856577f5038c0b8007a43fda3b3c5beb23">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.android.support-support-v13-23.4.0_0528660163b1d4aecac3dd776a29df8955516f33.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_e335212e7a3d6e9877fcc9519888e9d3ea901e03.jar" />
+    </item>
+    <item
+        jar="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/pre-dexed/debug/com.melnykov-floatingactionbutton-1.3.0_ab28d5b6a4a9755c30832e9e936568fedb8e4f59.jar" />
+    </item>
+
+</items>
