@@ -1,129 +1,102 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/medicalDataCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    custom:cardElevation="3dp"
-    custom:cardCornerRadius="5dp"
-    android:id="@+id/medicalDataCardView"
+    android:layout_margin="5dp"
     custom:cardBackgroundColor="@color/trans_white"
-    android:layout_margin="5dp">
+    custom:cardCornerRadius="5dp"
+    custom:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/logo_yellow_box">
+        android:background="@drawable/logo_yellow_box"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:padding="5dp"
-            android:background="@color/logo_yellow"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/logo_yellow"
+            android:padding="5dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Medical Data:"
             android:layout_marginBottom="5dp"
+            android:text="Medical Data:"
             android:textSize="@dimen/text_size_large"
             android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
             <TextView
                 android:id="@+id/et_flu_shot_date_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="Flu Shot Date:"/>
+                android:text="Flu Shot Date:"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/et_flu_shot_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
+                android:layout_gravity="right"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="end"
                 android:hint="@string/hint_date"
                 android:onClick="pickDate"
-                android:textSize="18sp"
-                android:gravity="end"
-                android:layout_gravity="right" />
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="10dp">
             <TextView
                 android:id="@+id/et_immunization_date_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="Immunization Date:"/>
+                android:text="Immunization Date:"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/et_immunization_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
+                android:layout_gravity="right"
                 android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="end"
                 android:hint="@string/hint_date"
                 android:onClick="pickDate"
-                android:textSize="18sp"
-                android:gravity="end"
-                android:layout_gravity="right" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="0dp"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/et_medication_time_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textSize="18sp"
-                android:text="Medication Time:"/>
-
-            <TextView
-                android:id="@+id/et_medication_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:layout_weight="1"
-                android:hint="@string/hint_time"
-                android:onClick="pickTime"
-                android:textSize="18sp"
-                android:gravity="end"
-                android:layout_gravity="right" />
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <android.support.design.widget.TextInputLayout
-                android:id="@+id/tv_medicine_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_camera" />
 
-                <EditText
-                    android:id="@+id/et_medicine_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="Name of Medication" />
-            </android.support.design.widget.TextInputLayout>
-
+            <ImageView
+                android:id="@+id/iv_shot_record"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_launcher_new" />
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

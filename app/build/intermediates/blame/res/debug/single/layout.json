@@ -40,6 +40,10 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/activity_kiddo_care_main.xml"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/registration_medicine_data_card.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/registration_medicine_data_card.xml"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/registration_edit_activity_scrolling.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/registration_edit_activity_scrolling.xml"
     },
@@ -280,12 +284,12 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/activity_new_meal.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/activity_new_meal.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/activity_new_meal.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/activity_new_meal.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",

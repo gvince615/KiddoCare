@@ -9,10 +9,9 @@ import java.util.List;
 
 public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    public static final int CHILD = 0, PARENT = 1, MEDICAL = 2, MEDICATION = 3, DISCOUNT = 4;
     // The items to display in your RecyclerView
     private List<Object> items;
-
-    public static final int CHILD = 0, PARENT = 1, MEDICAL = 2, DISCOUNT = 3;
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public ComplexRecyclerViewAdapter(List<Object> items) {
@@ -32,9 +31,10 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         }
         else if (items.get(position) instanceof ParentData) {
             return PARENT;
-        }
-        else if (items.get(position) instanceof MedicalData) {
+        } else if (items.get(position) instanceof ShotRecordData) {
             return MEDICAL;
+        } else if (items.get(position) instanceof MedicationData) {
+            return MEDICATION;
         }
         else if (items.get(position) instanceof DiscountData) {
             return DISCOUNT;
@@ -59,6 +59,10 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
             case MEDICAL:
                 View v3 = inflater.inflate(R.layout.registration_medical_data_card, viewGroup, false);
                 viewHolder = new MedicalHolder(v3);
+                break;
+            case MEDICATION:
+                View v5 = inflater.inflate(R.layout.registration_medicine_data_card, viewGroup, false);
+                viewHolder = new MedicationHolder(v5);
                 break;
             case DISCOUNT:
                 View v4 = inflater.inflate(R.layout.registration_discount_data_card, viewGroup, false);
@@ -87,9 +91,13 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
                 MedicalHolder vh3 = (MedicalHolder) viewHolder;
                 configureMedicalViewHolder(vh3, position);
                 break;
+            case MEDICATION:
+                MedicationHolder vh4 = (MedicationHolder) viewHolder;
+                configureMedicationViewHolder(vh4, position);
+                break;
             case DISCOUNT:
-                DiscountHolder vh4 = (DiscountHolder) viewHolder;
-                configureDiscountViewHolder(vh4, position);
+                DiscountHolder vh5 = (DiscountHolder) viewHolder;
+                configureDiscountViewHolder(vh5, position);
                 break;
             default:
 //                RecyclerViewSimpleTextViewHolder vh = (RecyclerViewSimpleTextViewHolder) viewHolder;
@@ -128,12 +136,20 @@ public class ComplexRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     }
     private void configureMedicalViewHolder(MedicalHolder medicalViewHolder, int position) {
 
-        MedicalData medicalData = (MedicalData) items.get(position);
-        if (medicalData != null) {
-            medicalViewHolder.getFluShotDate().setText(medicalData.flu_shot_date);
-            medicalViewHolder.getImmunizationDate().setText(medicalData.immunizations_date);
-            medicalViewHolder.getMedicationTime().setText(medicalData.medication_time);
-            medicalViewHolder.getMedicationDescription_label().getEditText().setText(medicalData.medication_description);
+        ShotRecordData shotRecordData = (ShotRecordData) items.get(position);
+        if (shotRecordData != null) {
+            medicalViewHolder.getFluShotDate().setText(shotRecordData.flu_shot_date);
+            medicalViewHolder.getImmunizationDate().setText(shotRecordData.immunizations_date);
+            medicalViewHolder.getIvShotRecord().setImageResource(shotRecordData.imageShortRecord);
+        }
+    }
+
+    private void configureMedicationViewHolder(MedicationHolder medicationHolder, int position) {
+
+        MedicationData medicationData = (MedicationData) items.get(position);
+        if (medicationData != null) {
+            medicationHolder.getMedicationTime().setText(medicationData.medication_time);
+            medicationHolder.getMedicationDescription_label().getEditText().setText(medicationData.medication_description);
         }
     }
     private void configureDiscountViewHolder(DiscountHolder discountViewHolder, int position) {

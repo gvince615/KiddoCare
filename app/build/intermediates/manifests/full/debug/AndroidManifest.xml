@@ -33,94 +33,39 @@
         android:versionCode="10"
         android:versionName="2.0.0" >
         <activity
-            android:name="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.vintek_ss.vince.kiddocare.UserSettingActivity"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
+            android:parentActivityName="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.AttendanceActivity"
             android:label="@string/title_activity_attendance"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
+            android:parentActivityName="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.vintek_ss.vince.kiddocare.RegistrationActivity"
-            android:label="@string/title_activity_registration"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.vintek_ss.vince.kiddocare.TasksActivity"
-            android:label="@string/title_activity_tasks"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.vintek_ss.vince.kiddocare.MealActivity"
-            android:label="@string/title_activity_meal"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.vintek_ss.vince.kiddocare.NewMealActivity"
-            android:label="@string/title_activity_new_meal"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.vintek_ss.vince.kiddocare.CalendarActivity"
-            android:label="@string/title_activity_calendar"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
-            android:screenOrientation="portrait" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.BillingActivity"
             android:label="@string/title_activity_billing"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
+            android:parentActivityName="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.AboutActivity"
             android:label="About KiddoCare"
-            android:parentActivityName="com.vintek_ss.vince.kiddocare.MainActivity"
+            android:parentActivityName="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity"
             android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.RegisteredListScrollingActivity"
@@ -130,7 +75,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.RegistrationListScrollingActivity"
@@ -140,7 +85,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.vintek_ss.vince.kiddocare.MainActivity" />
+                android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
         <activity
             android:name="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity"

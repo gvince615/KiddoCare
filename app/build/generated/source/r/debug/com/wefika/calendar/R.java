@@ -47,7 +47,7 @@ public final class R {
 	public static final class layout {
 		public static final int calendar_layout = 0x7f040024;
 		public static final int day_layout = 0x7f040026;
-		public static final int week_layout = 0x7f04005a;
+		public static final int week_layout = 0x7f04005b;
 	}
 	public static final class string {
 		public static final int time_next = 0x7f070074;

@@ -3,6 +3,7 @@ package com.vintek_ss.vince.kiddocare;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,6 +24,7 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.TimePicker;
 
 import net.opacapp.multilinecollapsingtoolbar.CollapsingToolbarLayout;
 
@@ -38,31 +40,26 @@ import static com.vintek_ss.vince.kiddocare.R.drawable.ic_launcher;
 
 public class RegistrationListScrollingActivity extends AppCompatActivity {
 
-    private static int ID = 0;
-
-    Bitmap bmp;
+    public static final int CHILD = 0;
+    public static final int PARENT = 1;
+    public static final int MEDICAL = 2;
+    public static final int MEDICATION = 3;
+    public static final int DISCOUNT = 4;
     final static int cameraData = 0;
+    private static int ID = 0;
     final String cItems[] = {"Generic Boy Image", "Generic Girl Image", "Take Picture"};
-
+    Bitmap bmp;
     CollapsingToolbarLayout collapsingToolbarLayout;
     ComplexRecyclerViewAdapter adapter;
     AppBarLayout appbar;
     ImageView childImage;
     RecyclerView rv_RegistrationData;
-    private int mYear, mMonth, mDay, mHour, mMinute;
     FloatingActionButton fab_take_pic, fab_add_card;
-
     ArrayList<Object> items = new ArrayList<>();
-
-    public static final int CHILD = 0;
-    public static final int PARENT = 1;
-    public static final int MEDICAL = 2;
-    public static final int DISCOUNT = 3;
-
     String mCollapsedTitle = "KateLynn Vincent";
     String mExpandedTitle = "KateLynn Vincent";
-
-    private int datasetTypes[] = {CHILD, PARENT, MEDICAL, DISCOUNT}; //view types
+    private int mYear, mMonth, mDay, mHour, mMinute;
+    private int datasetTypes[] = {CHILD, PARENT, MEDICAL, MEDICATION, DISCOUNT}; //view types
 
     private List<ChildData> childDataCard;
     private List<ParentData> parentCard;
@@ -135,7 +132,8 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 RegistrationListScrollingActivity.this,
                 android.R.layout.select_dialog_singlechoice);
         arrayAdapter.add("Parent Data Card");
-        arrayAdapter.add("Medical Data Card");
+        arrayAdapter.add("Shot Record Data Card");
+        arrayAdapter.add("Medication Data Card");
         arrayAdapter.add("Discount Data Card");
 
         builderSingle.setNegativeButton(
@@ -159,8 +157,12 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                                 items.add(new ParentData("", "", "", "", "", true, "", "", "", ""));
                                 adapter.notifyDataSetChanged();
                                 break;
-                            case "Medical Data Card":
-                                items.add(new MedicalData("", "", "", ""));
+                            case "Shot Record Data Card":
+                                items.add(new ShotRecordData(0, "", ""));
+                                adapter.notifyDataSetChanged();
+                                break;
+                            case "Medication Data Card":
+                                items.add(new MedicationData("", ""));
                                 adapter.notifyDataSetChanged();
                                 break;
                             case "Discount Data Card":
@@ -188,10 +190,50 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
         adapter = new ComplexRecyclerViewAdapter(items);
         rv_RegistrationData.setAdapter(adapter);
+    }
 
-//        adapter = new ChildRegistrationRVAdapter(childDataCard, parentCard, datasetTypes);
-//        rv_RegistrationData.setAdapter(adapter);
+    public void pickTime(View v) {
+        final Calendar c = Calendar.getInstance();
+        mHour = c.get(Calendar.HOUR);
+        mMinute = c.get(Calendar.MINUTE);
 
+        Dialog timeDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                String strI = "";
+                if (ID == (R.id.et_Medtime)) {
+                    TextView tv = (TextView) findViewById(R.id.et_Medtime);
+                    String am_or_pm = "";
+                    if (minute <= 9) {
+                        strI = "0" + minute;
+                    } else {
+                        strI = "" + minute;
+                    }
+                    if (hourOfDay >= 13 && hourOfDay < 24) {
+                        int newHr = hourOfDay - 12;
+                        am_or_pm = "pm";
+                        tv.setText(newHr + ":" + strI + " " + am_or_pm);
+                    }
+                    if (hourOfDay == 12) {
+                        am_or_pm = "pm";
+                        tv.setText(hourOfDay + ":" + strI + " " + am_or_pm);
+                    }
+                    if (hourOfDay == 0) {
+                        am_or_pm = "am";
+                        String strIHr = "12";
+                        tv.setText(strIHr + ":" + strI + " " + am_or_pm);
+                    }
+                    if (hourOfDay <= 11 && hourOfDay != 0) {
+                        am_or_pm = "am";
+
+                        tv.setText(hourOfDay + ":" + strI + " " + am_or_pm);
+                    }
+
+                }
+            }
+        }, mHour, mMinute, false);
+        timeDialog.show();
+        ID = v.getId();
     }
 
     public void pickDate(View v) {

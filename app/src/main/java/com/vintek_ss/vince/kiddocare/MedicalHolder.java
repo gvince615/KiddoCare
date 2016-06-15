@@ -1,20 +1,17 @@
 package com.vintek_ss.vince.kiddocare;
 
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MedicalHolder extends RecyclerView.ViewHolder {
 
-    //private ImageView ivExample;
+    private ImageView ivShotRecord;
     private CardView cv;
-    private TextView fluShotDate, immunizationDate, medicationTime;
-    private TextInputLayout medicationDescription_label;
-    private EditText  medicationDescription;
+    private TextView fluShotDate, immunizationDate;
 
     public MedicalHolder(View v) {
         super(v);
@@ -27,13 +24,9 @@ public class MedicalHolder extends RecyclerView.ViewHolder {
                         .setAction("Action", null).show();
             }
         });
-
+        ivShotRecord = (ImageView) itemView.findViewById(R.id.iv_shot_record);
         fluShotDate = (TextView) itemView.findViewById(R.id.et_flu_shot_date);
         immunizationDate = (TextView) itemView.findViewById(R.id.et_immunization_date);
-        medicationTime = (TextView) itemView.findViewById(R.id.et_medication_time);
-        medicationDescription_label = (TextInputLayout) itemView.findViewById(R.id.tv_medicine_name);
-
-        medicationDescription = (EditText)itemView.findViewById(R.id.et_medicine_name);
     }
 
     public CardView getCv() {
@@ -60,28 +53,11 @@ public class MedicalHolder extends RecyclerView.ViewHolder {
         this.immunizationDate = immunizationDate;
     }
 
-    public TextView getMedicationTime() {
-        return medicationTime;
+    public ImageView getIvShotRecord() {
+        return ivShotRecord;
     }
 
-    public void setMedicationTime(TextView medicationTime) {
-        this.medicationTime = medicationTime;
+    public void setIvShotRecord(ImageView ivShotRecord) {
+        this.ivShotRecord = ivShotRecord;
     }
-
-    public TextInputLayout getMedicationDescription_label() {
-        return medicationDescription_label;
-    }
-
-    public void setMedicationDescription_label(TextInputLayout medicationDescription_label) {
-        this.medicationDescription_label = medicationDescription_label;
-    }
-
-    public EditText getMedicationDescription() {
-        return medicationDescription;
-    }
-
-    public void setMedicationDescription(EditText medicationDescription) {
-        this.medicationDescription = medicationDescription;
-    }
-
 }
