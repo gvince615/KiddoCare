@@ -10,18 +10,47 @@
     android:layout_margin="5dp">
 
     <LinearLayout
+        android:padding="5dp"
         android:layout_width="match_parent"
+        android:weightSum="2"
         android:layout_height="wrap_content"
-        android:background="@drawable/logo_blue_box"
-        android:padding="10dp"
-        android:layout_margin="10dp"
+        android:background="@drawable/logo_yellow_box"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_weight=".7"
+            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:background="@color/logo_yellow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number:"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="@dimen/text_size_large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/registered_childRecordNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="@dimen/text_size_large"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/tv_child_first_name_layout"
@@ -70,11 +99,14 @@
         </LinearLayout>
         <LinearLayout
             android:id="@+id/image_holder"
+            android:layout_weight="1"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            >
             <ImageView
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
                 android:id="@+id/child_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

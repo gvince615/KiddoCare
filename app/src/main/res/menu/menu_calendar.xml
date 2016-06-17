@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.vintek_ss.vince.kiddocare.CalendarActivity">
+    tools:context=".CalendarActivity">
     <item
         android:id="@+id/action_newCalItem"
         android:orderInCategory="100"

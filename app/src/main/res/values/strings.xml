@@ -193,5 +193,6 @@
     <string name="title_activity_wear_attendance">WearAttendanceActivity</string>
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
+    <string name="hint_address_ln_2">Address Line 2</string>
 
 </resources>

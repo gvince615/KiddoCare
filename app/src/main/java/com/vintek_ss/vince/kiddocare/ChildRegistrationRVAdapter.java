@@ -1,217 +1,164 @@
 package com.vintek_ss.vince.kiddocare;
 
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import java.util.List;
 
-public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<ChildRegistrationRVAdapter.ViewHolder> {
-    private static final String TAG = "CustomAdapter";
+public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private final List<ParentData> parentDatas;
-    private final List<ChildData> childDatas;
+    public static final int CHILD = 0, PARENT = 1, MEDICAL = 2, MEDICATION = 3, DISCOUNT = 4;
+    // The items to display in your RecyclerView
+    private List<Object> items;
 
-    private int[] dataSetTypes;
-    private List mDataSet;
-
-    public static final int CHILD = 0;
-    public static final int PARENT = 1;
-    public static final int MEDICAL = 2;
-    public static final int DISCOUNT = 3;
-
-
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public ViewHolder(View v) {
-            super(v);
-        }
+    // Provide a suitable constructor (depends on the kind of dataset)
+    public ChildRegistrationRVAdapter(List<Object> items) {
+        this.items = items;
     }
 
-    public static class ChildViewHolder extends ViewHolder {
-        CardView cv;
-        EditText childFirstName, childLastName, childAddressLn1, childAddressCity, childAddressState, childAddressZip;
-        TextInputLayout childFirstName_layout, childLastName_layout, childAddressLn1_layout, childAddressCity_layout, childAddressState_layout, childAddressZip_layout;
-        TextView childBirthdate, childEnrolldate;
-
-        ChildViewHolder(View itemView) {
-            super(itemView);
-
-            cv = (CardView)itemView.findViewById(R.id.childDataCardView);
-            cv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Snackbar.make(v, "Tapped a Child Card", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-
-            childFirstName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_first_name_layout);
-            childLastName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_last_name_layout);
-            childAddressLn1_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_child_address_ln_1_layout);
-            childAddressCity_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_city_layout);
-            childAddressState_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_state_layout);
-            childAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
-
-            childFirstName = (EditText)itemView.findViewById(R.id.et_childFname);
-            childLastName = (EditText)itemView.findViewById(R.id.et_child_last_name);
-            childAddressLn1 = (EditText)itemView.findViewById(R.id.et_child_address_ln_1);
-            childAddressCity = (EditText)itemView.findViewById(R.id.et_child_address_city);
-            childAddressState = (EditText)itemView.findViewById(R.id.et_child_address_state);
-            childAddressZip = (EditText)itemView.findViewById(R.id.et_child_address_zip);
-
-            childBirthdate = (TextView) itemView.findViewById(R.id.tv_Cbirthdate);
-            childEnrolldate = (TextView) itemView.findViewById(R.id.et_child_Edate);
-
-
-
-        }
-    }
-
-    public static class ParentViewHolder extends ViewHolder {
-        CardView cv;
-        EditText parentFirstName, parentLastName, parentAddressLn1, parentAddressCity,
-                parentAddressState, parentAddressZip, parentEmail, parentPhoneNumber;
-        TextInputLayout parentFirstName_layout, parentLastName_layout, parentAddressLn1_layout,
-                parentAddressCity_layout, parentAddressState_layout, parentAddressZip_layout,
-                parentPhone_number_layout, parentEmail_layout;
-
-        ParentViewHolder(View itemView) {
-            super(itemView);
-
-            cv = (CardView)itemView.findViewById(R.id.parentDataCardView);
-
-            cv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Snackbar.make(v, "Tapped a Parent Card", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });
-
-            parentFirstName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentFname);
-            parentLastName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentLname);
-            parentEmail_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardians_email_address);
-            parentPhone_number_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_phone_number);
-            parentAddressLn1_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_guardian_address_ln_1_layout);
-            parentAddressCity_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_address_city_layout);
-            parentAddressState_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_address_state_layout);
-            parentAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
-
-            parentFirstName = (EditText)itemView.findViewById(R.id.et_parentFname);
-            parentLastName = (EditText)itemView.findViewById(R.id.et_parentLname);
-            parentAddressLn1 = (EditText)itemView.findViewById(R.id.et_guardian_address_ln_1);
-            parentEmail = (EditText)itemView.findViewById(R.id.et_guardians_email_address);
-            parentPhoneNumber = (EditText)itemView.findViewById(R.id.et_guardian_phone_number);
-            parentAddressCity = (EditText)itemView.findViewById(R.id.et_guardian_address_city);
-            parentAddressState = (EditText)itemView.findViewById(R.id.et_guardian_address_state);
-            parentAddressZip = (EditText)itemView.findViewById(R.id.et_guardian_address_zip);
-        }
-    }
-
-    public class MedicalViewHolder extends ViewHolder {
-//        TextView headline;
-//        Button read_more;
-
-        public MedicalViewHolder(View v) {
-            super(v);
-//            this.headline = (TextView) v.findViewById(R.id.headline);
-//            this.read_more = (Button) v.findViewById(R.id.read_more);
-        }
-    }
-
-    public class DiscountViewHolder extends ViewHolder {
-//        TextView headline;
-//        Button read_more;
-
-        public DiscountViewHolder(View v) {
-            super(v);
-//            this.headline = (TextView) v.findViewById(R.id.headline);
-//            this.read_more = (Button) v.findViewById(R.id.read_more);
-        }
-    }
-
-    public ChildRegistrationRVAdapter(List<ChildData> childDatas, List<ParentData> parentDatas, int[] datasetTypes) {
-        this.childDatas = childDatas;
-        this.parentDatas = parentDatas;
-
-
-        dataSetTypes = datasetTypes;
-    }
-
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View v;
-
-        if (viewType == CHILD) {
-            v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.registration_child_data_card, viewGroup, false);
-            return new ChildViewHolder(v);
-        } else if (viewType == PARENT) {
-            v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.registration_parent_data_card, viewGroup, false);
-            return new MedicalViewHolder(v);
-        } else if (viewType == MEDICAL){
-            v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.registration_medical_data_card, viewGroup, false);
-            return new ParentViewHolder(v);
-        } else {
-            v = LayoutInflater.from(viewGroup.getContext())
-                    .inflate(R.layout.registration_discount_data_card, viewGroup, false);
-            return new ParentViewHolder(v);
-        }
-    }
-
-    @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
-        if (viewHolder.getItemViewType() == CHILD) {
-
-            ChildViewHolder childViewHolder = (ChildViewHolder) viewHolder;
-
-            childViewHolder.childFirstName_layout.getEditText().setText(childDatas.get(i).first_name);
-            childViewHolder.childLastName_layout.getEditText().setText(childDatas.get(i).last_name);
-            childViewHolder.childBirthdate.setText(childDatas.get(i).birth_date);
-            childViewHolder.childEnrolldate.setText(childDatas.get(i).enroll_date);
-            childViewHolder.childAddressLn1_layout.getEditText().setText(childDatas.get(i).address_ln_1);
-            childViewHolder.childAddressCity_layout.getEditText().setText(childDatas.get(i).address_city);
-            childViewHolder.childAddressState_layout.getEditText().setText(childDatas.get(i).address_state);
-            childViewHolder.childAddressZip_layout.getEditText().setText(childDatas.get(i).address_zip);
-
-        }
-
-        else if (viewHolder.getItemViewType() == PARENT){
-            ParentViewHolder parentViewHolder = (ParentViewHolder) viewHolder;
-
-            parentViewHolder.parentFirstName_layout.getEditText().setText(parentDatas.get(i).first_name);
-            parentViewHolder.parentLastName_layout.getEditText().setText(parentDatas.get(i).last_name);
-            parentViewHolder.parentEmail_layout.getEditText().setText(parentDatas.get(i).email);
-            parentViewHolder.parentPhone_number_layout.getEditText().setText(parentDatas.get(i).phoneNumber);
-            parentViewHolder.parentAddressLn1_layout.getEditText().setText(parentDatas.get(i).address_ln_1);
-            parentViewHolder.parentAddressCity_layout.getEditText().setText(parentDatas.get(i).address_city);
-            parentViewHolder.parentAddressState_layout.getEditText().setText(parentDatas.get(i).address_state);
-            parentViewHolder.parentAddressZip_layout.getEditText().setText(parentDatas.get(i).address_zip);
-
-        }
-        else if (viewHolder.getItemViewType() == MEDICAL) {
-//            MedicalViewHolder holder = (MedicalViewHolder) viewHolder;
-//            holder.headline.setText(childDatas[position]);
-        }
-        else {
-//            DiscountViewHolder holder = (DiscountViewHolder) viewHolder;
-//            holder.headline.setText(childDatas[position]);
-        }
-
-    }
-
+    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        int i = childDatas.size();
-        return childDatas.size();
+        return this.items.size();
+    }
 
+    @Override
+    public int getItemViewType(int position) {
+        if (items.get(position) instanceof ChildData) {
+            return CHILD;
+        }
+        else if (items.get(position) instanceof ParentData) {
+            return PARENT;
+        } else if (items.get(position) instanceof ShotRecordData) {
+            return MEDICAL;
+        } else if (items.get(position) instanceof MedicationData) {
+            return MEDICATION;
+        }
+        else if (items.get(position) instanceof DiscountData) {
+            return DISCOUNT;
+        }
+        return -1;
+    }
+
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        RecyclerView.ViewHolder viewHolder = null;
+        LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
+
+        switch (viewType) {
+            case CHILD:
+                View v1 = inflater.inflate(R.layout.registration_child_data_card, viewGroup, false);
+                viewHolder = new ChildHolder(v1);
+                break;
+            case PARENT:
+                View v2 = inflater.inflate(R.layout.registration_parent_data_card, viewGroup, false);
+                viewHolder = new ParentHolder(v2);
+                break;
+            case MEDICAL:
+                View v3 = inflater.inflate(R.layout.registration_medical_data_card, viewGroup, false);
+                viewHolder = new ShotsHolder(v3);
+                break;
+            case MEDICATION:
+                View v5 = inflater.inflate(R.layout.registration_medicine_data_card, viewGroup, false);
+                viewHolder = new MedicationHolder(v5);
+                break;
+            case DISCOUNT:
+                View v4 = inflater.inflate(R.layout.registration_discount_data_card, viewGroup, false);
+                viewHolder = new DiscountHolder(v4);
+                break;
+            default:
+//                View v = inflater.inflate(android.R.layout.simple_list_item_1, viewGroup, false);
+//                viewHolder = new RecyclerViewSimpleTextViewHolder(v);
+                break;
+        }
+        return viewHolder;
+    }
+
+    @Override
+    public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
+        switch (viewHolder.getItemViewType()) {
+            case CHILD:
+                ChildHolder vh1 = (ChildHolder) viewHolder;
+                configureChildViewHolder(vh1, position);
+                break;
+            case PARENT:
+                ParentHolder vh2 = (ParentHolder) viewHolder;
+                configureParentViewHolder(vh2, position);
+                break;
+            case MEDICAL:
+                ShotsHolder vh3 = (ShotsHolder) viewHolder;
+                configureMedicalViewHolder(vh3, position);
+                break;
+            case MEDICATION:
+                MedicationHolder vh4 = (MedicationHolder) viewHolder;
+                configureMedicationViewHolder(vh4, position);
+                break;
+            case DISCOUNT:
+                DiscountHolder vh5 = (DiscountHolder) viewHolder;
+                configureDiscountViewHolder(vh5, position);
+                break;
+            default:
+//                RecyclerViewSimpleTextViewHolder vh = (RecyclerViewSimpleTextViewHolder) viewHolder;
+//                configureDefaultViewHolder(vh, position);
+                break;
+        }
+    }
+    private void configureChildViewHolder(ChildHolder childViewHolder, int position) {
+
+        ChildData childData = (ChildData) items.get(position);
+        if (childData != null) {
+            childViewHolder.getChildFirstName_layout().getEditText().setText(childData.first_name);
+            childViewHolder.getChildLastName_layout().getEditText().setText(childData.last_name);
+            childViewHolder.getChildBirthdate().setText(childData.birth_date);
+            childViewHolder.getChildEnrolldate().setText(childData.enroll_date);
+            childViewHolder.getChildAddressLn1_layout().getEditText().setText(childData.address_ln_1);
+            childViewHolder.getChildAddressCity_layout().getEditText().setText(childData.address_city);
+            childViewHolder.getChildAddressState_layout().getEditText().setText(childData.address_state);
+            childViewHolder.getChildAddressZip_layout().getEditText().setText(childData.address_zip);
+        }
+    }
+
+    private void configureParentViewHolder(ParentHolder parentViewHolder, int position) {
+
+        ParentData parentData = (ParentData) items.get(position);
+        if (parentData != null) {
+            parentViewHolder.getParentFirstName_layout().getEditText().setText(parentData.first_name);
+            parentViewHolder.getParentLastName_layout().getEditText().setText(parentData.last_name);
+            parentViewHolder.getParentEmail_layout().getEditText().setText(parentData.email);
+            parentViewHolder.getParentPhone_number_layout().getEditText().setText(parentData.phoneNumber);
+            parentViewHolder.getParentAddressLn1_layout().getEditText().setText(parentData.address_ln_1);
+            parentViewHolder.getParentAddressCity_layout().getEditText().setText(parentData.address_city);
+            parentViewHolder.getParentAddressState_layout().getEditText().setText(parentData.address_state);
+            parentViewHolder.getParentAddressZip_layout().getEditText().setText(parentData.address_zip);
+        }
+    }
+
+    private void configureMedicalViewHolder(ShotsHolder medicalViewHolder, int position) {
+
+        ShotRecordData shotRecordData = (ShotRecordData) items.get(position);
+        if (shotRecordData != null) {
+            medicalViewHolder.getFluShotDate().setText(shotRecordData.flu_shot_date);
+            medicalViewHolder.getImmunizationDate().setText(shotRecordData.immunizations_date);
+            medicalViewHolder.getIvShotRecord().setImageBitmap(shotRecordData.imageShortRecord);
+        }
+    }
+
+    private void configureMedicationViewHolder(MedicationHolder medicationHolder, int position) {
+
+        MedicationData medicationData = (MedicationData) items.get(position);
+        if (medicationData != null) {
+            medicationHolder.getMedicationTime().setText(medicationData.medication_time);
+            medicationHolder.getMedicationDescription_label().getEditText().setText(medicationData.medication_description);
+        }
+    }
+    private void configureDiscountViewHolder(DiscountHolder discountViewHolder, int position) {
+
+        DiscountData discountData = (DiscountData) items.get(position);
+        if (discountData != null) {
+            discountViewHolder.getDiscountDescription_label().getEditText().setText(discountData.discount_description);
+            //discountViewHolder.getDiscountAmount().getChildAt(position).getTe.(discountData.discount_description);
+        }
     }
 }

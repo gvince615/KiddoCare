@@ -574,6 +574,7 @@
     <string name="hint_TaskTitle">Task Title</string>
     <string name="hint_activities">Coloring, Blocks, etc...</string>
     <string name="hint_address_ln_1">Street Address</string>
+    <string name="hint_address_ln_2">Address Line 2</string>
     <string name="hint_allergies">List any Allergies</string>
     <string name="hint_city">City</string>
     <string name="hint_date">Select Date</string>

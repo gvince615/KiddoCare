@@ -5,16 +5,20 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class ParentHolder extends RecyclerView.ViewHolder {
 
     private CardView cv;
-    private EditText parentFirstName, parentLastName, parentAddressLn1, parentAddressCity,
+    private EditText parentFirstName, parentLastName, parentAddressLn1, parentAddressLn2, parentAddressCity,
             parentAddressState, parentAddressZip, parentEmail, parentPhoneNumber;
-    private TextInputLayout parentFirstName_layout, parentLastName_layout, parentAddressLn1_layout,
+    private TextInputLayout parentFirstName_layout, parentLastName_layout, parentAddressLn1_layout, parentAddressLn2_layout,
             parentAddressCity_layout, parentAddressState_layout, parentAddressZip_layout,
             parentPhone_number_layout, parentEmail_layout;
+    private CheckBox isAddressSameAsChild;
+    private Spinner guardianType;
 
     public ParentHolder(View v) {
         super(v);
@@ -24,18 +28,21 @@ public class ParentHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View v) {
 
-
-
                 Snackbar.make(v, "Tapped a Parent Card", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
+        guardianType = (Spinner) itemView.findViewById(R.id.spinner_guardian_type);
         parentFirstName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentFname);
         parentLastName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentLname);
         parentEmail_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardians_email_address);
         parentPhone_number_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_phone_number);
+
+        isAddressSameAsChild = (CheckBox) itemView.findViewById(R.id.c_address_same_as_child);
+
         parentAddressLn1_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_guardian_address_ln_1_layout);
+        parentAddressLn2_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_guardian_address_ln_2_layout);
         parentAddressCity_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_address_city_layout);
         parentAddressState_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_address_state_layout);
         parentAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
@@ -43,6 +50,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         parentFirstName = (EditText)itemView.findViewById(R.id.et_parentFname);
         parentLastName = (EditText)itemView.findViewById(R.id.et_parentLname);
         parentAddressLn1 = (EditText)itemView.findViewById(R.id.et_guardian_address_ln_1);
+        parentAddressLn2 = (EditText) itemView.findViewById(R.id.et_guardian_address_ln_2);
         parentEmail = (EditText)itemView.findViewById(R.id.et_guardians_email_address);
         parentPhoneNumber = (EditText)itemView.findViewById(R.id.et_guardian_phone_number);
         parentAddressCity = (EditText)itemView.findViewById(R.id.et_guardian_address_city);
@@ -56,6 +64,38 @@ public class ParentHolder extends RecyclerView.ViewHolder {
 
     public void setCv(CardView cv) {
         this.cv = cv;
+    }
+
+    public Spinner getGuardianType() {
+        return guardianType;
+    }
+
+    public void setGuardianType(Spinner guardianType) {
+        this.guardianType = guardianType;
+    }
+
+    public CheckBox getIsAddressSameAsChild() {
+        return isAddressSameAsChild;
+    }
+
+    public void setIsAddressSameAsChild(CheckBox isAddressSameAsChild) {
+        this.isAddressSameAsChild = isAddressSameAsChild;
+    }
+
+    public EditText getParentAddressLn2() {
+        return parentAddressLn2;
+    }
+
+    public void setParentAddressLn2(EditText parentAddressLn2) {
+        this.parentAddressLn2 = parentAddressLn2;
+    }
+
+    public TextInputLayout getParentAddressLn2_layout() {
+        return parentAddressLn2_layout;
+    }
+
+    public void setParentAddressLn2_layout(TextInputLayout parentAddressLn2_layout) {
+        this.parentAddressLn2_layout = parentAddressLn2_layout;
     }
 
     public EditText getParentFirstName() {

@@ -50,8 +50,8 @@ public final class R {
 		public static final int week_layout = 0x7f04005b;
 	}
 	public static final class string {
-		public static final int time_next = 0x7f070074;
-		public static final int time_prev = 0x7f070075;
+		public static final int time_next = 0x7f070075;
+		public static final int time_prev = 0x7f070076;
 	}
 	public static final class style {
 		public static final int CalendarStyle = 0x7f0a00c0;

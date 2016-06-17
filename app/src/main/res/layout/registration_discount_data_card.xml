@@ -1,39 +1,39 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/discountDataCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    custom:cardElevation="3dp"
-    custom:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
     custom:cardBackgroundColor="@color/trans_white"
-    android:id="@+id/discountDataCardView"
-    android:layout_margin="5dp">
+    custom:cardCornerRadius="5dp"
+    custom:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/logo_green_box">
+        android:background="@drawable/logo_green_box"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:padding="5dp"
-            android:background="@color/logo_green"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/logo_green"
+            android:padding="5dp">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Discount to Apply:"
             android:layout_marginBottom="5dp"
+            android:text="Discount to Apply:"
             android:textSize="@dimen/text_size_large"
             android:textStyle="bold|italic" />
         </LinearLayout>
 
         <LinearLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/tv_discount_description"
@@ -44,18 +44,33 @@
                     android:id="@+id/et_discount_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="discount description" />
+                    android:hint="discount description"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
-            <Spinner
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:weightSum="2">
+
+            <Spinner
                 android:id="@+id/spinner_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:entries="@array/Discount_values"
-                android:textSize="25sp"
-                android:gravity="center_horizontal" />
+                android:gravity="center_horizontal"
+                android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Pecent"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

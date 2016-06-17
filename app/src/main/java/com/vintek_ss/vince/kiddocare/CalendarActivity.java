@@ -25,7 +25,7 @@ import java.util.List;
 public class CalendarActivity extends Activity {
     private static int ID = 0;
     public ArrayList<Integer> al = new ArrayList<Integer>();
-    public List<customAdapterEvent> eventList = new ArrayList<customAdapterEvent>();
+    public List<CalEventAdapter> eventList = new ArrayList<CalEventAdapter>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +154,7 @@ public class CalendarActivity extends Activity {
                     String eventDate = cursor.getString(cursor
                             .getColumnIndex(daycaremanagerDB.KEY_CAL_DATE));
 
-                    eventList.add(new customAdapterEvent(eventTitle, eventTimeS, eventTimeE, eventDate));
+                    eventList.add(new CalEventAdapter(eventTitle, eventTimeS, eventTimeE, eventDate));
                     cursor.moveToNext();
                 }
             }
@@ -168,12 +168,12 @@ public class CalendarActivity extends Activity {
     }
 
     private void loadEventDataIntoListView() {
-        ArrayAdapter<customAdapterEvent> adapter = new MyListAdapter();
+        ArrayAdapter<CalEventAdapter> adapter = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.lv_eventList);
         list.setAdapter(adapter);
     }
 
-    private class MyListAdapter extends ArrayAdapter<customAdapterEvent> {
+    private class MyListAdapter extends ArrayAdapter<CalEventAdapter> {
         public MyListAdapter() {
             super(CalendarActivity.this, R.layout.event_layout,
                     eventList);
@@ -188,7 +188,7 @@ public class CalendarActivity extends Activity {
                         parent, false);
             }
             // Find the car to work with.
-            customAdapterEvent currentEvent = eventList.get(position);
+            CalEventAdapter currentEvent = eventList.get(position);
             // Fill the view
             TextView eventName = (TextView) itemView.findViewById(R.id.tv_eventTitle);
             eventName.setText(currentEvent.geteventTitle());

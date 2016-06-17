@@ -6,6 +6,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class ChildHolder extends RecyclerView.ViewHolder {
@@ -13,9 +14,10 @@ public class ChildHolder extends RecyclerView.ViewHolder {
 
 
     private CardView cv;
-    private EditText childFirstName, childLastName, childAddressLn1, childAddressCity, childAddressState, childAddressZip;
-    private TextInputLayout childFirstName_layout, childLastName_layout, childAddressLn1_layout, childAddressCity_layout, childAddressState_layout, childAddressZip_layout;
+    private EditText childFirstName, childLastName, childAddressLn1, childAddressLn2, childAddressCity, childAddressState, childAddressZip;
+    private TextInputLayout childFirstName_layout, childLastName_layout, childAddressLn2_layout, childAddressLn1_layout, childAddressCity_layout, childAddressState_layout, childAddressZip_layout;
     private TextView childBirthdate, childEnrolldate;
+    private Spinner childAge;
 
     public ChildHolder(View v) {
         super(v);
@@ -31,21 +33,50 @@ public class ChildHolder extends RecyclerView.ViewHolder {
 
         childFirstName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_first_name_layout);
         childLastName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_last_name_layout);
-        childBirthdate = (TextView) itemView.findViewById(R.id.tv_Cbirthdate);
-        childEnrolldate = (TextView) itemView.findViewById(R.id.et_child_Edate);
         childAddressLn1_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_child_address_ln_1_layout);
+        childAddressLn2_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_child_address_ln_2_layout);
         childAddressCity_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_city_layout);
         childAddressState_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_state_layout);
         childAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
 
-        childFirstName = (EditText)itemView.findViewById(R.id.et_childFname);
+        childFirstName = (EditText) itemView.findViewById(R.id.et_child_first_name);
         childLastName = (EditText)itemView.findViewById(R.id.et_child_last_name);
         childAddressLn1 = (EditText)itemView.findViewById(R.id.et_child_address_ln_1);
+        childAddressLn2 = (EditText) itemView.findViewById(R.id.et_child_address_ln_2);
         childAddressCity = (EditText)itemView.findViewById(R.id.et_child_address_city);
         childAddressState = (EditText)itemView.findViewById(R.id.et_child_address_state);
         childAddressZip = (EditText)itemView.findViewById(R.id.et_child_address_zip);
 
+        childAge = (Spinner) itemView.findViewById(R.id.spinner_age_bracket);
 
+        childBirthdate = (TextView) itemView.findViewById(R.id.tv_Cbirthdate);
+        childEnrolldate = (TextView) itemView.findViewById(R.id.et_child_Edate);
+
+
+    }
+
+    public EditText getChildAddressLn2() {
+        return childAddressLn2;
+    }
+
+    public void setChildAddressLn2(EditText childAddressLn2) {
+        this.childAddressLn2 = childAddressLn2;
+    }
+
+    public TextInputLayout getChildAddressLn2_layout() {
+        return childAddressLn2_layout;
+    }
+
+    public void setChildAddressLn2_layout(TextInputLayout childAddressLn2_layout) {
+        this.childAddressLn2_layout = childAddressLn2_layout;
+    }
+
+    public Spinner getChildAge() {
+        return childAge;
+    }
+
+    public void setChildAge(Spinner childAge) {
+        this.childAge = childAge;
     }
 
     public CardView getCv() {

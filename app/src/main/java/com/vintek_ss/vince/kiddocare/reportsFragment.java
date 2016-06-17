@@ -5,7 +5,6 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.database.Cursor;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
@@ -47,66 +46,66 @@ public class reportsFragment extends Fragment {
         TextView attenTV = (TextView) rootView.findViewById(R.id.tv_Atten_Rec);
         TextView regTV = (TextView) rootView.findViewById(R.id.tv_reg_records);
         TextView oth = (TextView) rootView.findViewById(R.id.tv_parent_rec);
-        populateAttenData(attenTV);
-        populateRegData(regTV);
+//        populateAttenData(attenTV);
+//        populateRegData(regTV);
         populateParentData(oth);
         return rootView;
     }
 
-    public void populateAttenData(TextView tv) {
-        daycaremanagerDB db = new daycaremanagerDB(getContext());
-        db.open();
-        Cursor c = db.get_ALL_AttenData();
-        String title = ("Attendance Records\n");
-        String output = (title);
-        while (c.moveToNext()) {
-            String record = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_ROWID));
-            String child = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_CHILD));
-            String dateIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_IN));
-            //String timeIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_TIME_IN1));
-            //String timeOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_TIME_OUT1));
-            String dateOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_OUT));
-            if (dateOUT == null) {
+//    public void populateAttenData(TextView tv) {
+//        daycaremanagerDB db = new daycaremanagerDB(getContext());
+//        db.open();
+//        Cursor c = db.get_ALL_AttenData();
+//        String title = ("Attendance Records\n");
+//        String output = (title);
+//        while (c.moveToNext()) {
+//            String record = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_ROWID));
+//            String child = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_CHILD));
+//            String dateIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_TIME_IN));
+//            //String timeIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_TIME_IN1));
+//            //String timeOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_TIME_OUT1));
+//            String dateOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_TIME_OUT));
+//            if (dateOUT == null) {
+//
+//                dateOUT = ("Currently Signed in");
+//            }
+//            if (c.isLast()) {
+//                output = output + record + " :\t" + child + "\n"
+//                        + dateIN + " |\t" + dateOUT;
+//            } else {
+//                output = output + record + " :\t" + child + "\n"
+//                        + dateIN + " |\t" + dateOUT + "\n";
+//            }
+//        }
+//        tv.setText(output);
+//        db.close();
+//    }
 
-                dateOUT = ("Currently Signed in");
-            }
-            if (c.isLast()) {
-                output = output + record + " :\t" + child + "\n"
-                        + dateIN + " |\t" + dateOUT;
-            } else {
-                output = output + record + " :\t" + child + "\n"
-                        + dateIN + " |\t" + dateOUT + "\n";
-            }
-        }
-        tv.setText(output);
-        db.close();
-    }
-
-    public void populateRegData(TextView tv) {
-        daycaremanagerDB db = new daycaremanagerDB(getContext());
-        db.open();
-        Cursor c = db.get_ALL_RegData();
-        String title = ("Registration Records\n");
-        String output = (title);
-        while (c.moveToNext()) {
-            String record = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
-            String fname = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
-            String lname = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_LNAME));
-            String edate = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_EDATE));
-            String age = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_AGE));
-            String incare = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_INCARE));
-
-            if (c.isLast()) {
-                output = output + record + " :\t" + fname + "\t" + lname + "\n"
-                        + edate + " |\t" + age + " |\t " + incare;
-            } else {
-                output = output + record + " :\t" + fname + " " + lname + "\n"
-                        + edate + " |\t" + age + " |\t " + incare + "\n";
-            }
-        }
-        tv.setText(output);
-        db.close();
-    }
+//    public void populateRegData(TextView tv) {
+//        daycaremanagerDB db = new daycaremanagerDB(getContext());
+//        db.open();
+//        Cursor c = db.get_ALL_RegData();
+//        String title = ("Registration Records\n");
+//        String output = (title);
+//        while (c.moveToNext()) {
+//            String record = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
+//            String fname = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
+//            String lname = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_LNAME));
+//            String edate = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_EDATE));
+//            String age = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_AGE));
+//            String incare = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_CHILD_INCARE));
+//
+//            if (c.isLast()) {
+//                output = output + record + " :\t" + fname + "\t" + lname + "\n"
+//                        + edate + " |\t" + age + " |\t " + incare;
+//            } else {
+//                output = output + record + " :\t" + fname + " " + lname + "\n"
+//                        + edate + " |\t" + age + " |\t " + incare + "\n";
+//            }
+//        }
+//        tv.setText(output);
+//        db.close();
+//    }
 
     public void populateParentData(TextView tv) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);

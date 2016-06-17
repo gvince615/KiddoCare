@@ -6,7 +6,9 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -19,6 +21,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -50,7 +53,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     final String cItems[] = {"Generic Boy Image", "Generic Girl Image", "Take Picture"};
     Bitmap bmp;
     CollapsingToolbarLayout collapsingToolbarLayout;
-    ComplexRecyclerViewAdapter adapter;
+    ChildRegistrationRVAdapter adapter;
     AppBarLayout appbar;
     ImageView childImage;
     RecyclerView rv_RegistrationData;
@@ -63,6 +66,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
     private List<ChildData> childDataCard;
     private List<ParentData> parentCard;
+    private int newChildNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,10 +121,22 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 pickACardToAdd();
             }
         });
+        int childNumber = 0;
 
-        loadBackdrop();
-        initializeData();
+        if (savedInstanceState == null) {
+            Bundle bundle = getIntent().getExtras();
+            if (bundle != null) {
+                childNumber = bundle.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+            } else {
+                loadBackdrop();
+                initializeData();
+            }
+        } else {
+            childNumber = savedInstanceState.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+        }
         initializeAdapter();
+
+
     }
 
     private void pickACardToAdd() {
@@ -154,20 +170,22 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
                         switch (strName){
                             case "Parent Data Card":
-                                items.add(new ParentData("", "", "", "", "", true, "", "", "", ""));
-                                adapter.notifyDataSetChanged();
+                                items.add(new ParentData("", "", "", "", "", true, "", "", "", "", ""));
+                                adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
                             case "Shot Record Data Card":
-                                items.add(new ShotRecordData(0, "", ""));
-                                adapter.notifyDataSetChanged();
+                                Bitmap image = BitmapFactory.decodeResource(getApplicationContext().getResources(),
+                                        R.drawable.ic_launcher_new);
+                                items.add(new ShotRecordData(image, "", ""));
+                                adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
                             case "Medication Data Card":
                                 items.add(new MedicationData("", ""));
-                                adapter.notifyDataSetChanged();
+                                adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
                             case "Discount Data Card":
                                 items.add(new DiscountData("", ""));
-                                adapter.notifyDataSetChanged();
+                                adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
                         }
                         Snackbar.make(fab_add_card, strName + " Added", Snackbar.LENGTH_LONG)
@@ -182,13 +200,16 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     private ArrayList<Object> getSampleArrayList() {
-        items.add(new ChildData(0, 0, "", "", "", "", "", "", "", ""));
+        Bitmap image = BitmapFactory.decodeResource(this.getResources(),
+                R.drawable.ic_launcher_new);
+
+        items.add(new ChildData(0, image, "", "", "", "", "", "", "", "", ""));
         return items;
     }
 
     private void initializeAdapter(){
 
-        adapter = new ComplexRecyclerViewAdapter(items);
+        adapter = new ChildRegistrationRVAdapter(items);
         rv_RegistrationData.setAdapter(adapter);
     }
 
@@ -201,8 +222,8 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             @Override
             public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
                 String strI = "";
-                if (ID == (R.id.et_Medtime)) {
-                    TextView tv = (TextView) findViewById(R.id.et_Medtime);
+                if (ID == (R.id.et_medication_time)) {
+                    TextView tv = (TextView) findViewById(R.id.et_medication_time);
                     String am_or_pm = "";
                     if (minute <= 9) {
                         strI = "0" + minute;
@@ -228,7 +249,6 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
                         tv.setText(hourOfDay + ":" + strI + " " + am_or_pm);
                     }
-
                 }
             }
         }, mHour, mMinute, false);
@@ -245,17 +265,22 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 monthOfYear++;
+                TextView tv = null;
 
                 if (ID == (R.id.tv_Cbirthdate)) {
-                    TextView tv = (TextView) findViewById(R.id.tv_Cbirthdate);
-                    tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
+                    tv = (TextView) findViewById(R.id.tv_Cbirthdate);
                 }
-                if (ID == (R.id.tv_child_Edate)) {
-                    TextView tv = (TextView) findViewById(R.id.tv_child_Edate);
-                    tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
+                if (ID == (R.id.et_child_Edate)) {
+                    tv = (TextView) findViewById(R.id.et_child_Edate);
                 }
-                if (ID == (R.id.et_DTAPdate)) {
-                    TextView tv = (TextView) findViewById(R.id.et_DTAPdate);
+                if (ID == (R.id.et_immunization_date)) {
+                    tv = (TextView) findViewById(R.id.et_immunization_date);
+                }
+                if (ID == (R.id.et_flu_shot_date)) {
+                    tv = (TextView) findViewById(R.id.et_flu_shot_date);
+                }
+
+                if (tv != null) {
                     tv.setText(monthOfYear + "/" + dayOfMonth + "/" +year);
                 }
             }
@@ -266,13 +291,114 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
     private void loadBackdrop() {
         childImage = (ImageView) findViewById(R.id.iv_child_image);
+    }
+
+    public void save_info() {
+        for (int card = 1; card <= rv_RegistrationData.getChildCount(); card++) {
+
+            View currentCard = rv_RegistrationData.getChildAt(card - 1);
+
+            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ChildHolder) {
+                Bitmap childImage = ((BitmapDrawable) this.childImage.getDrawable()).getBitmap();
+                String childFirstName = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildFirstName().getText());
+                String childLastName = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildLastName().getText());
+                String childBirthDate = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildBirthdate().getText());
+                String childEnrollDate = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildEnrolldate().getText());
+                String childAddyLn1 = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressLn1().getText());
+                String childAddyLn2 = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressLn2().getText());
+                String childAddyCity = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressCity().getText());
+                String childAddyState = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressState().getText());
+                String childAddyZip = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressZip().getText());
+                String childAge = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAge().getSelectedItem());
+
+                daycaremanagerDB entry = new daycaremanagerDB(this);
+                entry.open();
+                newChildNumber = entry.createChildEntry(childFirstName, childLastName, childBirthDate, childEnrollDate, childAddyLn1, childAddyLn2,
+                        childAddyCity, childAddyState, childAddyZip, childAge, childImage);
+                entry.close();
+
+            }
+            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ParentHolder) {
+
+                String guardianType = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getGuardianType().getSelectedItem());
+                String guardianFirstName = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentFirstName().getText());
+                String guardianLastName = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentLastName().getText());
+                String guardianPhone = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentPhoneNumber().getText());
+                String guardianEmail = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentEmail().getText());
+
+                Boolean addressSameAsChild = ((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIsAddressSameAsChild().isChecked();
+
+                String guardianAddyLn1;
+                String guardianAddyLn2;
+                String guardianAddyCity;
+                String guardianAddyState;
+                String guardianAddyZip;
+                if (addressSameAsChild) {
+                    daycaremanagerDB db = new daycaremanagerDB(this);
+                    db.open();
+                    Cursor addressCursor = db.getChildAddress(newChildNumber);
+                    guardianAddyLn1 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_1));
+                    guardianAddyLn2 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_2));
+                    guardianAddyCity = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_CITY));
+                    guardianAddyState = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_STATE));
+                    guardianAddyZip = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_ZIP));
+                    db.close();
+                } else {
+                    guardianAddyLn1 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn1().getText());
+                    guardianAddyLn2 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn2().getText());
+                    guardianAddyCity = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressCity().getText());
+                    guardianAddyState = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressState().getText());
+                    guardianAddyZip = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressZip().getText());
+                }
+
+                daycaremanagerDB guardianEntry = new daycaremanagerDB(this);
+                guardianEntry.open();
+                guardianEntry.createParentEntry(newChildNumber, guardianFirstName, guardianLastName, guardianPhone, guardianAddyLn1,
+                        guardianAddyLn2, guardianAddyCity, guardianType, guardianAddyState, guardianAddyZip, guardianEmail);
+                guardianEntry.close();
+            }
+            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ShotsHolder) {
+                String medicalFluShotDate = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getFluShotDate().getText());
+                String medicalImmunizationShotDate = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getImmunizationDate().getText());
+                Drawable medicalImmunizationImage = ((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIvShotRecord().getDrawable();
+                Bitmap medicalImmunizationBmp = ((BitmapDrawable) medicalImmunizationImage).getBitmap();
+
+                daycaremanagerDB medicalEntry = new daycaremanagerDB(this);
+                medicalEntry.open();
+                medicalEntry.createShotsEntry(newChildNumber, medicalFluShotDate, medicalImmunizationShotDate, medicalImmunizationBmp);
+                medicalEntry.close();
+            }
+            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof MedicationHolder) {
+
+            }
+            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof DiscountHolder) {
+
+            }
+
+        }
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_scrolling, menu);
+        getMenuInflater().inflate(R.menu.menu_reg, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        if (id == R.id.action_saveReg) {
+            save_info();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
     // Take a Pic
     public void takePic() {

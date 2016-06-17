@@ -1,5 +1,5 @@
 <menu xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.vintek_ss.vince.kiddocare.AboutActivity">
+    tools:context=".AboutActivity">
 
 
 </menu>

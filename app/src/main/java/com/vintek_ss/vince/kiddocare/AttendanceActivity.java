@@ -6,11 +6,7 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -25,10 +21,8 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
-import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -40,7 +34,7 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
     private static final int SETTINGS_RESULT = 1;
     private static int ID = 0;
     public ArrayList<Integer> al = new ArrayList<Integer>();
-    public List<customAdapterEnrolled> childList = new ArrayList<customAdapterEnrolled>();
+    public List<EnrolledChildrenAdapter> childList = new ArrayList<EnrolledChildrenAdapter>();
     Spinner spinner;
     int attenRow = 0;
     boolean ChildINcare = false;
@@ -55,255 +49,255 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
 
         spinner = (Spinner) findViewById(R.id.s_reg_children);
 
-        populateList();
-        loadDataIntoListView();
-        loadSpinnerData();
+//        populateList();
+//        loadDataIntoListView();
+//        loadSpinnerData();
 
         OnItemClickListener listener = new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long arg3) {
-                Integer value = al.get(position);
-                childClickedCIn(position);
+//                Integer value = al.get(position);
+//                childClickedCIn(position);
             }
-
+//
         };
-        ListView list = (ListView) findViewById(R.id.lv_enrolledchild_checkin);
-        list.setOnItemClickListener(listener);
-        spinner.setOnItemSelectedListener(this);
+//        ListView list = (ListView) findViewById(R.id.lv_enrolledchild_checkin);
+//        list.setOnItemClickListener(listener);
+//        spinner.setOnItemSelectedListener(this);
     }
 
-    private void loadSpinnerData() {
-        // database handler
-        daycaremanagerDB db = new daycaremanagerDB(getApplicationContext());
-        db.open();
-        // Spinner Drop down elements
-        List<String> children = db.getAllChildren();
+//    private void loadSpinnerData() {
+//        // database handler
+//        daycaremanagerDB db = new daycaremanagerDB(getApplicationContext());
+//        db.open();
+//        // Spinner Drop down elements
+//        List<String> children = db.getAllChildren();
+//
+//        // Creating adapter for spinner
+//        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+//                android.R.layout.simple_spinner_item, children);
+//
+//        // Drop down layout style - list view with radio button
+//        dataAdapter
+//                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//
+//        // attaching data adapter to spinner
+//        spinner.setAdapter(dataAdapter);
+//        db.close();
+//    }
 
-        // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_spinner_item, children);
+//    public void onItemSelected(AdapterView<?> parent, View view, int position,
+//                               long id) {
+//
+//        if (position == 0) {
+//
+//        } else {
+//
+//            String selectedChild = spinner.getSelectedItem().toString();
+//
+//            daycaremanagerDB dbAtten = new daycaremanagerDB(getApplicationContext());
+//            dbAtten.open();
+//            Cursor c = dbAtten.get_Child_AttenData(selectedChild);
+//            c.moveToLast();
+//
+//
+//            String clockIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_TIME_IN));
+//            String clockOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_TIME_OUT));
+//            //attenRow = c.getInt(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_ROWID));
+//
+//
+//            TextView timeIN = (TextView) findViewById(R.id.et_attenTimeIn);
+//            TextView dateIN = (TextView) findViewById(R.id.et_attenDateIn);
+//            TextView timeOUT = (TextView) findViewById(R.id.et_attenTimeOut);
+//            TextView dateOUT = (TextView) findViewById(R.id.et_attenDateOut);
+//            if (!TextUtils.isEmpty(clockIN) && !TextUtils.isEmpty(clockOUT)) {
+//                ChildINcare = false;
+//            }
+//            if (TextUtils.isEmpty(clockOUT) && !TextUtils.isEmpty(clockIN)) {
+//                String date = "";
+//                String time = "";
+//                String[] splitDandT = clockIN.split("\\s+");
+//                date = splitDandT[0];
+//                time = splitDandT[1] + " " + splitDandT[2];
+//
+//
+//                dateIN.setText(date);
+//                timeIN.setText(time);
+//                ChildINcare = true;
+//
+//            } else {
+//                dateIN.setText("Select Date");
+//                timeIN.setText("Select Time");
+//                dateOUT.setText("Select Date");
+//                timeOUT.setText("Select Time");
+//            }
+//
+//            dbAtten.close();
+//        }
+//
+//    }
+//
+//    @Override
+//    public void onNothingSelected(AdapterView<?> parent) {
+//
+//    }
 
-        // Drop down layout style - list view with radio button
-        dataAdapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//    public void SaveUpdateAtten(View v) {
+//        String selectedChild = spinner.getSelectedItem().toString();
+//        String[] splitFandL = selectedChild.split("\\s+");
+//        String cfn = splitFandL[0];
+//        String cln = splitFandL[1];
+//
+//        TextView TimeIN = (TextView) findViewById(R.id.et_attenTimeIn);
+//        String timeIN = TimeIN.getText().toString();
+//        TextView DateIN = (TextView) findViewById(R.id.et_attenDateIn);
+//        String dateIN = DateIN.getText().toString();
+//        String clockINDate = dateIN + " " + timeIN;
+//
+//        TextView TimeOUT = (TextView) findViewById(R.id.et_attenTimeOut);
+//        String timeOUT = TimeOUT.getText().toString();
+//        TextView DateOUT = (TextView) findViewById(R.id.et_attenDateOut);
+//        String dateOUT = DateOUT.getText().toString();
+//        String clockOUTDate = dateOUT + " " + timeOUT;
+//
+//        if (TextUtils.isEmpty(dateIN) && TextUtils.isEmpty(dateOUT) || TextUtils.isEmpty(timeOUT)
+//                && TextUtils.isEmpty(timeIN)) {
+//
+//            TimeOUT.setBackgroundResource(R.drawable.red_box);
+//            TimeIN.setBackgroundResource(R.drawable.red_box);
+//            DateOUT.setBackgroundResource(R.drawable.red_box);
+//            DateIN.setBackgroundResource(R.drawable.red_box);
+//
+//
+//            int duration = Toast.LENGTH_LONG;
+//            Toast toast = Toast.makeText(this,
+//                    "Missing date/time Info\nDate and Time are required for IN or OUT", duration);
+//            toast.show();
+//        } else {
+//            ///////////////////////////////////////////////// String cIn = String.valueOf(attenRow);
+//
+//            daycaremanagerDB dbAtten = new daycaremanagerDB(getApplicationContext());
+//            dbAtten.open();
+//            String result = "";
+//            String cIn = dbAtten.getChildRecordNum(cfn, cln);
+//            if (ChildINcare == true) {
+//                result = dbAtten.updateAttenEntry(cIn, cfn, cln, clockOUTDate);
+//            } else {
+//                result = dbAtten.createAttenNEWEntry(cIn, cfn, cln, clockINDate, clockOUTDate);
+//            }
+//            Toast.makeText(getApplicationContext(), result,
+//                    Toast.LENGTH_SHORT).show();
+//            dbAtten.close();
+//        }
+//    }
 
-        // attaching data adapter to spinner
-        spinner.setAdapter(dataAdapter);
-        db.close();
-    }
-
-    public void onItemSelected(AdapterView<?> parent, View view, int position,
-                               long id) {
-
-        if (position == 0) {
-
-        } else {
-
-            String selectedChild = spinner.getSelectedItem().toString();
-
-            daycaremanagerDB dbAtten = new daycaremanagerDB(getApplicationContext());
-            dbAtten.open();
-            Cursor c = dbAtten.get_Child_AttenData(selectedChild);
-            c.moveToLast();
-
-
-            String clockIN = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_IN));
-            String clockOUT = c.getString(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_DATE_OUT));
-            //attenRow = c.getInt(c.getColumnIndex(daycaremanagerDB.KEY_ATTEN_ROWID));
-
-
-            TextView timeIN = (TextView) findViewById(R.id.et_attenTimeIn);
-            TextView dateIN = (TextView) findViewById(R.id.et_attenDateIn);
-            TextView timeOUT = (TextView) findViewById(R.id.et_attenTimeOut);
-            TextView dateOUT = (TextView) findViewById(R.id.et_attenDateOut);
-            if (!TextUtils.isEmpty(clockIN) && !TextUtils.isEmpty(clockOUT)) {
-                ChildINcare = false;
-            }
-            if (TextUtils.isEmpty(clockOUT) && !TextUtils.isEmpty(clockIN)) {
-                String date = "";
-                String time = "";
-                String[] splitDandT = clockIN.split("\\s+");
-                date = splitDandT[0];
-                time = splitDandT[1] + " " + splitDandT[2];
-
-
-                dateIN.setText(date);
-                timeIN.setText(time);
-                ChildINcare = true;
-
-            } else {
-                dateIN.setText("Select Date");
-                timeIN.setText("Select Time");
-                dateOUT.setText("Select Date");
-                timeOUT.setText("Select Time");
-            }
-
-            dbAtten.close();
-        }
-
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
-    public void SaveUpdateAtten(View v) {
-        String selectedChild = spinner.getSelectedItem().toString();
-        String[] splitFandL = selectedChild.split("\\s+");
-        String cfn = splitFandL[0];
-        String cln = splitFandL[1];
-
-        TextView TimeIN = (TextView) findViewById(R.id.et_attenTimeIn);
-        String timeIN = TimeIN.getText().toString();
-        TextView DateIN = (TextView) findViewById(R.id.et_attenDateIn);
-        String dateIN = DateIN.getText().toString();
-        String clockINDate = dateIN + " " + timeIN;
-
-        TextView TimeOUT = (TextView) findViewById(R.id.et_attenTimeOut);
-        String timeOUT = TimeOUT.getText().toString();
-        TextView DateOUT = (TextView) findViewById(R.id.et_attenDateOut);
-        String dateOUT = DateOUT.getText().toString();
-        String clockOUTDate = dateOUT + " " + timeOUT;
-
-        if (TextUtils.isEmpty(dateIN) && TextUtils.isEmpty(dateOUT) || TextUtils.isEmpty(timeOUT)
-                && TextUtils.isEmpty(timeIN)) {
-
-            TimeOUT.setBackgroundResource(R.drawable.red_box);
-            TimeIN.setBackgroundResource(R.drawable.red_box);
-            DateOUT.setBackgroundResource(R.drawable.red_box);
-            DateIN.setBackgroundResource(R.drawable.red_box);
-
-
-            int duration = Toast.LENGTH_LONG;
-            Toast toast = Toast.makeText(this,
-                    "Missing date/time Info\nDate and Time are required for IN or OUT", duration);
-            toast.show();
-        } else {
-            ///////////////////////////////////////////////// String cIn = String.valueOf(attenRow);
-
-            daycaremanagerDB dbAtten = new daycaremanagerDB(getApplicationContext());
-            dbAtten.open();
-            String result = "";
-            String cIn = dbAtten.getChildRecordNum(cfn, cln);
-            if (ChildINcare == true) {
-                result = dbAtten.updateAttenEntry(cIn, cfn, cln, clockOUTDate);
-            } else {
-                result = dbAtten.createAttenNEWEntry(cIn, cfn, cln, clockINDate, clockOUTDate);
-            }
-            Toast.makeText(getApplicationContext(), result,
-                    Toast.LENGTH_SHORT).show();
-            dbAtten.close();
-        }
-    }
-
-    public void childClickedCIn(int position) {
-
-        ListView list = (ListView) findViewById(R.id.lv_enrolledchild_checkin);
-        daycaremanagerDB AttenEntry = new daycaremanagerDB(this);
-        AttenEntry.open();
-        String r = "";
-        //// Get Data
-        TextView childFirst = (TextView) list.getChildAt(position).findViewById(R.id.tv_cfirst);
-        String cfn = childFirst.getText().toString();
-        TextView childLast = (TextView) list.getChildAt(position).findViewById(R.id.tv_clast);
-        String cln = childLast.getText().toString();
-        TextView childnum = (TextView) list.getChildAt(position).findViewById(R.id.tv_recordnum);
-
-        //String childFullName = cfn + "" + cln;
-        String cIn = AttenEntry.getChildRecordNum(cfn, cln);
-
-        String isLoggedIn = AttenEntry.getChildNameINCARE(cIn, cfn, cln);
-
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat date = new SimpleDateFormat("yyyy-MMM-d h:mm a");
-
-        //SimpleDateFormat time = new SimpleDateFormat("HH:mm a");
-        String clockDate = date.format(c.getTime());
-        //String clockTime = time.format(c.getTime());
-        String n = "NO";
-        String y = "YES";
-        // child is logged in NEED TO LOG CHILD OUT
-        if (isLoggedIn.equals(y)) {
-            r = AttenEntry.updateAttenEntry(cIn, cfn, cln, clockDate);
-            list.getChildAt(position).setBackgroundColor(getResources().getColor(trans));
-        }
-        // child logged out NEED TO LOG CHILD IN
-        if (isLoggedIn.equals(n)) {
-            r = AttenEntry.createAttenEntry(cIn, cfn, cln, clockDate);
-
-            list.getChildAt(position).setBackgroundColor(getResources().getColor(green));
-        }
-        Toast.makeText(getApplicationContext(), r,
-                Toast.LENGTH_SHORT).show();
-        AttenEntry.close();
-    }
+//    public void childClickedCIn(int position) {
+//
+//        ListView list = (ListView) findViewById(R.id.lv_enrolledchild_checkin);
+//        daycaremanagerDB AttenEntry = new daycaremanagerDB(this);
+//        AttenEntry.open();
+//        String r = "";
+//        //// Get Data
+//        TextView childFirst = (TextView) list.getChildAt(position).findViewById(R.id.tv_cfirst);
+//        String cfn = childFirst.getText().toString();
+//        TextView childLast = (TextView) list.getChildAt(position).findViewById(R.id.tv_clast);
+//        String cln = childLast.getText().toString();
+//        TextView childnum = (TextView) list.getChildAt(position).findViewById(R.id.tv_recordnum);
+//
+//        //String childFullName = cfn + "" + cln;
+//        String cIn = AttenEntry.getChildRecordNum(cfn, cln);
+//
+//        String isLoggedIn = AttenEntry.getChildNameINCARE(cIn, cfn, cln);
+//
+//        Calendar c = Calendar.getInstance();
+//        SimpleDateFormat date = new SimpleDateFormat("yyyy-MMM-d h:mm a");
+//
+//        //SimpleDateFormat time = new SimpleDateFormat("HH:mm a");
+//        String clockDate = date.format(c.getTime());
+//        //String clockTime = time.format(c.getTime());
+//        String n = "NO";
+//        String y = "YES";
+//        // child is logged in NEED TO LOG CHILD OUT
+//        if (isLoggedIn.equals(y)) {
+//            r = AttenEntry.updateAttenEntry(cIn, cfn, cln, clockDate);
+//            list.getChildAt(position).setBackgroundColor(getResources().getColor(trans));
+//        }
+//        // child logged out NEED TO LOG CHILD IN
+//        if (isLoggedIn.equals(n)) {
+//            r = AttenEntry.createAttenEntry(cIn, cfn, cln, clockDate);
+//
+//            list.getChildAt(position).setBackgroundColor(getResources().getColor(green));
+//        }
+//        Toast.makeText(getApplicationContext(), r,
+//                Toast.LENGTH_SHORT).show();
+//        AttenEntry.close();
+//    }
 
     private void loadDataIntoListView() {
 
-        ArrayAdapter<customAdapterEnrolled> adapter = new MyListAdapter();
+        ArrayAdapter<EnrolledChildrenAdapter> adapter = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.lv_enrolledchild_checkin);
         list.setAdapter(adapter);
 
     }
 
-    private void populateList() {
-        daycaremanagerDB childInfo = new daycaremanagerDB(this);
-        childInfo.open();
-
-        Cursor cursor = childInfo.getCursorChildList();
-
-        // Allow activity to manage lifetime of the cursor.
-        // DEPRECATED!0 Runs on the UI thread, OK for small/short queries.
-        // startManagingCursor(cursor);
-        int count = cursor.getCount();
-
-        if (count >= 0) {
-            if (cursor.moveToFirst()) {
-                while (!cursor.isAfterLast()) {
-
-                    String childRecord = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
-                    int childRecInt = cursor.getInt(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
-                    al.add(childRecInt);
-
-                    String childFname = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
-                    String childLname = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_LNAME));
-                    String childEdate = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_EDATE));
-                    String childActive = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_AGE));
-
-                    byte[] childPIC = cursor.getBlob(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_PIC));
-                    Bitmap bmChildPIC = BitmapFactory.decodeByteArray(childPIC, 0,
-                            childPIC.length);
-
-                    String isLoggedIn = cursor.getString(cursor
-                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_INCARE));
-
-                    childList.add(new customAdapterEnrolled(childRecord,
-                            childFname, childLname, childEdate, childActive,
-                            bmChildPIC, isLoggedIn));
-
-                    cursor.moveToNext();
-
-                }
-            }
-        }
-
-        if (count < 1) {
-            Toast.makeText(getApplicationContext(), "No Children Enrolled",
-                    Toast.LENGTH_SHORT).show();
-        }
-
-        cursor.close();
-        childInfo.close();
-    }
+//    private void populateList() {
+//        daycaremanagerDB childInfo = new daycaremanagerDB(this);
+//        childInfo.open();
+//
+//        Cursor cursor = childInfo.getCursorChildList();
+//
+//        // Allow activity to manage lifetime of the cursor.
+//        // DEPRECATED!0 Runs on the UI thread, OK for small/short queries.
+//        // startManagingCursor(cursor);
+//        int count = cursor.getCount();
+//
+//        if (count >= 0) {
+//            if (cursor.moveToFirst()) {
+//                while (!cursor.isAfterLast()) {
+//
+//                    String childRecord = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
+//                    int childRecInt = cursor.getInt(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_ROWID));
+//                    al.add(childRecInt);
+//
+//                    String childFname = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_FNAME));
+//                    String childLname = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_LNAME));
+//                    String childEdate = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_EDATE));
+//                    String childActive = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_AGE));
+//
+//                    byte[] childPIC = cursor.getBlob(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_PIC));
+//                    Bitmap bmChildPIC = BitmapFactory.decodeByteArray(childPIC, 0,
+//                            childPIC.length);
+//
+//                    String isLoggedIn = cursor.getString(cursor
+//                            .getColumnIndex(daycaremanagerDB.KEY_CHILD_INCARE));
+//
+//                    childList.add(new EnrolledChildrenAdapter(childRecord,
+//                            childFname, childLname, childEdate, childActive,
+//                            bmChildPIC, isLoggedIn));
+//
+//                    cursor.moveToNext();
+//
+//                }
+//            }
+//        }
+//
+//        if (count < 1) {
+//            Toast.makeText(getApplicationContext(), "No Children Enrolled",
+//                    Toast.LENGTH_SHORT).show();
+//        }
+//
+//        cursor.close();
+//        childInfo.close();
+//    }
 
     private void setupActionBar() {
 
@@ -523,7 +517,38 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
         return false;
     }
 
-    private class MyListAdapter extends ArrayAdapter<customAdapterEnrolled> {
+    /**
+     * <p>Callback method to be invoked when an item in this view has been
+     * selected. This callback is invoked only when the newly selected
+     * position is different from the previously selected position or if
+     * there was no selected item.</p>
+     * <p/>
+     * Impelmenters can call getItemAtPosition(position) if they need to access the
+     * data associated with the selected item.
+     *
+     * @param parent   The AdapterView where the selection happened
+     * @param view     The view within the AdapterView that was clicked
+     * @param position The position of the view in the adapter
+     * @param id       The row id of the item that is selected
+     */
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    /**
+     * Callback method to be invoked when the selection disappears from this
+     * view. The selection can disappear for instance when touch is activated
+     * or when the adapter becomes empty.
+     *
+     * @param parent The AdapterView that now contains no selected item.
+     */
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    private class MyListAdapter extends ArrayAdapter<EnrolledChildrenAdapter> {
         public MyListAdapter() {
             super(AttendanceActivity.this, R.layout.listview_row,
                     childList);
@@ -539,7 +564,7 @@ public class AttendanceActivity extends Activity implements AdapterView.OnItemSe
                         parent, false);
             }
             // Find the car to work with.
-            customAdapterEnrolled currentChild = childList.get(position);
+            EnrolledChildrenAdapter currentChild = childList.get(position);
 
             // Fill the view
             ImageView imageView = (ImageView) itemView

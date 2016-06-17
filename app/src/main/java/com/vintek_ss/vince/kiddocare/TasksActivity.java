@@ -27,7 +27,7 @@ import java.util.List;
 public class TasksActivity extends Activity {
     private static int ID = 0;
     public ArrayList<Integer> al = new ArrayList<Integer>();
-    public List<customAdapterTask> taskList = new ArrayList<customAdapterTask>();
+    public List<TaskAdapter> taskList = new ArrayList<TaskAdapter>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class TasksActivity extends Activity {
                     String taskDate = cursor.getString(cursor
                             .getColumnIndex(daycaremanagerDB.KEY_TODO_DATE));
 
-                    taskList.add(new customAdapterTask(taskTitle, taskTime, taskStatus, taskDate));
+                    taskList.add(new TaskAdapter(taskTitle, taskTime, taskStatus, taskDate));
                     cursor.moveToNext();
                 }
             }
@@ -100,7 +100,7 @@ public class TasksActivity extends Activity {
     }
 
     private void loadTaskDataIntoListView() {
-        ArrayAdapter<customAdapterTask> adapter = new MyListAdapter();
+        ArrayAdapter<TaskAdapter> adapter = new MyListAdapter();
         ListView list = (ListView) findViewById(R.id.lv_taskList);
         list.setAdapter(adapter);
     }
@@ -196,7 +196,7 @@ public class TasksActivity extends Activity {
         loadTaskDataIntoListView();
     }
 
-    private class MyListAdapter extends ArrayAdapter<customAdapterTask> {
+    private class MyListAdapter extends ArrayAdapter<TaskAdapter> {
         public MyListAdapter() {
             super(TasksActivity.this, R.layout.task_list_layout,
                     taskList);
@@ -211,7 +211,7 @@ public class TasksActivity extends Activity {
                         parent, false);
             }
             // Find the car to work with.
-            customAdapterTask currentTask = taskList.get(position);
+            TaskAdapter currentTask = taskList.get(position);
             // Fill the view
             TextView taskName = (TextView) itemView.findViewById(R.id.tv_taskTitle);
             taskName.setText(currentTask.gettaskTitle());
