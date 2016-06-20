@@ -31,7 +31,7 @@ public class KiddoCareMainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (toolbar != null) {
-            toolbar.setLogo(R.drawable.ic_launcher);
+            toolbar.setLogo(R.mipmap.ic_launcher_new);
         }
 
         initMain();

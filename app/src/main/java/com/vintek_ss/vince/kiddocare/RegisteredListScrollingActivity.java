@@ -35,7 +35,6 @@ public class RegisteredListScrollingActivity extends AppCompatActivity {
                 new RecyclerItemClickListener(RegisteredListScrollingActivity.this, new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        // do whatever
                         Intent intent = new Intent(RegisteredListScrollingActivity.this, RegistrationListScrollingActivity.class);
                         intent.putExtra(REGISTERED_CHILD_DATA, childDatas.get(position).number);
                         startActivity(intent);
@@ -90,4 +89,5 @@ public class RegisteredListScrollingActivity extends AppCompatActivity {
         RegisteredRVAdapter adapter = new RegisteredRVAdapter(childDatas, this);
         rv_RegisteredData.setAdapter(adapter);
     }
+
 }

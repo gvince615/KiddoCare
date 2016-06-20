@@ -1,12 +1,12 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentDataCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/parentDataCardView"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
-    custom:cardElevation="3dp"
+    android:layout_margin="5dp"
     custom:cardBackgroundColor="@color/trans_white"
     custom:cardCornerRadius="5dp"
-    android:layout_margin="5dp">
+    custom:cardElevation="3dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,38 +16,38 @@
 
 
         <LinearLayout
-            android:padding="5dp"
-            android:background="@color/logo_pink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@color/logo_pink"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Child's Guardian\nInformation:"
-                android:layout_marginBottom="5dp"
-                android:textSize="@dimen/text_size_large"
-                android:layout_weight="1"
                 android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="Child's Guardian\nInformation:"
+                android:textSize="@dimen/text_size_large"
                 android:textStyle="bold|italic" />
 
             <Spinner
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
                 android:id="@+id/spinner_guardian_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:entries="@array/guardian_type"
-                android:textSize="25sp"
-                android:gravity="end" />
+                android:gravity="end"
+                android:textSize="25sp" />
             </LinearLayout>
 
         <LinearLayout
-            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/tv_parentFname"
@@ -58,8 +58,8 @@
                     android:id="@+id/et_parentFname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="guardian's First Name" />
+                    android:hint="guardian's First Name"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -71,8 +71,8 @@
                     android:id="@+id/et_parentLname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="guardian's Last Name" />
+                    android:hint="guardian's Last Name"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
 
@@ -85,8 +85,8 @@
                     android:id="@+id/et_guardians_email_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="guardian's email" />
+                    android:hint="guardian's email"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -98,8 +98,8 @@
                     android:id="@+id/et_guardian_phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="guardian's phone number" />
+                    android:hint="guardian's phone number"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -116,9 +116,10 @@
                         android:id="@+id/et_guardian_address_ln_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:hint="@string/hint_address_ln_1" />
+                        android:hint="@string/hint_address_ln_1"
+                        android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
+
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/tv_et_guardian_address_ln_2_layout"
                     android:layout_width="match_parent"
@@ -129,29 +130,29 @@
                         android:id="@+id/et_guardian_address_ln_2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:hint="@string/hint_address_ln_2" />
+                        android:hint="@string/hint_address_ln_2"
+                        android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
                 <CheckBox
                     android:id="@+id/c_address_same_as_child"
-                    android:text="Same As Child"
-                    android:layout_weight=".2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".2"
+                    android:text="Same As Child" />
             </LinearLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/tv_guardian_address_city_layout"
-                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
 
                 <EditText
                     android:id="@+id/et_guardian_address_city"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:singleLine="true"
-                    android:hint="@string/hint_city" />
+                    android:hint="@string/hint_city"
+                    android:singleLine="true" />
             </android.support.design.widget.TextInputLayout>
 
             <LinearLayout
@@ -161,30 +162,30 @@
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/tv_child_address_zip_layout"
-                    android:layout_weight=".7"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".7">
 
                     <EditText
                         android:id="@+id/et_guardian_address_zip"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:hint="@string/hint_zip" />
+                        android:hint="@string/hint_zip"
+                        android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
 
                 <android.support.design.widget.TextInputLayout
                     android:id="@+id/tv_guardian_address_state_layout"
-                    android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
 
                     <EditText
                         android:id="@+id/et_guardian_address_state"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
-                        android:hint="@string/hint_state" />
+                        android:hint="@string/hint_state"
+                        android:singleLine="true" />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
 

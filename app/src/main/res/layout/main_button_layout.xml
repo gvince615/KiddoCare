@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
+        android:orientation="horizontal"
         android:weightSum="2">
 
         <ImageButton
+            android:id="@+id/btn_registration"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btn_registration"
             android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:background="@mipmap/ic_registration_btn" />
+            android:background="@mipmap/ic_registration_btn"
+            android:scaleType="fitEnd" />
 
         <ImageButton
+            android:id="@+id/btn_attendance"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btn_attendance"
             android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:background="@mipmap/ic_attendance_btn" />
+            android:background="@mipmap/ic_attendance_btn"
+            android:scaleType="fitEnd" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
         android:layout_weight="1"
+        android:orientation="horizontal"
         android:weightSum="3">
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/btn_billing"
-            android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:background="@mipmap/ic_billing_btn" />
-
-        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_billing_btn"
+            android:scaleType="fitEnd" />
+
+        <ImageButton
             android:id="@+id/btn_about"
-            android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:background="@mipmap/ic_launcher" />
-
-        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btn_menu"
             android:layout_weight="1"
-            android:scaleType="fitEnd"
-            android:background="@mipmap/ic_menu" />
+            android:background="@mipmap/ic_launcher_new"
+            android:scaleType="fitEnd" />
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_menu"
+            android:scaleType="fitEnd" />
         </LinearLayout>
 </LinearLayout>

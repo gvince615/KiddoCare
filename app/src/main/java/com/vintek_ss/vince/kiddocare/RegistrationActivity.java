@@ -826,7 +826,7 @@ public class RegistrationActivity extends Activity implements
 //
 //
 //            if (pMRnum == newRec || pDRnum == newRec) {
-//                entry.createParentEntry(pMfn, pMLn, pMcell, pMhome, pMwork,
+//                entry.createGuardianEntry(pMfn, pMLn, pMcell, pMhome, pMwork,
 //                        pMemail, pDfn, pDLn, pDcell, pDhome, pDwork,
 //                        pDemail);
 //            } else {

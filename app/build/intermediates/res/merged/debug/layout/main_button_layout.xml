@@ -51,7 +51,7 @@
             android:id="@+id/btn_about"
             android:layout_weight="1"
             android:scaleType="fitEnd"
-            android:background="@mipmap/ic_launcher" />
+            android:background="@mipmap/ic_launcher_new" />
 
         <ImageButton
             android:layout_width="wrap_content"

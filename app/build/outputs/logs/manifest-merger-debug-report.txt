@@ -93,7 +93,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/st
 	android:allowBackup
 		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:22:9-35
 	android:icon
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:23:9-45
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:23:9-47
 	android:theme
 		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:26:9-40
 	android:versionName

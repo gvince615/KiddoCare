@@ -12,6 +12,10 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxxhdpi/ic_edit.png"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_shot_record.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxxhdpi/ic_shot_record.png"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_vintek_logo.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxxhdpi/ic_vintek_logo.png"
     },
@@ -26,10 +30,6 @@
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_menu.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxxhdpi/ic_menu.png"
-    },
-    {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_registration_btn.png",

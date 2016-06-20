@@ -161,16 +161,10 @@ public class daycaremanagerDB {
         return (int) insertedID;
     }
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    ////// END DB HELPER
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-    ////// BEGIN CRUD OPERATIONS
-    ////////////////////////////////////////////////////////////////////////////////////////////////
-
     public Cursor getChildAddress(int childNumber) {
 
         String whereClause = "_id = ?";
-        String[] whereArgs = new String[]{String.valueOf(childNumber)};
+        String[] whereArgs = new String[]{Integer.toString(childNumber)};
 
         String[] columns = new String[]{KEY_CHILD_ROWID, KEY_CHILD_FNAME,
                 KEY_CHILD_LNAME, KEY_CHILD_BDATE, KEY_CHILD_EDATE, KEY_CHILD_AGE, KEY_CHILD_ADDRESS_LN_1,
@@ -211,9 +205,9 @@ public class daycaremanagerDB {
     }
 
     ////////////// PARENT ////////////////////
-    public void createParentEntry(int child_id, String p_Fname, String p_Lname, String p_phone_number,
-                                  String p_addy_ln_1, String p_addy_ln_2, String p_addy_city, String p_guardian_type,
-                                  String p_addy_state, String p_addy_zip, String p_Email) {
+    public void createGuardianEntry(int child_id, String p_Fname, String p_Lname, String p_phone_number,
+                                    String p_addy_ln_1, String p_addy_ln_2, String p_addy_city, String p_guardian_type,
+                                    String p_addy_state, String p_addy_zip, String p_Email) {
 
         ContentValues parentCV = new ContentValues();
 

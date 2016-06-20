@@ -12,6 +12,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -35,9 +36,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import static com.vintek_ss.vince.kiddocare.R.drawable.ic_boy;
-import static com.vintek_ss.vince.kiddocare.R.drawable.ic_girl;
-import static com.vintek_ss.vince.kiddocare.R.drawable.ic_launcher;
+import static com.vintek_ss.vince.kiddocare.R.mipmap.ic_launcher_new;
 
 //import android.support.design.widget.CollapsingToolbarLayout;
 
@@ -49,11 +48,13 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     public static final int MEDICATION = 3;
     public static final int DISCOUNT = 4;
     final static int cameraData = 0;
+    private static final String SAVED_LAYOUT_MANAGER = "SAVED_RV_LAYOUT_MANAGER";
     private static int ID = 0;
     final String cItems[] = {"Generic Boy Image", "Generic Girl Image", "Take Picture"};
     Bitmap bmp;
     CollapsingToolbarLayout collapsingToolbarLayout;
     ChildRegistrationRVAdapter adapter;
+    LinearLayoutManager llm;
     AppBarLayout appbar;
     ImageView childImage;
     RecyclerView rv_RegistrationData;
@@ -67,12 +68,16 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     private List<ChildData> childDataCard;
     private List<ParentData> parentCard;
     private int newChildNumber;
+    private Parcelable mListState;
+    private Parcelable layoutManagerSavedState;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registration_edit_activity_scrolling);
         final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        childImage = (ImageView) findViewById(R.id.iv_child_image);
 
         collapsingToolbarLayout =
                 (CollapsingToolbarLayout) findViewById(R.id.collapsing_toolbar);
@@ -103,8 +108,9 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         rv_RegistrationData = (RecyclerView)findViewById(R.id.rv_registration_data_list);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm = new LinearLayoutManager(this);
         rv_RegistrationData.setLayoutManager(llm);
+
 
         fab_take_pic = (FloatingActionButton) findViewById(R.id.fab_take_child_picture);
         fab_take_pic.setOnClickListener(new View.OnClickListener() {
@@ -121,33 +127,36 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 pickACardToAdd();
             }
         });
-        int childNumber = 0;
-
+        //int childNumber = 0;
+        initializeAdapter();
         if (savedInstanceState == null) {
             Bundle bundle = getIntent().getExtras();
             if (bundle != null) {
-                childNumber = bundle.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+                //childNumber = bundle.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
             } else {
                 loadBackdrop();
                 initializeData();
             }
         } else {
-            childNumber = savedInstanceState.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+            //childNumber = savedInstanceState.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+            loadBackdrop();
+            initializeData();
+            super.onRestoreInstanceState(savedInstanceState);
         }
-        initializeAdapter();
+
 
 
     }
 
     private void pickACardToAdd() {
         AlertDialog.Builder builderSingle = new AlertDialog.Builder(RegistrationListScrollingActivity.this);
-        builderSingle.setIcon(R.drawable.ic_launcher);
-        builderSingle.setTitle("Select A Card To Add:");
+        builderSingle.setIcon(R.mipmap.ic_launcher_new);
+        builderSingle.setTitle("Select A Card Type To Add:");
 
         final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 RegistrationListScrollingActivity.this,
                 android.R.layout.select_dialog_singlechoice);
-        arrayAdapter.add("Parent Data Card");
+        arrayAdapter.add("Guardian Data Card");
         arrayAdapter.add("Shot Record Data Card");
         arrayAdapter.add("Medication Data Card");
         arrayAdapter.add("Discount Data Card");
@@ -169,13 +178,13 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                         String strName = arrayAdapter.getItem(which);
 
                         switch (strName){
-                            case "Parent Data Card":
+                            case "Guardian Data Card":
                                 items.add(new ParentData("", "", "", "", "", true, "", "", "", "", ""));
                                 adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
                             case "Shot Record Data Card":
                                 Bitmap image = BitmapFactory.decodeResource(getApplicationContext().getResources(),
-                                        R.drawable.ic_launcher_new);
+                                        R.mipmap.ic_shot_record);
                                 items.add(new ShotRecordData(image, "", ""));
                                 adapter.notifyItemInserted(rv_RegistrationData.getChildCount() + 1);
                                 break;
@@ -201,7 +210,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
     private ArrayList<Object> getSampleArrayList() {
         Bitmap image = BitmapFactory.decodeResource(this.getResources(),
-                R.drawable.ic_launcher_new);
+                R.mipmap.ic_launcher_new);
 
         items.add(new ChildData(0, image, "", "", "", "", "", "", "", "", ""));
         return items;
@@ -290,7 +299,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     private void loadBackdrop() {
-        childImage = (ImageView) findViewById(R.id.iv_child_image);
+
     }
 
     public void save_info() {
@@ -299,7 +308,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             View currentCard = rv_RegistrationData.getChildAt(card - 1);
 
             if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ChildHolder) {
-                Bitmap childImage = ((BitmapDrawable) this.childImage.getDrawable()).getBitmap();
+                Bitmap childsImage = ((BitmapDrawable) this.childImage.getDrawable()).getBitmap();
                 String childFirstName = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildFirstName().getText());
                 String childLastName = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildLastName().getText());
                 String childBirthDate = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildBirthdate().getText());
@@ -314,7 +323,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 daycaremanagerDB entry = new daycaremanagerDB(this);
                 entry.open();
                 newChildNumber = entry.createChildEntry(childFirstName, childLastName, childBirthDate, childEnrollDate, childAddyLn1, childAddyLn2,
-                        childAddyCity, childAddyState, childAddyZip, childAge, childImage);
+                        childAddyCity, childAddyState, childAddyZip, childAge, childsImage);
                 entry.close();
 
             }
@@ -328,21 +337,24 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
                 Boolean addressSameAsChild = ((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIsAddressSameAsChild().isChecked();
 
-                String guardianAddyLn1;
-                String guardianAddyLn2;
-                String guardianAddyCity;
-                String guardianAddyState;
-                String guardianAddyZip;
+                String guardianAddyLn1 = null;
+                String guardianAddyLn2 = null;
+                String guardianAddyCity = null;
+                String guardianAddyState = null;
+                String guardianAddyZip = null;
                 if (addressSameAsChild) {
                     daycaremanagerDB db = new daycaremanagerDB(this);
                     db.open();
                     Cursor addressCursor = db.getChildAddress(newChildNumber);
-                    guardianAddyLn1 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_1));
-                    guardianAddyLn2 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_2));
-                    guardianAddyCity = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_CITY));
-                    guardianAddyState = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_STATE));
-                    guardianAddyZip = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_ZIP));
-                    db.close();
+                    if (addressCursor.moveToFirst()) {
+                        guardianAddyLn1 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_1));
+                        guardianAddyLn2 = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_LN_2));
+                        guardianAddyCity = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_CITY));
+                        guardianAddyState = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_STATE));
+                        guardianAddyZip = addressCursor.getString(addressCursor.getColumnIndex(daycaremanagerDB.KEY_CHILD_ADDRESS_ZIP));
+                        db.close();
+                        addressCursor.close();
+                    }
                 } else {
                     guardianAddyLn1 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn1().getText());
                     guardianAddyLn2 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn2().getText());
@@ -353,7 +365,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
                 daycaremanagerDB guardianEntry = new daycaremanagerDB(this);
                 guardianEntry.open();
-                guardianEntry.createParentEntry(newChildNumber, guardianFirstName, guardianLastName, guardianPhone, guardianAddyLn1,
+                guardianEntry.createGuardianEntry(newChildNumber, guardianFirstName, guardianLastName, guardianPhone, guardianAddyLn1,
                         guardianAddyLn2, guardianAddyCity, guardianType, guardianAddyState, guardianAddyZip, guardianEmail);
                 guardianEntry.close();
             }
@@ -395,6 +407,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
         if (id == R.id.action_saveReg) {
             save_info();
+            finish();
             return true;
         }
 
@@ -404,7 +417,7 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     public void takePic() {
         AlertDialog.Builder ab = new AlertDialog.Builder(RegistrationListScrollingActivity.this);
         ab.setTitle("Choose");
-        ab.setIcon(ic_launcher);
+        ab.setIcon(ic_launcher_new);
 
         ab.setItems(cItems, new DialogInterface.OnClickListener() {
             @Override
@@ -427,15 +440,11 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     public void boyPic() {
-        Drawable boy = getResources().getDrawable(ic_boy);
-        bmp = ((BitmapDrawable) boy).getBitmap();
-        childImage.setImageBitmap(bmp);
+        childImage.setImageResource(R.mipmap.ic_boy);
     }
 
     public void girlPic() {
-        Drawable girl = getResources().getDrawable(ic_girl);
-        bmp = ((BitmapDrawable) girl).getBitmap();
-        childImage.setImageBitmap(bmp);
+        childImage.setImageResource(R.mipmap.ic_girl);
     }
 
 
@@ -448,5 +457,53 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
             bmp = (Bitmap) extras.get("data");
             childImage.setImageBitmap(bmp);
         }
+    }
+
+    @Override
+    protected Parcelable onSaveInstanceState(Bundle outState) {
+        //super.onSaveInstanceState(outState);
+        Bundle bundle = new Bundle();
+        bundle.putParcelable(SAVED_LAYOUT_MANAGER, rv_RegistrationData.getLayoutManager().onSaveInstanceState());
+        return bundle;
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Parcelable state) {
+        if (state instanceof Bundle) {
+            layoutManagerSavedState = ((Bundle) state).getParcelable(SAVED_LAYOUT_MANAGER);
+        }
+        super.onRestoreInstanceState(state);
+    }
+
+
+    /**
+     * This method is called after {@link #onStart} when the activity is
+     * being re-initialized from a previously saved state, given here in
+     * <var>savedInstanceState</var>.  Most implementations will simply use {@link #onCreate}
+     * to restore their state, but it is sometimes convenient to do it here
+     * after all of the initialization has been done or to allow subclasses to
+     * decide whether to use your default implementation.  The default
+     * implementation of this method performs a restore of any view state that
+     * had previously been frozen by {@link #onSaveInstanceState}.
+     * <p/>
+     * <p>This method is called between {@link #onStart} and
+     * {@link #onPostCreate}.
+     *
+     * @param savedInstanceState the data most recently supplied in {@link #onSaveInstanceState}.
+     * @see #onCreate
+     * @see #onPostCreate
+     * @see #onResume
+     * @see #onSaveInstanceState
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        //super.onRestoreInstanceState(savedInstanceState);
+
+        if (state instanceof Bundle) {
+            layoutManagerSavedState = ((Bundle) state).getParcelable(SAVED_LAYOUT_MANAGER);
+        }
+        super.onRestoreInstanceState(state);
+
+
     }
 }

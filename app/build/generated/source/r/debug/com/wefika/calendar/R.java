@@ -25,15 +25,15 @@ public final class R {
 		public static final int bg_btn_calendar_activated = 0x7f02004c;
 		public static final int bg_btn_calendar_pressed = 0x7f02004d;
 		public static final int bg_calendar_stroke = 0x7f02004e;
-		public static final int ic_arrow_left = 0x7f020057;
-		public static final int ic_arrow_left_disabled = 0x7f020058;
-		public static final int ic_arrow_left_normal = 0x7f020059;
-		public static final int ic_arrow_left_pressed = 0x7f02005a;
-		public static final int ic_arrow_right = 0x7f02005b;
-		public static final int ic_arrow_right_disabled = 0x7f02005c;
-		public static final int ic_arrow_right_normal = 0x7f02005d;
-		public static final int ic_arrow_right_pressed = 0x7f02005e;
-		public static final int ic_launcher = 0x7f020066;
+		public static final int ic_arrow_left = 0x7f020058;
+		public static final int ic_arrow_left_disabled = 0x7f020059;
+		public static final int ic_arrow_left_normal = 0x7f02005a;
+		public static final int ic_arrow_left_pressed = 0x7f02005b;
+		public static final int ic_arrow_right = 0x7f02005c;
+		public static final int ic_arrow_right_disabled = 0x7f02005d;
+		public static final int ic_arrow_right_normal = 0x7f02005e;
+		public static final int ic_arrow_right_pressed = 0x7f02005f;
+		public static final int ic_launcher = 0x7f020064;
 	}
 	public static final class id {
 		public static final int days = 0x7f0e00e0;
