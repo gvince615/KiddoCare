@@ -1,6 +1,6 @@
 package com.vintek_ss.vince.kiddocare;
 
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -11,7 +11,7 @@ import android.widget.Spinner;
 public class DiscountHolder extends RecyclerView.ViewHolder {
 
     private CardView cv;
-    private EditText discountDescription;
+    private TextInputEditText discountDescription;
     private TextInputLayout discountDescription_label;
     private Spinner discountAmount;
 
@@ -19,16 +19,16 @@ public class DiscountHolder extends RecyclerView.ViewHolder {
         super(v);
         cv = (CardView)itemView.findViewById(R.id.discountDataCardView);
 
-        cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Tapped a Discount Card", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(v, "Tapped a Discount Card", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         discountDescription_label = (TextInputLayout) itemView.findViewById(R.id.tv_discount_description);
-        discountDescription = (EditText)itemView.findViewById(R.id.et_discount_description);
+        discountDescription = (TextInputEditText) itemView.findViewById(R.id.et_discount_description);
 
         discountAmount = (Spinner)itemView.findViewById(R.id.spinner_discount);
 
@@ -62,7 +62,7 @@ public class DiscountHolder extends RecyclerView.ViewHolder {
         return discountDescription;
     }
 
-    public void setDiscountDescription(EditText discountDescription) {
+    public void setDiscountDescription(TextInputEditText discountDescription) {
         this.discountDescription = discountDescription;
     }
 }

@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight=".75"
             android:orientation="vertical">
 
             <LinearLayout
@@ -31,10 +31,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/logo_blue"
-                    android:padding="5dp"
                     android:layout_marginBottom="5dp"
-                    android:orientation="vertical">
+                    android:background="@color/logo_blue"
+                    android:orientation="vertical"
+                    android:padding="5dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -89,8 +89,8 @@
                 android:id="@+id/tv_child_age_bracket_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="3dp">
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1">
 
                 <EditText
                     android:id="@+id/et_child_age_bracket"
@@ -105,20 +105,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginBottom="4dp"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_weight="1"
+            android:layout_marginBottom="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1.25"
             android:background="@drawable/black_box"
             android:orientation="vertical">
             <ImageView
                 android:id="@+id/child_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@mipmap/ic_girl" />
+                android:scaleType="fitXY" />
         </LinearLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>

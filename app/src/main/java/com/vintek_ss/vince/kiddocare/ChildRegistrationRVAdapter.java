@@ -10,33 +10,35 @@ import java.util.List;
 public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public static final int CHILD = 0, PARENT = 1, MEDICAL = 2, MEDICATION = 3, DISCOUNT = 4;
-    // The items to display in your RecyclerView
-    private List<Object> items;
+    // The cards to display in your RecyclerView
+    private List<Object> cards;
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ChildRegistrationRVAdapter(List<Object> items) {
-        this.items = items;
+    public ChildRegistrationRVAdapter(List<Object> cards) {
+        this.cards = cards;
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return this.items.size();
+        return this.cards.size();
     }
 
     @Override
     public int getItemViewType(int position) {
-        if (items.get(position) instanceof ChildData) {
+        if (cards.get(position) instanceof ChildData) {
             return CHILD;
         }
-        else if (items.get(position) instanceof ParentData) {
+        if (cards.get(position) instanceof ParentData) {
             return PARENT;
-        } else if (items.get(position) instanceof ShotRecordData) {
+        }
+        if (cards.get(position) instanceof ShotRecordData) {
             return MEDICAL;
-        } else if (items.get(position) instanceof MedicationData) {
+        }
+        if (cards.get(position) instanceof MedicationData) {
             return MEDICATION;
         }
-        else if (items.get(position) instanceof DiscountData) {
+        if (cards.get(position) instanceof DiscountData) {
             return DISCOUNT;
         }
         return -1;
@@ -107,7 +109,7 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
     }
     private void configureChildViewHolder(ChildHolder childViewHolder, int position) {
 
-        ChildData childData = (ChildData) items.get(position);
+        ChildData childData = (ChildData) cards.get(position);
         if (childData != null) {
             childViewHolder.getChildFirstName_layout().getEditText().setText(childData.first_name);
             childViewHolder.getChildLastName_layout().getEditText().setText(childData.last_name);
@@ -122,7 +124,7 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
 
     private void configureParentViewHolder(ParentHolder parentViewHolder, int position) {
 
-        ParentData parentData = (ParentData) items.get(position);
+        ParentData parentData = (ParentData) cards.get(position);
         if (parentData != null) {
             parentViewHolder.getParentFirstName_layout().getEditText().setText(parentData.first_name);
             parentViewHolder.getParentLastName_layout().getEditText().setText(parentData.last_name);
@@ -137,7 +139,7 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
 
     private void configureMedicalViewHolder(ShotsHolder medicalViewHolder, int position) {
 
-        ShotRecordData shotRecordData = (ShotRecordData) items.get(position);
+        ShotRecordData shotRecordData = (ShotRecordData) cards.get(position);
         if (shotRecordData != null) {
             medicalViewHolder.getFluShotDate().setText(shotRecordData.flu_shot_date);
             medicalViewHolder.getImmunizationDate().setText(shotRecordData.immunizations_date);
@@ -147,7 +149,7 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
 
     private void configureMedicationViewHolder(MedicationHolder medicationHolder, int position) {
 
-        MedicationData medicationData = (MedicationData) items.get(position);
+        MedicationData medicationData = (MedicationData) cards.get(position);
         if (medicationData != null) {
             medicationHolder.getMedicationTime().setText(medicationData.medication_time);
             medicationHolder.getMedicationDescription_label().getEditText().setText(medicationData.medication_description);
@@ -155,7 +157,7 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
     }
     private void configureDiscountViewHolder(DiscountHolder discountViewHolder, int position) {
 
-        DiscountData discountData = (DiscountData) items.get(position);
+        DiscountData discountData = (DiscountData) cards.get(position);
         if (discountData != null) {
             discountViewHolder.getDiscountDescription_label().getEditText().setText(discountData.discount_description);
             //discountViewHolder.getDiscountAmount().getChildAt(position).getTe.(discountData.discount_description);

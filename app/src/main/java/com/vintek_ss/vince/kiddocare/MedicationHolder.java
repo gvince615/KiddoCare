@@ -1,6 +1,6 @@
 package com.vintek_ss.vince.kiddocare;
 
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,24 +14,24 @@ public class MedicationHolder extends RecyclerView.ViewHolder {
     private CardView cv;
     private TextView medicationTime;
     private TextInputLayout medicationDescription_label;
-    private EditText medicationDescription;
+    private TextInputEditText medicationDescription;
 
     public MedicationHolder(View v) {
         super(v);
         cv = (CardView) itemView.findViewById(R.id.medicineDataCardView);
 
-        cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Tapped a Medication Card", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(v, "Tapped a Medication Card", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         medicationTime = (TextView) itemView.findViewById(R.id.et_medication_time);
         medicationDescription_label = (TextInputLayout) itemView.findViewById(R.id.tv_medicine_name);
 
-        medicationDescription = (EditText) itemView.findViewById(R.id.et_medicine_name);
+        medicationDescription = (TextInputEditText) itemView.findViewById(R.id.et_medicine_name);
     }
 
     public CardView getCv() {
@@ -62,7 +62,7 @@ public class MedicationHolder extends RecyclerView.ViewHolder {
         return medicationDescription;
     }
 
-    public void setMedicationDescription(EditText medicationDescription) {
+    public void setMedicationDescription(TextInputEditText medicationDescription) {
         this.medicationDescription = medicationDescription;
     }
 

@@ -168,16 +168,16 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/abc_screen_content_include.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/registration_child_data_card.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/registration_child_data_card.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/registration_discount_data_card.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/registration_discount_data_card.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/event_dialog_layout.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/event_dialog_layout.xml"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/registration_child_data_card.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/registration_child_data_card.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
@@ -284,12 +284,12 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/res/layout/design_navigation_menu_item.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/activity_new_meal.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/activity_new_meal.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/notification_template_media.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/res/layout/notification_template_media.xml"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/activity_new_meal.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/layout/activity_new_meal.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",

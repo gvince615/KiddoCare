@@ -65,12 +65,12 @@ public class RegisteredRVAdapter extends RecyclerView.Adapter<RegisteredRVAdapte
             super(itemView);
 
             cv = (CardView) itemView.findViewById(R.id.childDataCardView);
-            cv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-//
-                }
-            });
+//            cv.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+////
+//                }
+//            });
 
             childPhoto = (ImageView) itemView.findViewById(R.id.child_image);
             childRecordNumber = (TextView) itemView.findViewById(R.id.registered_childRecordNumber);

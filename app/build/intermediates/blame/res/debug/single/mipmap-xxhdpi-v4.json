@@ -16,10 +16,6 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_launcher_new.png"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_girl.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_girl.png"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_attendance_btn.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_attendance_btn.png"
     },
@@ -30,10 +26,6 @@
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_shot_record.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_shot_record.png"
-    },
-    {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_boy.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-xxhdpi/ic_boy.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-xxhdpi-v4/ic_edit.png",

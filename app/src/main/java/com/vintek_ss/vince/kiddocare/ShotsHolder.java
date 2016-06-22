@@ -1,6 +1,5 @@
 package com.vintek_ss.vince.kiddocare;
 
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -17,13 +16,13 @@ public class ShotsHolder extends RecyclerView.ViewHolder {
         super(v);
         cv = (CardView)itemView.findViewById(R.id.medicalDataCardView);
 
-        cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Tapped a Medical Card", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Snackbar.make(v, "Tapped a Medical Card", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         ivShotRecord = (ImageView) itemView.findViewById(R.id.iv_shot_record);
         fluShotDate = (TextView) itemView.findViewById(R.id.et_flu_shot_date);
         immunizationDate = (TextView) itemView.findViewById(R.id.et_immunization_date);

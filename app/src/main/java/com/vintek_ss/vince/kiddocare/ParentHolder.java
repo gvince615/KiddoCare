@@ -1,6 +1,6 @@
 package com.vintek_ss.vince.kiddocare;
 
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -12,7 +12,7 @@ import android.widget.Spinner;
 public class ParentHolder extends RecyclerView.ViewHolder {
 
     private CardView cv;
-    private EditText parentFirstName, parentLastName, parentAddressLn1, parentAddressLn2, parentAddressCity,
+    private TextInputEditText parentFirstName, parentLastName, parentAddressLn1, parentAddressLn2, parentAddressCity,
             parentAddressState, parentAddressZip, parentEmail, parentPhoneNumber;
     private TextInputLayout parentFirstName_layout, parentLastName_layout, parentAddressLn1_layout, parentAddressLn2_layout,
             parentAddressCity_layout, parentAddressState_layout, parentAddressZip_layout,
@@ -24,14 +24,14 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         super(v);
         cv = (CardView)itemView.findViewById(R.id.parentDataCardView);
 
-        cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Snackbar.make(v, "Tapped a Parent Card", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                Snackbar.make(v, "Tapped a Parent Card", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
         guardianType = (Spinner) itemView.findViewById(R.id.spinner_guardian_type);
         parentFirstName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentFname);
@@ -47,15 +47,15 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         parentAddressState_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_address_state_layout);
         parentAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
 
-        parentFirstName = (EditText)itemView.findViewById(R.id.et_parentFname);
-        parentLastName = (EditText)itemView.findViewById(R.id.et_parentLname);
-        parentAddressLn1 = (EditText)itemView.findViewById(R.id.et_guardian_address_ln_1);
-        parentAddressLn2 = (EditText) itemView.findViewById(R.id.et_guardian_address_ln_2);
-        parentEmail = (EditText)itemView.findViewById(R.id.et_guardians_email_address);
-        parentPhoneNumber = (EditText)itemView.findViewById(R.id.et_guardian_phone_number);
-        parentAddressCity = (EditText)itemView.findViewById(R.id.et_guardian_address_city);
-        parentAddressState = (EditText)itemView.findViewById(R.id.et_guardian_address_state);
-        parentAddressZip = (EditText)itemView.findViewById(R.id.et_guardian_address_zip);
+        parentFirstName = (TextInputEditText) itemView.findViewById(R.id.et_parentFname);
+        parentLastName = (TextInputEditText) itemView.findViewById(R.id.et_parentLname);
+        parentAddressLn1 = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_ln_1);
+        parentAddressLn2 = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_ln_2);
+        parentEmail = (TextInputEditText) itemView.findViewById(R.id.et_guardians_email_address);
+        parentPhoneNumber = (TextInputEditText) itemView.findViewById(R.id.et_guardian_phone_number);
+        parentAddressCity = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_city);
+        parentAddressState = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_state);
+        parentAddressZip = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_zip);
     }
 
     public CardView getCv() {
@@ -86,7 +86,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentAddressLn2;
     }
 
-    public void setParentAddressLn2(EditText parentAddressLn2) {
+    public void setParentAddressLn2(TextInputEditText parentAddressLn2) {
         this.parentAddressLn2 = parentAddressLn2;
     }
 
@@ -102,7 +102,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentFirstName;
     }
 
-    public void setParentFirstName(EditText parentFirstName) {
+    public void setParentFirstName(TextInputEditText parentFirstName) {
         this.parentFirstName = parentFirstName;
     }
 
@@ -110,7 +110,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentLastName;
     }
 
-    public void setParentLastName(EditText parentLastName) {
+    public void setParentLastName(TextInputEditText parentLastName) {
         this.parentLastName = parentLastName;
     }
 
@@ -118,7 +118,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentAddressLn1;
     }
 
-    public void setParentAddressLn1(EditText parentAddressLn1) {
+    public void setParentAddressLn1(TextInputEditText parentAddressLn1) {
         this.parentAddressLn1 = parentAddressLn1;
     }
 
@@ -126,7 +126,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentAddressCity;
     }
 
-    public void setParentAddressCity(EditText parentAddressCity) {
+    public void setParentAddressCity(TextInputEditText parentAddressCity) {
         this.parentAddressCity = parentAddressCity;
     }
 
@@ -134,7 +134,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentAddressState;
     }
 
-    public void setParentAddressState(EditText parentAddressState) {
+    public void setParentAddressState(TextInputEditText parentAddressState) {
         this.parentAddressState = parentAddressState;
     }
 
@@ -142,7 +142,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentAddressZip;
     }
 
-    public void setParentAddressZip(EditText parentAddressZip) {
+    public void setParentAddressZip(TextInputEditText parentAddressZip) {
         this.parentAddressZip = parentAddressZip;
     }
 
@@ -150,7 +150,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentEmail;
     }
 
-    public void setParentEmail(EditText parentEmail) {
+    public void setParentEmail(TextInputEditText parentEmail) {
         this.parentEmail = parentEmail;
     }
 
@@ -158,7 +158,7 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         return parentPhoneNumber;
     }
 
-    public void setParentPhoneNumber(EditText parentPhoneNumber) {
+    public void setParentPhoneNumber(TextInputEditText parentPhoneNumber) {
         this.parentPhoneNumber = parentPhoneNumber;
     }
 
