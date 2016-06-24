@@ -21,18 +21,18 @@ public class ChildData implements Serializable, Parcelable {
             return new ChildData[size];
         }
     };
-    String age;
-    int number;
-    Bitmap pic;
-    String first_name;
-    String last_name;
-    String birth_date;
-    String enroll_date;
-    String address_ln_1;
-    String address_ln_2;
-    String address_city;
-    String address_state;
-    String address_zip;
+    public String age;
+    public int number;
+    public Bitmap pic;
+    public String first_name;
+    public String last_name;
+    public String birth_date;
+    public String enroll_date;
+    public String address_ln_1;
+    public String address_ln_2;
+    public String address_city;
+    public String address_state;
+    public String address_zip;
 
     public ChildData(int number, Bitmap pic, String first_name, String last_name, String birth_date,
                      String enroll_date, String address_ln_1, String address_ln_2, String address_city,

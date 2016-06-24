@@ -601,7 +601,7 @@ public class RegistrationActivity extends Activity implements
 //    }
 //
 //    // Take a Pic
-//    public void takePic(final View v) {
+//    public void getAndSetImage(final View v) {
 //        AlertDialog.Builder ab = new AlertDialog.Builder(RegistrationActivity.this);
 //        ab.setTitle("Choose");
 //        ab.setIcon(ic_launcher);
@@ -654,7 +654,7 @@ public class RegistrationActivity extends Activity implements
 //    }
 //
 //    //save child reg
-//    public void save_info(View v) {
+//    public void saveDataToDatabase(View v) {
 //
 //        boolean didItWork = true;
 //        try {
@@ -879,7 +879,7 @@ public class RegistrationActivity extends Activity implements
 //        if (id == R.id.action_saveReg) {
 //
 //            View v = this.findViewById(R.id.b_saveNew);
-//            save_info(v);
+//            saveDataToDatabase(v);
 //
 //            //////// Save it to DB!!!!!!
 //

@@ -8,15 +8,22 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.vintek_ss.vince.kiddocare.TextWatchers.DiscountDescTextWatcher;
+
 public class DiscountHolder extends RecyclerView.ViewHolder {
 
+    DiscountDescTextWatcher discountDescTextWatcher;
     private CardView cv;
     private TextInputEditText discountDescription;
     private TextInputLayout discountDescription_label;
     private Spinner discountAmount;
 
-    public DiscountHolder(View v) {
+    public DiscountHolder(View v,
+                          DiscountDescTextWatcher discountDescTextWatcher) {
         super(v);
+
+        this.discountDescTextWatcher = discountDescTextWatcher;
+
         cv = (CardView)itemView.findViewById(R.id.discountDataCardView);
 
 //        cv.setOnClickListener(new View.OnClickListener() {
@@ -28,7 +35,9 @@ public class DiscountHolder extends RecyclerView.ViewHolder {
 //        });
 
         discountDescription_label = (TextInputLayout) itemView.findViewById(R.id.tv_discount_description);
+
         discountDescription = (TextInputEditText) itemView.findViewById(R.id.et_discount_description);
+        discountDescription.addTextChangedListener(discountDescTextWatcher);
 
         discountAmount = (Spinner)itemView.findViewById(R.id.spinner_discount);
 

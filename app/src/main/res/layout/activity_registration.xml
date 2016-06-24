@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/registration_container"
     android:layout_width="match_parent"
@@ -9,24 +8,24 @@
 
     <android.support.v7.widget.ButtonBarLayout
         android:id="@+id/registration_header"
-        android:elevation="2dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="2dp">
 
 
 
     <Button
-        android:text="Child"
         android:id="@+id/child_page_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:text="Child" />
     <Button
-        android:text="Parent"
         android:id="@+id/parent_page_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:text="Parent" />
 
     </android.support.v7.widget.ButtonBarLayout>
 
@@ -58,28 +57,28 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_weight=".5"
-                    android:layout_gravity="center_horizontal|center_vertical">
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/iv_ChildPic"
                         android:layout_width="wrap_content"
                         android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
                         android:adjustViewBounds="true"
                         android:clickable="true"
                         android:contentDescription="@string/child_picture"
-                        android:src="@mipmap/ic_launcher_new"
-                        android:layout_gravity="center_horizontal|center_vertical"/>
+                        android:src="@mipmap/ic_launcher_new" />
 
                     <Button
                         android:id="@+id/b_takePic"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:onClick="takePic"
+                        android:layout_gravity="end|center"
+                        android:onClick="getAndSetImage"
                         android:text="@string/tpic_Label"
-                        android:textSize="12sp"
-                        android:layout_gravity="end|center"/>
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -87,9 +86,9 @@
                     android:id="@+id/child_name_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="left|top"
                     android:layout_weight=".3"
-                    android:layout_gravity="left|top">
+                    android:orientation="vertical">
 
                     <!--<com.quickenloans.floatui.QLFloatingEditLayout-->
                         <!--android:id="@+id/et_childFname"-->
@@ -307,11 +306,11 @@
                         android:id="@+id/s_childAgeGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:entries="@array/Child_Age"
-                        android:spinnerMode="dialog"
-                        android:layout_below="@+id/et_childFname"
+                        android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true" />
+                        android:layout_below="@+id/et_childFname"
+                        android:entries="@array/Child_Age"
+                        android:spinnerMode="dialog" />
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>

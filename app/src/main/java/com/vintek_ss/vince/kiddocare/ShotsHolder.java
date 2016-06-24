@@ -6,14 +6,26 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.vintek_ss.vince.kiddocare.TextWatchers.ShotsFluDateTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ShotsImmunDateTextWatcher;
+
 public class ShotsHolder extends RecyclerView.ViewHolder {
 
+    ShotsFluDateTextWatcher shotsFluDateTextWatcher;
+    ShotsImmunDateTextWatcher shotsImmunDateTextWatcher;
     private ImageView ivShotRecord;
     private CardView cv;
     private TextView fluShotDate, immunizationDate;
 
-    public ShotsHolder(View v) {
+    public ShotsHolder(View v,
+                       ShotsFluDateTextWatcher shotsFluDateTextWatcher,
+                       ShotsImmunDateTextWatcher shotsImmunDateTextWatcher) {
+
         super(v);
+
+        this.shotsFluDateTextWatcher = shotsFluDateTextWatcher;
+        this.shotsImmunDateTextWatcher = shotsImmunDateTextWatcher;
+
         cv = (CardView)itemView.findViewById(R.id.medicalDataCardView);
 
 //        cv.setOnClickListener(new View.OnClickListener() {
@@ -24,8 +36,12 @@ public class ShotsHolder extends RecyclerView.ViewHolder {
 //            }
 //        });
         ivShotRecord = (ImageView) itemView.findViewById(R.id.iv_shot_record);
+
         fluShotDate = (TextView) itemView.findViewById(R.id.et_flu_shot_date);
+        fluShotDate.addTextChangedListener(shotsFluDateTextWatcher);
+
         immunizationDate = (TextView) itemView.findViewById(R.id.et_immunization_date);
+        immunizationDate.addTextChangedListener(shotsImmunDateTextWatcher);
     }
 
     public CardView getCv() {

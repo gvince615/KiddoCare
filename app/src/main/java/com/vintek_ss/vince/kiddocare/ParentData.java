@@ -18,17 +18,17 @@ public class ParentData implements Parcelable {
             return new ParentData[size];
         }
     };
-    String guardian_type;
-    String first_name;
-    String last_name;
-    String email;
-    String phoneNumber;
-    boolean isAddressSameAsChild;
-    String address_ln_1;
-    String address_ln_2;
-    String address_city;
-    String address_state;
-    String address_zip;
+    public String guardian_type;
+    public String first_name;
+    public String last_name;
+    public String email;
+    public String phoneNumber;
+    public boolean isAddressSameAsChild;
+    public String address_ln_1;
+    public String address_ln_2;
+    public String address_city;
+    public String address_state;
+    public String address_zip;
 
     public ParentData(String guardian_type, String first_name, String last_name, String email,
                       String phoneNumber, boolean isAddressSameAsChild, String address_ln_1, String address_ln_2, String address_city,

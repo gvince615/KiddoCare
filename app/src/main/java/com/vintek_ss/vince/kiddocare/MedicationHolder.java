@@ -8,16 +8,27 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.vintek_ss.vince.kiddocare.TextWatchers.MedDescTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.MedTimeTextWatcher;
+
 public class MedicationHolder extends RecyclerView.ViewHolder {
 
+    MedDescTextWatcher medDescTextWatcher;
+    MedTimeTextWatcher medTimeTextWatcher;
     //private ImageView ivExample;
     private CardView cv;
     private TextView medicationTime;
     private TextInputLayout medicationDescription_label;
     private TextInputEditText medicationDescription;
 
-    public MedicationHolder(View v) {
+    public MedicationHolder(View v,
+                            MedDescTextWatcher medDescTextWatcher,
+                            MedTimeTextWatcher medTimeTextWatcher) {
         super(v);
+
+        this.medDescTextWatcher = medDescTextWatcher;
+        this.medTimeTextWatcher = medTimeTextWatcher;
+
         cv = (CardView) itemView.findViewById(R.id.medicineDataCardView);
 
 //        cv.setOnClickListener(new View.OnClickListener() {
@@ -29,9 +40,12 @@ public class MedicationHolder extends RecyclerView.ViewHolder {
 //        });
 
         medicationTime = (TextView) itemView.findViewById(R.id.et_medication_time);
+        medicationTime.addTextChangedListener(medTimeTextWatcher);
+
         medicationDescription_label = (TextInputLayout) itemView.findViewById(R.id.tv_medicine_name);
 
         medicationDescription = (TextInputEditText) itemView.findViewById(R.id.et_medicine_name);
+        medicationDescription.addTextChangedListener(medDescTextWatcher);
     }
 
     public CardView getCv() {

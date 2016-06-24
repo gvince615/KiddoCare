@@ -9,18 +9,58 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildAddressCityTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildAddressLnOneTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildAddressLnTwoTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildAddressStateTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildAddressZipTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildBirthDateTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildEnrollDateTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildFirstNameTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ChildLastNameTextWatcher;
+
 public class ChildHolder extends RecyclerView.ViewHolder {
 
 
-
+    ChildFirstNameTextWatcher childFirstNameTextWatcher;
+    ChildLastNameTextWatcher childLastNameTextWatcher;
+    ChildAddressLnOneTextWatcher childAddressLnOneTextWatcher;
+    ChildAddressLnTwoTextWatcher childAddressLnTwoTextWatcher;
+    ChildAddressCityTextWatcher childAddressCityTextWatcher;
+    ChildAddressStateTextWatcher childAddressStateTextWatcher;
+    ChildAddressZipTextWatcher childAddressZipTextWatcher;
+    ChildBirthDateTextWatcher childBirthDateTextWatcher;
+    ChildEnrollDateTextWatcher childEnrollDateTextWatcher;
     private CardView cv;
     private TextInputEditText childFirstName, childLastName, childAddressLn1, childAddressLn2, childAddressCity, childAddressState, childAddressZip;
     private TextInputLayout childFirstName_layout, childLastName_layout, childAddressLn2_layout, childAddressLn1_layout, childAddressCity_layout, childAddressState_layout, childAddressZip_layout;
     private TextView childBirthdate, childEnrolldate;
     private Spinner childAge;
 
-    public ChildHolder(View v) {
+
+    public ChildHolder(View v,
+                       ChildFirstNameTextWatcher childFirstNameTextWatcher,
+                       ChildLastNameTextWatcher childLastNameTextWatcher,
+                       ChildAddressLnOneTextWatcher childAddressLnOneTextWatcher,
+                       ChildAddressLnTwoTextWatcher childAddressLnTwoTextWatcher,
+                       ChildAddressCityTextWatcher childAddressCityTextWatcher,
+                       ChildAddressStateTextWatcher childAddressStateTextWatcher,
+                       ChildAddressZipTextWatcher childAddressZipTextWatcher,
+                       ChildBirthDateTextWatcher childBirthDateTextWatcher,
+                       ChildEnrollDateTextWatcher childEnrollDateTextWatcher
+    ) {
         super(v);
+
+        this.childFirstNameTextWatcher = childFirstNameTextWatcher;
+        this.childLastNameTextWatcher = childLastNameTextWatcher;
+        this.childAddressLnOneTextWatcher = childAddressLnOneTextWatcher;
+        this.childAddressLnTwoTextWatcher = childAddressLnTwoTextWatcher;
+        this.childAddressCityTextWatcher = childAddressCityTextWatcher;
+        this.childAddressStateTextWatcher = childAddressStateTextWatcher;
+        this.childAddressZipTextWatcher = childAddressZipTextWatcher;
+        this.childBirthDateTextWatcher = childBirthDateTextWatcher;
+        this.childEnrollDateTextWatcher = childEnrollDateTextWatcher;
+
         cv = (CardView)itemView.findViewById(R.id.childDataCardView);
 
 //        cv.setOnClickListener(new View.OnClickListener() {
@@ -40,20 +80,38 @@ public class ChildHolder extends RecyclerView.ViewHolder {
         childAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
 
         childFirstName = (TextInputEditText) itemView.findViewById(R.id.et_child_first_name);
+        childFirstName.addTextChangedListener(childFirstNameTextWatcher);
+
         childLastName = (TextInputEditText) itemView.findViewById(R.id.et_child_last_name);
+        childLastName.addTextChangedListener(childLastNameTextWatcher);
+
         childAddressLn1 = (TextInputEditText) itemView.findViewById(R.id.et_child_address_ln_1);
+        childAddressLn1.addTextChangedListener(childAddressLnOneTextWatcher);
+
         childAddressLn2 = (TextInputEditText) itemView.findViewById(R.id.et_child_address_ln_2);
+        childAddressLn2.addTextChangedListener(childAddressLnTwoTextWatcher);
+
         childAddressCity = (TextInputEditText) itemView.findViewById(R.id.et_child_address_city);
+        childAddressCity.addTextChangedListener(childAddressCityTextWatcher);
+
         childAddressState = (TextInputEditText) itemView.findViewById(R.id.et_child_address_state);
+        childAddressState.addTextChangedListener(childAddressStateTextWatcher);
+
         childAddressZip = (TextInputEditText) itemView.findViewById(R.id.et_child_address_zip);
+        childAddressZip.addTextChangedListener(childAddressZipTextWatcher);
 
         childAge = (Spinner) itemView.findViewById(R.id.spinner_age_bracket);
 
         childBirthdate = (TextView) itemView.findViewById(R.id.tv_Cbirthdate);
+        childBirthdate.addTextChangedListener(childBirthDateTextWatcher);
+
         childEnrolldate = (TextView) itemView.findViewById(R.id.et_child_Edate);
+        childEnrolldate.addTextChangedListener(childEnrollDateTextWatcher);
+
 
 
     }
+
 
     public EditText getChildAddressLn2() {
         return childAddressLn2;

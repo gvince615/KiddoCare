@@ -194,7 +194,7 @@
                     android:layout_alignStart="@+id/iv_ChildPic"
                     android:layout_below="@+id/iv_ChildPic"
                     android:minHeight="30dip"
-                    android:onClick="takePic"
+                    android:onClick="getAndSetImage"
                     android:text="@string/tpic_Label"
                     android:textAlignment="center"
                     android:textSize="12sp" />

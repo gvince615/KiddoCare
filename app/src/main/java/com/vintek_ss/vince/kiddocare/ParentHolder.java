@@ -9,8 +9,28 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentAddressCityTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentAddressLnOneTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentAddressLnTwoTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentAddressStateTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentAddressZipTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentEmailTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentFirstNameTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentLastNameTextWatcher;
+import com.vintek_ss.vince.kiddocare.TextWatchers.ParentPhoneTextWatcher;
+
 public class ParentHolder extends RecyclerView.ViewHolder {
 
+    ParentFirstNameTextWatcher parentFirstNameTextWatcher;
+    ParentLastNameTextWatcher parentLastNameTextWatcher;
+    ParentAddressLnOneTextWatcher parentAddressLnOneTextWatcher;
+    ParentAddressLnTwoTextWatcher parentAddressLnTwoTextWatcher;
+    ParentAddressCityTextWatcher parentAddressCityTextWatcher;
+    ParentAddressStateTextWatcher parentAddressStateTextWatcher;
+    ParentAddressZipTextWatcher parentAddressZipTextWatcher;
+    //ParentTypeTextWatcher parentTypeTextWatcher;
+    ParentPhoneTextWatcher parentPhoneTextWatcher;
+    ParentEmailTextWatcher parentEmailTextWatcher;
     private CardView cv;
     private TextInputEditText parentFirstName, parentLastName, parentAddressLn1, parentAddressLn2, parentAddressCity,
             parentAddressState, parentAddressZip, parentEmail, parentPhoneNumber;
@@ -20,8 +40,29 @@ public class ParentHolder extends RecyclerView.ViewHolder {
     private CheckBox isAddressSameAsChild;
     private Spinner guardianType;
 
-    public ParentHolder(View v) {
+
+    public ParentHolder(View v,
+                        ParentFirstNameTextWatcher parentFirstNameTextWatcher,
+                        ParentLastNameTextWatcher parentLastNameTextWatcher,
+                        ParentAddressLnOneTextWatcher parentAddressLnOneTextWatcher,
+                        ParentAddressLnTwoTextWatcher parentAddressLnTwoTextWatcher,
+                        ParentAddressCityTextWatcher parentAddressCityTextWatcher,
+                        ParentAddressStateTextWatcher parentAddressStateTextWatcher,
+                        ParentAddressZipTextWatcher parentAddressZipTextWatcher,
+                        ParentPhoneTextWatcher parentPhoneTextWatcher,
+                        ParentEmailTextWatcher parentEmailTextWatcher) {
         super(v);
+
+        this.parentFirstNameTextWatcher = parentFirstNameTextWatcher;
+        this.parentLastNameTextWatcher = parentLastNameTextWatcher;
+        this.parentAddressLnOneTextWatcher = parentAddressLnOneTextWatcher;
+        this.parentAddressLnTwoTextWatcher = parentAddressLnTwoTextWatcher;
+        this.parentAddressCityTextWatcher = parentAddressCityTextWatcher;
+        this.parentAddressStateTextWatcher = parentAddressStateTextWatcher;
+        this.parentAddressZipTextWatcher = parentAddressZipTextWatcher;
+        this.parentPhoneTextWatcher = parentPhoneTextWatcher;
+        this.parentEmailTextWatcher = parentEmailTextWatcher;
+
         cv = (CardView)itemView.findViewById(R.id.parentDataCardView);
 
 //        cv.setOnClickListener(new View.OnClickListener() {
@@ -38,7 +79,6 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         parentLastName_layout = (TextInputLayout) itemView.findViewById(R.id.tv_parentLname);
         parentEmail_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardians_email_address);
         parentPhone_number_layout = (TextInputLayout) itemView.findViewById(R.id.tv_guardian_phone_number);
-
         isAddressSameAsChild = (CheckBox) itemView.findViewById(R.id.c_address_same_as_child);
 
         parentAddressLn1_layout = (TextInputLayout) itemView.findViewById(R.id.tv_et_guardian_address_ln_1_layout);
@@ -48,14 +88,32 @@ public class ParentHolder extends RecyclerView.ViewHolder {
         parentAddressZip_layout = (TextInputLayout) itemView.findViewById(R.id.tv_child_address_zip_layout);
 
         parentFirstName = (TextInputEditText) itemView.findViewById(R.id.et_parentFname);
+        parentFirstName.addTextChangedListener(parentFirstNameTextWatcher);
+
         parentLastName = (TextInputEditText) itemView.findViewById(R.id.et_parentLname);
+        parentLastName.addTextChangedListener(parentLastNameTextWatcher);
+
         parentAddressLn1 = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_ln_1);
+        parentAddressLn1.addTextChangedListener(parentAddressLnOneTextWatcher);
+
         parentAddressLn2 = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_ln_2);
+        parentAddressLn2.addTextChangedListener(parentAddressLnTwoTextWatcher);
+
         parentEmail = (TextInputEditText) itemView.findViewById(R.id.et_guardians_email_address);
+        parentEmail.addTextChangedListener(parentEmailTextWatcher);
+
         parentPhoneNumber = (TextInputEditText) itemView.findViewById(R.id.et_guardian_phone_number);
+        parentPhoneNumber.addTextChangedListener(parentPhoneTextWatcher);
+
         parentAddressCity = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_city);
+        parentAddressCity.addTextChangedListener(parentAddressCityTextWatcher);
+
         parentAddressState = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_state);
+        parentAddressState.addTextChangedListener(parentAddressStateTextWatcher);
+
         parentAddressZip = (TextInputEditText) itemView.findViewById(R.id.et_guardian_address_zip);
+        parentAddressZip.addTextChangedListener(parentAddressZipTextWatcher);
+
     }
 
     public CardView getCv() {

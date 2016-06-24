@@ -18,8 +18,9 @@ import java.util.List;
 public class RegisteredListScrollingActivity extends AppCompatActivity {
 
     public static final String REGISTERED_CHILD_DATA = "REGISTERED_CHILD_DATA";
-    RecyclerView rv_RegisteredData;
+    private RecyclerView rv_RegisteredData;
     private List<ChildData> childDatas;
+    private RegisteredRVAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,8 +87,13 @@ public class RegisteredListScrollingActivity extends AppCompatActivity {
     }
 
     private void initializeAdapter(){
-        RegisteredRVAdapter adapter = new RegisteredRVAdapter(childDatas, this);
+        adapter = new RegisteredRVAdapter(childDatas, this);
         rv_RegisteredData.setAdapter(adapter);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
+    }
 }
