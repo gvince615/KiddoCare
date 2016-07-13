@@ -10,7 +10,6 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -61,7 +60,8 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     private int cardDatasetTypes[] = {CHILD, PARENT, SHOTS, MEDICATION, DISCOUNT}; //view types
 
     private int newChildNumber;
-    private int childNumber;
+    private int childNumberToEdit;
+    private Boolean isInEditMode = false;
 
 
     @Override
@@ -78,10 +78,12 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if (savedInstanceState != null) {
-
+            childNumberToEdit = savedInstanceState.getInt(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_TO_EDIT);
+            isInEditMode = savedInstanceState.getBoolean(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_IS_IN_EDIT_MODE);
         } else {
             if (bundle != null) {
-                childNumber = bundle.getInt(RegisteredListScrollingActivity.REGISTERED_CHILD_DATA);
+                childNumberToEdit = bundle.getInt(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_TO_EDIT);
+                isInEditMode = bundle.getBoolean(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_IS_IN_EDIT_MODE);
             } else {
                 loadBlankChildCard();
             }
@@ -105,7 +107,6 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
         fab_add_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //saveCards();
                 pickACardToAdd();
             }
         });
@@ -121,19 +122,6 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 
         adapter = new ChildRegistrationRVAdapter(cardsList);
         rv_RegistrationData.setAdapter(adapter);
-
-//        rv_RegistrationData.addOnChildAttachStateChangeListener(new RecyclerView.OnChildAttachStateChangeListener() {
-//            @Override
-//            public void onChildViewAttachedToWindow(View view) {
-//
-//            }
-//
-//            @Override
-//            public void onChildViewDetachedFromWindow(View view) {
-//                saveCards();
-//            }
-//        });
-
     }
 
     private void setUpToolbarAndAppBar() {
@@ -311,12 +299,10 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     public void saveDataToDatabase() {
-        for (int card = 1; card <= rv_RegistrationData.getChildCount(); card++) {
+        for (int card = 0; card < cardsList.size(); card++) {
 
-            View currentCard = rv_RegistrationData.getChildAt(card - 1);
-
-            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ChildHolder) {
-                ChildData childData = (ChildData) cardsList.get(card - 1);
+            if (cardsList.get(card) instanceof ChildData) {
+                ChildData childData = (ChildData) cardsList.get(card);
                 updateChildObject(childData);
 
                 daycaremanagerDB entry = new daycaremanagerDB(this);
@@ -324,11 +310,11 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                 newChildNumber = entry.createChildEntry(childData.first_name, childData.last_name, childData.birth_date, childData.enroll_date, childData.address_ln_1, childData.address_ln_2,
                         childData.address_city, childData.address_state, childData.address_zip, childData.age, ((BitmapDrawable) childImage.getDrawable()).getBitmap());
                 entry.close();
-
             }
-            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ParentHolder) {
-                ParentData parentData = (ParentData) cardsList.get(card - 1);
-                createParentObject(currentCard, parentData);
+
+            if (cardsList.get(card) instanceof ParentData) {
+                ParentData parentData = (ParentData) cardsList.get(card);
+                updateParentObject(parentData);
 
                 if (parentData.isAddressSameAsChild) {
                     daycaremanagerDB db = new daycaremanagerDB(this);
@@ -351,162 +337,81 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
                         parentData.address_ln_2, parentData.address_city, parentData.guardian_type, parentData.address_state, parentData.address_zip, parentData.email);
                 guardianEntry.close();
             }
-            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ShotsHolder) {
-                ShotRecordData shotRecordData = (ShotRecordData) cardsList.get(card - 1);
-                shotRecordData = createShotsObject(currentCard, shotRecordData);
-
-                daycaremanagerDB medicalEntry = new daycaremanagerDB(this);
-                medicalEntry.open();
-                medicalEntry.createShotsEntry(newChildNumber, shotRecordData.flu_shot_date, shotRecordData.immunizations_date, shotRecordData.imageShotRecord);
-                medicalEntry.close();
-            }
-            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof MedicationHolder) {
-                MedicationData medicationData = (MedicationData) cardsList.get(card - 1);
-                medicationData = createMedicationObject(currentCard, medicationData);
+            if (cardsList.get(card) instanceof MedicationData) {
+                MedicationData medicationData = (MedicationData) cardsList.get(card);
+                updateMedicationObject(medicationData);
 
                 daycaremanagerDB medicationEntry = new daycaremanagerDB(this);
                 medicationEntry.open();
                 medicationEntry.createMedicationEntry(newChildNumber, medicationData.medication_time, medicationData.medication_description);
                 medicationEntry.close();
             }
-            if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof DiscountHolder) {
-                DiscountData discountData = (DiscountData) cardsList.get(card - 1);
-                discountData = createDiscountObject(currentCard, discountData);
+            if (cardsList.get(card) instanceof ShotRecordData) {
+                ShotRecordData shotRecordData = (ShotRecordData) cardsList.get(card);
+                updateShotsObject(shotRecordData);
+
+                daycaremanagerDB medicalEntry = new daycaremanagerDB(this);
+                medicalEntry.open();
+                medicalEntry.createShotsEntry(newChildNumber, shotRecordData.flu_shot_date, shotRecordData.immunizations_date, shotRecordData.imageShotRecord);
+                medicalEntry.close();
+            }
+            if (cardsList.get(card) instanceof DiscountData) {
+                DiscountData discountData = (DiscountData) cardsList.get(card);
+                updateDiscountObject(discountData);
 
                 daycaremanagerDB discountEntry = new daycaremanagerDB(this);
                 discountEntry.open();
-                discountEntry.createDiscountEntry(newChildNumber, discountData.discount_description, Double.parseDouble(discountData.discount_amount));
+                discountEntry.createDiscountEntry(newChildNumber, discountData.discount_description, discountData.discount_amount);
                 discountEntry.close();
             }
         }
     }
 
-    public void saveCards() {
-        int numCards = cardsList.size();
-//        adapter.updateData(cardsList);
-        for (int currentCard = 0; currentCard < cardsList.size(); currentCard++) {
-            if (cardsList.get(currentCard) instanceof ChildData) {
-                updateChildObject((ChildData) cardsList.get(currentCard));
-            }
+    private DiscountData updateDiscountObject(DiscountData discountData) {
 
-//            switch (cardsList.get(currentCard).equals()){
-//                case CHILD:
-//                        updateChildObject(rv_RegistrationData.getChildAt(currentCard), (ChildData) cardsList.get(currentCard));
-//                    break;
-//                case PARENT:
-//                        createParentObject(rv_RegistrationData.getChildAt(currentCard), (ParentData) cardsList.get(currentCard));
-//                    break;
-//                case SHOTS:
-//                        createShotsObject(rv_RegistrationData.getChildAt(currentCard), (ShotRecordData) cardsList.get(currentCard));
-//                    break;
-//                case MEDICATION:
-//                        createMedicationObject(rv_RegistrationData.getChildAt(currentCard), (MedicationData) cardsList.get(currentCard));
-//                    break;
-//                case DISCOUNT:
-//                        createDiscountObject(rv_RegistrationData.getChildAt(currentCard), (DiscountData) cardsList.get(currentCard));
-//                    break;
-        }
-        //}
-//        View currentCard = rv_RegistrationData.getChildAt(0);
-//        for (int cardNumber = 0; cardNumber < cardsList.size(); cardNumber++) {
-//
-//            View currentCard = rv_RegistrationData.getChildAt(cardNumber);
-
-
-//            if (currentCard != null) {
-
-//                if (cardsList.get(cardNumber) instanceof ChildHolder){
-//                    ChildData childData = (ChildData) cardsList.get(cardNumber);
-//                    updateChildObject(currentCard, childData);
-//                }
-//                if (cardsList.get(cardNumber) instanceof ParentHolder) {
-//                    ParentData parentData = (ParentData) cardsList.get(cardNumber);
-//                    createParentObject(currentCard, parentData);
-//                }
-//                if (cardsList.get(cardNumber) instanceof ShotsHolder) {
-//                    ShotRecordData shotRecordData = (ShotRecordData) cardsList.get(cardNumber);
-//                    createShotsObject(currentCard, shotRecordData);
-//                }
-//                if (cardsList.get(cardNumber) instanceof MedicationHolder) {
-//                    MedicationData medicationData = (MedicationData) cardsList.get(cardNumber);
-//                    createMedicationObject(currentCard, medicationData);
-//                }
-//                if (cardsList.get(cardNumber) instanceof DiscountHolder) {
-//                    DiscountData discountData = (DiscountData) cardsList.get(cardNumber);
-//                    createDiscountObject(currentCard, discountData);
-//                }
-
-//                if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ChildHolder) {
-//                    ChildData childData = (ChildData) cardsList.get(cardNumber);
-//                    updateChildObject(currentCard, childData);
-//                }
-//                if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ParentHolder) {
-//                    ParentData parentData = (ParentData) cardsList.get(cardNumber);
-//                    createParentObject(currentCard, parentData);
-//                }
-//                if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof ShotsHolder) {
-//                    ShotRecordData shotRecordData = (ShotRecordData) cardsList.get(cardNumber);
-//                    createShotsObject(currentCard, shotRecordData);
-//                }
-//                if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof MedicationHolder) {
-//                    MedicationData medicationData = (MedicationData) cardsList.get(cardNumber);
-//                    createMedicationObject(currentCard, medicationData);
-//                }
-//                if (rv_RegistrationData.getChildViewHolder(currentCard) instanceof DiscountHolder) {
-//                    DiscountData discountData = (DiscountData) cardsList.get(cardNumber);
-//                    createDiscountObject(currentCard, discountData);
-//                }
-//            }
-//        }
-    }
-
-    private DiscountData createDiscountObject(View currentCard, DiscountData discountData) {
-
-        discountData.discount_description = String.valueOf(((DiscountHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getDiscountDescription().getText());
-        discountData.discount_amount = String.valueOf(((DiscountHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getDiscountAmount().getSelectedItem().toString());
+//        discountData.discount_description = String.valueOf(((DiscountHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getDiscountDescription().getText());
+//        discountData.discount_amount = String.valueOf(((DiscountHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getDiscountAmount().getSelectedItem().toString());
 
         return discountData;
     }
 
-    private MedicationData createMedicationObject(View currentCard, MedicationData medicationData) {
+    private MedicationData updateMedicationObject(MedicationData medicationData) {
 
-        medicationData.medication_time = String.valueOf(((MedicationHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getMedicationTime().getText());
-        medicationData.medication_description = String.valueOf(((MedicationHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getMedicationDescription().getText());
+//        medicationData.medication_time = String.valueOf(((MedicationHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getMedicationTime().getText());
+//        medicationData.medication_description = String.valueOf(((MedicationHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getMedicationDescription().getText());
 
         return medicationData;
     }
 
-    private ShotRecordData createShotsObject(View currentCard, ShotRecordData shotRecordData) {
+    private ShotRecordData updateShotsObject(ShotRecordData shotRecordData) {
 
-        Drawable medicalImmunizationImage = ((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIvShotRecord().getDrawable();
-
-        shotRecordData.imageShotRecord = ((BitmapDrawable) medicalImmunizationImage).getBitmap();
-        shotRecordData.flu_shot_date = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getFluShotDate().getText());
-        shotRecordData.immunizations_date = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getImmunizationDate().getText());
+//        Drawable medicalImmunizationImage = ((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIvShotRecord().getDrawable();
+//
+//        shotRecordData.imageShotRecord = ((BitmapDrawable) medicalImmunizationImage).getBitmap();
+//        shotRecordData.flu_shot_date = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getFluShotDate().getText());
+//        shotRecordData.immunizations_date = String.valueOf(((ShotsHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getImmunizationDate().getText());
 
         return shotRecordData;
     }
 
-    private ParentData createParentObject(View currentCard, ParentData parentData) {
+    private ParentData updateParentObject(ParentData parentData) {
 
-        parentData.guardian_type = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getGuardianType().getSelectedItem());
-        parentData.first_name = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentFirstName().getText());
-        parentData.last_name = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentLastName().getText());
-        parentData.email = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentEmail().getText());
-        parentData.phoneNumber = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentPhoneNumber().getText());
-        parentData.isAddressSameAsChild = ((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIsAddressSameAsChild().isChecked();
-        parentData.address_ln_1 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn1().getText());
-        parentData.address_ln_2 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn2().getText());
-        parentData.address_city = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressCity().getText());
-        parentData.address_state = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressState().getText());
-        parentData.address_zip = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressZip().getText());
+//        parentData.guardian_type = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getGuardianType().getSelectedItem());
+//        parentData.first_name = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentFirstName().getText());
+//        parentData.last_name = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentLastName().getText());
+//        parentData.email = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentEmail().getText());
+//        parentData.phoneNumber = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentPhoneNumber().getText());
+//        parentData.isAddressSameAsChild = ((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getIsAddressSameAsChild().isChecked();
+//        parentData.address_ln_1 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn1().getText());
+//        parentData.address_ln_2 = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressLn2().getText());
+//        parentData.address_city = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressCity().getText());
+//        parentData.address_state = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressState().getText());
+//        parentData.address_zip = String.valueOf(((ParentHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getParentAddressZip().getText());
 
         return parentData;
     }
 
     private ChildData updateChildObject(ChildData childData) {
-
-        //childData.first_name = adapter
 
 //        childData.first_name = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildFirstName().getText());
 //        childData.last_name = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildLastName().getText());
@@ -520,25 +425,6 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
 //        childData.address_zip = String.valueOf(((ChildHolder) rv_RegistrationData.getChildViewHolder(currentCard)).getChildAddressZip().getText());
 
         return childData;
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_reg, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-
-        if (id == R.id.action_saveReg) {
-            saveDataToDatabase();
-            finish();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     public void getAndSetImage() {
@@ -595,6 +481,25 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_reg, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.action_saveReg) {
+            saveDataToDatabase();
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -612,13 +517,10 @@ public class RegistrationListScrollingActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-    }
-
-    @Override
     protected void onSaveInstanceState(final Bundle outState) {
         super.onSaveInstanceState(outState);
-        saveCards();
+
+        outState.putSerializable(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_TO_EDIT, childNumberToEdit);
+        outState.putBoolean(RegisteredListScrollingActivity.KEY_REGISTERED_CHILD_IS_IN_EDIT_MODE, isInEditMode);
     }
 }

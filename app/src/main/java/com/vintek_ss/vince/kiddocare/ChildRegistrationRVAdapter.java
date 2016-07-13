@@ -37,7 +37,6 @@ public class ChildRegistrationRVAdapter extends RecyclerView.Adapter<RecyclerVie
     // The cards to display in your RecyclerView
     private List<Object> cards;
 
-
     // Provide a suitable constructor (depends on the kind of dataset)
     public ChildRegistrationRVAdapter(List<Object> cards) {
         this.cards = cards;

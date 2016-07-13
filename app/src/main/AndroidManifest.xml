@@ -17,6 +17,7 @@
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:allowBackup="true"
@@ -43,7 +44,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vintek_ss.vince.kiddocare.KiddoCareMainActivity" />
         </activity>
-
         <activity
             android:name=".BillingActivity"
             android:label="@string/title_activity_billing"

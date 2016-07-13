@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_main.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_settings.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_settings.xml"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_main.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_main.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_new_meal.xml",
@@ -28,20 +28,20 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_scrolling.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/main.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/main.xml"
-    },
-    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_billing.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_billing.xml"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/global.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/global.xml"
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/main.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/main.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_calendar.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/menu_calendar.xml"
+    },
+    {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/global.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/menu/global.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/menu/menu_tasks.xml",

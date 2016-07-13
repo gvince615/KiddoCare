@@ -1,15 +1,15 @@
 [
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_attendance_btn.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-hdpi/ic_attendance_btn.png"
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_shot_record.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-hdpi/ic_shot_record.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_menu.png",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-hdpi/ic_menu.png"
     },
     {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_shot_record.png",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-hdpi/ic_shot_record.png"
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_attendance_btn.png",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/mipmap-hdpi/ic_attendance_btn.png"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_registration_btn.png",

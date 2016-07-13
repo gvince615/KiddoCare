@@ -49,198 +49,209 @@ uses-permission#android.permission.READ_CONTACTS
 ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:19:5-72
 	android:name
 		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:19:22-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:20:5-68
+MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
+MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
+MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:20:22-65
 application
-ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:21:5-96:19
+ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:22:5-96:19
 MERGED from [com.wefika:collapse-calendar-view:0.1.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/AndroidManifest.xml:11:5-47
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:cardview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v13:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:cardview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v13:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.melnykov:floatingactionbutton:1.3.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.3.0/AndroidManifest.xml:12:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-crash:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.0.2/AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:26:5-41:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:26:5-41:19
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:design:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-core:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:26:5-41:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:26:5-41:19
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:30:5-59:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:5:5-12:19
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:25:5-20
 	android:screenOrientation
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:25:9-45
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:26:9-45
 	android:label
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:24:9-41
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:25:9-41
 	android:allowBackup
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:22:9-35
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:23:9-35
 	android:icon
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:23:9-47
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:24:9-47
 	android:theme
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:26:9-40
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:27:9-40
 	android:versionName
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:28:9-36
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:29:9-36
 	android:versionCode
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:27:9-33
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:28:9-33
 activity#com.vintek_ss.vince.kiddocare.UserSettingActivity
-ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:29:9-36:20
+ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:30:9-37:20
 	android:screenOrientation
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:32:13-49
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:33:13-49
 	android:parentActivityName
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:31:13-64
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:32:13-64
 	android:name
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:30:13-48
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:31:13-48
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:33:13-35:87
+ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:34:13-36:87
 	android:name
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:34:17-63
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:35:17-63
 	android:value
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:35:17-84
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:36:17-84
 activity#com.vintek_ss.vince.kiddocare.AttendanceActivity
-ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:37:9-45:20
+ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:38:9-46:20
 	android:screenOrientation
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:41:13-49
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:42:13-49
 	android:label
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:39:13-62
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:40:13-62
 	android:parentActivityName
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:40:13-64
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:41:13-64
 	android:name
-		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:38:13-47
+		ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:39:13-47
 activity#com.vintek_ss.vince.kiddocare.BillingActivity
 ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml:47:9-55:20
 	android:screenOrientation
@@ -308,163 +319,163 @@ ADDED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/Andro
 uses-sdk
 INJECTED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.wefika:collapse-calendar-view:0.1.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:cardview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v13:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:design:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:cardview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v13:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v13/24.0.0/AndroidManifest.xml:21:5-23:55
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.melnykov:floatingactionbutton:1.3.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.melnykov/floatingactionbutton/1.3.0/AndroidManifest.xml:8:5-10:41
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-crash:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.0.2/AndroidManifest.xml:22:5-42
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [net.opacapp:multiline-collapsingtoolbar:1.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/net.opacapp/multiline-collapsingtoolbar/1.0.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:design:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:recyclerview-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:design:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:recyclerview-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:appcompat-v7:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [net.simonvt.menudrawer:menudrawer:3.0.6] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/net.simonvt.menudrawer/menudrawer/3.0.6/AndroidManifest.xml:3:5-72
 MERGED from [com.google.firebase:firebase-core:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-core/9.0.2/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-base:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:18:5-42
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.firebase:firebase-common:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 MERGED from [com.google.android.gms:play-services-tasks:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.2/AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.2/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:21:5-23:54
 	android:targetSdkVersion
 		INJECTED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml
@@ -472,7 +483,7 @@ MERGED from [com.android.support:support-v4:23.4.0] /Users/gvincent/Documents/st
 		INJECTED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:23.4.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:support-v4:24.0.0] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/AndroidManifest.xml:23:9-51
 service#com.google.firebase.crash.internal.service.FirebaseCrashReceiverService
 ADDED from [com.google.firebase:firebase-crash:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.0.2/AndroidManifest.xml:26:9-27:50
 	android:process
@@ -566,16 +577,6 @@ MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:20:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:20:22-76
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
-MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
-MERGED from [com.google.firebase:firebase-analytics:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.0.2/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.0.2/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:5-68
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:22:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:23:5-82
 MERGED from [com.google.firebase:firebase-iid:9.0.2] /Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.0.2/AndroidManifest.xml:23:5-82

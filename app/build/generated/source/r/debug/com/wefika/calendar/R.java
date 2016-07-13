@@ -9,56 +9,56 @@ package com.wefika.calendar;
 public final class R {
 	public static final class attr {
 		public static final int calendarViewStyle = 0x7f010000;
-		public static final int state_current = 0x7f010143;
+		public static final int state_current = 0x7f010158;
 	}
 	public static final class color {
 		public static final int blue_dark = 0x7f0d000c;
 		public static final int blue_light = 0x7f0d000d;
 		public static final int stroke = 0x7f0d0069;
-		public static final int text_calendar = 0x7f0d0086;
+		public static final int text_calendar = 0x7f0d008e;
 		public static final int text_light = 0x7f0d006f;
 		public static final int text_normal = 0x7f0d0070;
 		public static final int text_super_light = 0x7f0d0071;
 	}
 	public static final class drawable {
-		public static final int bg_btn_calendar = 0x7f02004b;
-		public static final int bg_btn_calendar_activated = 0x7f02004c;
-		public static final int bg_btn_calendar_pressed = 0x7f02004d;
-		public static final int bg_calendar_stroke = 0x7f02004e;
-		public static final int ic_arrow_left = 0x7f020082;
-		public static final int ic_arrow_left_disabled = 0x7f020083;
-		public static final int ic_arrow_left_normal = 0x7f020084;
-		public static final int ic_arrow_left_pressed = 0x7f020085;
-		public static final int ic_arrow_right = 0x7f020086;
-		public static final int ic_arrow_right_disabled = 0x7f020087;
-		public static final int ic_arrow_right_normal = 0x7f020088;
-		public static final int ic_arrow_right_pressed = 0x7f020089;
-		public static final int ic_launcher = 0x7f02008e;
+		public static final int bg_btn_calendar = 0x7f02004c;
+		public static final int bg_btn_calendar_activated = 0x7f02004d;
+		public static final int bg_btn_calendar_pressed = 0x7f02004e;
+		public static final int bg_calendar_stroke = 0x7f02004f;
+		public static final int ic_arrow_left = 0x7f020083;
+		public static final int ic_arrow_left_disabled = 0x7f020084;
+		public static final int ic_arrow_left_normal = 0x7f020085;
+		public static final int ic_arrow_left_pressed = 0x7f020086;
+		public static final int ic_arrow_right = 0x7f020087;
+		public static final int ic_arrow_right_disabled = 0x7f020088;
+		public static final int ic_arrow_right_normal = 0x7f020089;
+		public static final int ic_arrow_right_pressed = 0x7f02008a;
+		public static final int ic_launcher = 0x7f02008f;
 	}
 	public static final class id {
-		public static final int days = 0x7f0e00e9;
-		public static final int header = 0x7f0e00e5;
-		public static final int next = 0x7f0e00e7;
-		public static final int prev = 0x7f0e00e6;
-		public static final int selection_title = 0x7f0e00e8;
-		public static final int title = 0x7f0e0054;
-		public static final int weeks = 0x7f0e00ea;
+		public static final int days = 0x7f0e00eb;
+		public static final int header = 0x7f0e00e7;
+		public static final int next = 0x7f0e00e9;
+		public static final int prev = 0x7f0e00e8;
+		public static final int selection_title = 0x7f0e00ea;
+		public static final int title = 0x7f0e0055;
+		public static final int weeks = 0x7f0e00ec;
 	}
 	public static final class layout {
-		public static final int calendar_layout = 0x7f040024;
-		public static final int day_layout = 0x7f040026;
-		public static final int week_layout = 0x7f04005b;
+		public static final int calendar_layout = 0x7f040025;
+		public static final int day_layout = 0x7f040027;
+		public static final int week_layout = 0x7f04005c;
 	}
 	public static final class string {
-		public static final int time_next = 0x7f07009b;
-		public static final int time_prev = 0x7f07009c;
+		public static final int time_next = 0x7f0700a7;
+		public static final int time_prev = 0x7f0700a8;
 	}
 	public static final class style {
-		public static final int CalendarStyle = 0x7f0a00c0;
-		public static final int CalendarTheme = 0x7f0a00c1;
+		public static final int CalendarStyle = 0x7f0900ca;
+		public static final int CalendarTheme = 0x7f0900cb;
 	}
 	public static final class styleable {
-		public static final int[] day = { 0x7f010143 };
+		public static final int[] day = { 0x7f010158 };
 		public static final int day_state_current = 0;
 	}
 }

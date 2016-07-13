@@ -7,12 +7,12 @@ android {
             keyPassword 'aABC232907!'
         }
     }
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
     defaultConfig {
         applicationId "com.vintek_ss.vince.kiddocare"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 24
         versionCode 10
         versionName '2.0.0'
         signingConfig signingConfigs.config
@@ -32,13 +32,13 @@ dependencies {
 
     compile 'com.wefika:collapse-calendar-view:0.1.0' // for calendar
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-    compile 'com.android.support:support-v13:23.4.0'
+    compile 'com.android.support:recyclerview-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.android.support:cardview-v7:24.0.0'
+    compile 'com.android.support:support-v13:24.0.0'
     compile 'com.melnykov:floatingactionbutton:1.3.0'
     //noinspection GradleDynamicVersion
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.google.firebase:firebase-crash:9.0.2'
     compile 'net.opacapp:multiline-collapsingtoolbar:1.0.0'
 
@@ -48,5 +48,8 @@ dependencies {
 
     compile 'com.github.frankiesardo:icepick:2.3.6'
     provided 'com.github.frankiesardo:icepick-processor:2.3.6'
+    compile 'org.jetbrains:annotations-java5:15.0'
+
+    wearApp project(':kiddocare')
 }
 apply plugin: 'com.google.gms.google-services'

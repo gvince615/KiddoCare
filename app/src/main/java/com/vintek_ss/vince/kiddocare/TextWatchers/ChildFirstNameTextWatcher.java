@@ -14,11 +14,13 @@ public class ChildFirstNameTextWatcher implements TextWatcher {
     List<Object> cards;
     int position;
     Object card;
+    //TextView firstName;
 
-    public void setParams(List<Object> cards, int position) {
+    public void setParams(List<Object> cards, int position) {//, TextView first_name) {
         this.card = cards.get(position);
         this.cards = cards;
         this.position = position;
+        ///this.firstName = first_name;
     }
 
     @Override

@@ -134,13 +134,27 @@ public class daycaremanagerDB {
         ourHelper.close();
     }
 
+
+    public Context getActivity() {
+        return ourContext;
+    }
+
+    public Cursor getAllElements(String tableName) {
+
+        // Select All Query
+        String selectQuery = "SELECT  * FROM " + tableName;
+        Cursor cursor = ourDatabase.rawQuery(selectQuery, null);
+
+        return cursor;
+    }
+
     //////////////// CHILD ////////////////////
     public int createChildEntry(String cfn, String cln, String cbd, String ced, String cadd_ln1,
                                 String cadd_ln2, String cadd_city, String cadd_state,
                                 String cadd_zip, String cAge, Bitmap cPic) {
 
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
-        cPic.compress(Bitmap.CompressFormat.JPEG, 50, stream);
+        cPic.compress(Bitmap.CompressFormat.JPEG, 100, stream);
         byte[] picArray = stream.toByteArray();
 
         ContentValues childCV = new ContentValues();
@@ -167,9 +181,9 @@ public class daycaremanagerDB {
         String[] whereArgs = new String[]{Integer.toString(childNumber)};
 
         String[] columns = new String[]{KEY_CHILD_ROWID, KEY_CHILD_FNAME,
-                KEY_CHILD_LNAME, KEY_CHILD_BDATE, KEY_CHILD_EDATE, KEY_CHILD_AGE, KEY_CHILD_ADDRESS_LN_1,
+                KEY_CHILD_LNAME, KEY_CHILD_ADDRESS_LN_1,
                 KEY_CHILD_ADDRESS_LN_2, KEY_CHILD_ADDRESS_CITY, KEY_CHILD_ADDRESS_STATE, KEY_CHILD_ADDRESS_ZIP,
-                KEY_CHILD_AGE, KEY_CHILD_PIC};
+                KEY_CHILD_AGE};
         Cursor c = ourDatabase.query(CHILD_TABLE, columns, whereClause, whereArgs,
                 null, null, null);
 
@@ -241,7 +255,7 @@ public class daycaremanagerDB {
     }
 
     //////////////// DISCOUNT ////////////////////
-    public long createDiscountEntry(int d_child_id, String d_desc, Double d_amount) {
+    public long createDiscountEntry(int d_child_id, String d_desc, String d_amount) {
 
         ContentValues discountCV = new ContentValues();
 
@@ -441,6 +455,61 @@ public class daycaremanagerDB {
 
         // returning childDatas
         return foodItems;
+    }
+
+    public String putIteminDB(String usersInput, String selected) {
+        String s = null;
+        String result = null;
+        //////// to update ChildData record showing in care status
+        ContentValues itemCV = new ContentValues();
+        itemCV.put(KEY_FOODITEM_GROUP, s);
+        if (selected.equals("Enter Meal Name")) {
+            s = "Meal Name";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+
+        if (selected.equals("Select Any Food Item 1") ||
+                selected.equals("Select Any Food Item 2")) {
+
+        }
+
+
+        if (selected.equals("Select Drink Item")) {
+            s = "Drink";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+        if (selected.equals("Select Bread Item")) {
+            s = "Bread";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+        if (selected.equals("Select Fruit or Veggie Item 1")) {
+            s = "Fruits & Veggies";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+        if (selected.equals("Select Fruit or Veggie Item 2")) {
+            s = "Fruits & Veggies";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+        if (selected.equals("Select Protein Item")) {
+            s = "Protein";
+            itemCV.put(KEY_FOODITEM_GROUP, s);
+            itemCV.put(KEY_FOODITEM_NAME, usersInput);
+        }
+
+
+        // run it
+        try {
+            ourDatabase.insert(FOODITEM_TABLE, null, itemCV);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result = usersInput + " has been added as " + s;
     }
 
 //    public String[] getDiscount(String cfn, String cln) {
@@ -1055,61 +1124,6 @@ public class daycaremanagerDB {
 //        return children;
 //    }
 
-    public String putIteminDB(String usersInput, String selected) {
-        String s = null;
-        String result = null;
-        //////// to update ChildData record showing in care status
-        ContentValues itemCV = new ContentValues();
-        itemCV.put(KEY_FOODITEM_GROUP, s);
-        if (selected.equals("Enter Meal Name")) {
-            s = "Meal Name";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-
-        if (selected.equals("Select Any Food Item 1") ||
-                selected.equals("Select Any Food Item 2")) {
-
-        }
-
-
-        if (selected.equals("Select Drink Item")) {
-            s = "Drink";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-        if (selected.equals("Select Bread Item")) {
-            s = "Bread";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-        if (selected.equals("Select Fruit or Veggie Item 1")) {
-            s = "Fruits & Veggies";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-        if (selected.equals("Select Fruit or Veggie Item 2")) {
-            s = "Fruits & Veggies";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-        if (selected.equals("Select Protein Item")) {
-            s = "Protein";
-            itemCV.put(KEY_FOODITEM_GROUP, s);
-            itemCV.put(KEY_FOODITEM_NAME, usersInput);
-        }
-
-
-        // run it
-        try {
-            ourDatabase.insert(FOODITEM_TABLE, null, itemCV);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return result = usersInput + " has been added as " + s;
-    }
-
     //// Save Breakfast/AM Snack
     public void saveNewMealPlanB(String selectedDay, String sBmealName, String sBdrink, String sBbread,
                                  String sBforv2, String sBamS1, String sBamS2) {
@@ -1424,10 +1438,6 @@ public class daycaremanagerDB {
         return foodItems6;
     }
 
-    public Context getActivity() {
-        return ourContext;
-    }
-
     private static class DbHelper extends SQLiteOpenHelper {
 
         public DbHelper(Context context) {
@@ -1455,7 +1465,7 @@ public class daycaremanagerDB {
                     + KEY_DISCOUNT_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                     + KEY_DISCOUNT_CHILD_ID + " INTEGER, "
                     + KEY_DISCOUNT_DESC + " TEXT, "
-                    + KEY_DISCOUNT_AMOUNT + " REAL);");
+                    + KEY_DISCOUNT_AMOUNT + " TEXT);");
 
             db.execSQL("CREATE TABLE " + SHOT_RECORD_TABLE + " ("
                     + KEY_SHOT_RECORD_ROWID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
