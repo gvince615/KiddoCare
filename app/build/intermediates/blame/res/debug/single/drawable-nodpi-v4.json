@@ -4,6 +4,10 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/ic_arrow_left.xml"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/bg_btn_calendar_activated.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_btn_calendar_activated.xml"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/polkadotbg.jpg",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/src/main/res/drawable-nodpi/polkadotbg.jpg"
     },
@@ -12,19 +16,15 @@
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_btn_calendar_pressed.xml"
     },
     {
+        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/bg_calendar_stroke.xml",
+        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_calendar_stroke.xml"
+    },
+    {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/ic_arrow_right.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/ic_arrow_right.xml"
     },
     {
         "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/bg_btn_calendar.xml",
         "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_btn_calendar.xml"
-    },
-    {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/bg_btn_calendar_activated.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_btn_calendar_activated.xml"
-    },
-    {
-        "merged": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/res/merged/debug/drawable-nodpi-v4/bg_calendar_stroke.xml",
-        "source": "/Users/gvincent/Documents/studioprojects/KiddoCare/app/build/intermediates/exploded-aar/com.wefika/collapse-calendar-view/0.1.0/res/drawable-nodpi-v4/bg_calendar_stroke.xml"
     }
 ]
