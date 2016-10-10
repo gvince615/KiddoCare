@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ValidationFormField">
+        <attr name="hintText" format="string" />
+        <attr name="floatingLabelText" format="string" />
+        <attr name="fieldType" format="string" />
+        <attr name="maxLength" format="string" />
+        <attr name="regexPattern" format="string" />
+        <attr name="regexErrorText" format="string" />
+        <attr name="minLength" format="string" />
+        <attr name="minLengthErrorText" format="string" />
+        <attr name="hasHelperText" format="boolean" />
+        <attr name="isloggedIn" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TypefaceableTextView">
+        <attr name="tvOverriddenTypeface" format="string" />
+    </declare-styleable>
+</resources>
